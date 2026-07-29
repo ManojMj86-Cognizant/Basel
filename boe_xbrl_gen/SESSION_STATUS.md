@@ -1,6 +1,12 @@
 # Session Status & Outstanding Items — BoE Banking XBRL Generator
 
 **Last updated:** 2026-07-24
+**🛑 SESSION PAUSED (2026-07-24).** Code + docs + generated instances (v6/v8/v11/v12) pushed to GitHub
+`https://github.com/ManojMj86-Cognizant/Basel.git` (branch `main`, commit `b5815cc`). No servers running.
+**▶ NEXT ON RESUME — the generation work:** submit **v12** to TDG Beacon → compare vs v11 (332 err) / v8
+(75 err, safe fallback), then continue per the "PRA001 valid-instance drive" resume plan below (Group C
+b0361/b0363; then Phase 2 common-basis regeneration for the OF08-hub cluster).
+
 **Goal:** Generate BoE Banking XBRL v4.0.0 instances shaped like the official samples, with
 random values that are **business-rule valid** (Arelle-verified), reusable across all
 banking returns. Target: zero violations across all modules.
