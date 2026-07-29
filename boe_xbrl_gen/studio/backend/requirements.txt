@@ -1,0 +1,5 @@
+# Datapoint Studio backend (Phase 0). Reuses the engine env; these are the web deps.
+fastapi>=0.115
+uvicorn[standard]>=0.34
+python-multipart>=0.0.9   # required by FastAPI for file uploads
+lxml>=5

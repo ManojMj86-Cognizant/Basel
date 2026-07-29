@@ -1,0 +1,39 @@
+# ── BoE third-party release data (obtain separately from the Bank of England) ──
+# Not "code built here"; large + externally licensed. The engine expects these on disk.
+/boebanking400/
+/boebanking400.zip
+/boebankingtaxonomydpmv400/
+/boebankingtaxonomysampleinstancesv400/
+/boebankingtaxonomyvalidationsv400/
+
+# ── Caches / build artifacts ──
+**/.cache/
+**/node_modules/
+**/__pycache__/
+*.pyc
+*.pyo
+**/dist/
+**/build/
+**/.vite/
+.venv/
+venv/
+.env
+**/.pytest_cache/
+**/.mypy_cache/
+
+# ── Engine run outputs / caches ──
+boe_xbrl_gen/out/
+boe_xbrl_gen/studio/backend/.cache/
+**/*.pkl
+*.log
+
+# ── Editor / OS / local tooling ──
+.claude/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.tmp
+
+# NOTE: generated PRA001 instances (ABCDEFGHIJ..._VALID_v*.xbrl) are intentionally
+# committed as deliverables (see SESSION_STATUS). model/dpm_model.json is committed too.

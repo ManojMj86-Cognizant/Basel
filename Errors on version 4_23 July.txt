@@ -1,0 +1,1084 @@
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0679
+The total unconstrained expected shortfall for the previous day // [boe_b0679];[if (t: OF24.01.01.01, r: 0010, c: 0150) reported as 1452000 !=0 then ((t: OF24.01.01.01, r: 0010, c: 0170) reported as 6571000 = (t: OF24.01.01.01, r: 0010, c: 0160) reported as 9921000 * imax((t: OF24.01.01.01, r: 0010, c: 0140) reported as 6061000 / (t: OF24.01.01.01, r: 0010, c: 0150) reported as 1452000, 1)) else (true())]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0678
+The total unconstrained expected shortfall for the previous day // [boe_b0678];[if ((t: OF24.01.01.01, r: 0010, c: 0110) reported as 701000 != 0) then ((t: OF24.01.01.01, r: 0010, c: 0130) reported as 3079000 = (t: OF24.01.01.01, r: 0010, c: 0120) reported as 4930000 * imax((t: OF24.01.01.01, r: 0010, c: 0100) reported as 1209000 / (t: OF24.01.01.01, r: 0010, c: 0110) reported as 701000, 1)) else (true())]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0677
+The total constrained expected shortfall over the previous 60 working days // [boe_b0677];[if ((t: OF24.01.01.01, r: 0010, c: 0060) reported as 5977000 != 0) then ((t: OF24.01.01.01, r: 0010, c: 0080) reported as 7579000 = (t: OF24.01.01.01, r: 0010, c: 0070) reported as 6892000 * imax((t: OF24.01.01.01, r: 0010, c: 0050) reported as 6134000 / (t: OF24.01.01.01, r: 0010, c: 0060) reported as 5977000, 1)) else (true())]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0676
+The total unconstrained expected shortfall over the previous 60 working days // [boe_b0676];[if ((t: OF24.01.01.01, r: 0010, c: 0020) reported as 8397000 != 0) then ((t: OF24.01.01.01, r: 0010, c: 0040) reported as 4545000 = (t: OF24.01.01.01, r: 0010, c: 0030) reported as 6175000 * imax((t: OF24.01.01.01, r: 0010, c: 0010) reported as 8075000 / (t: OF24.01.01.01, r: 0010, c: 0020) reported as 8397000, 1)) else (true())]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0361
+The constrained expected shortfall measure for the risk factor Credit spread risk // [boe_b0361];[scope((t: OF24.01.01.01, c:0050;0060;0070;0080;0140;0150;0160;0170))];[If (((t: OF24.01.01.01, r: 0080) reported as 7572000 * (t: OF24.01.01.01, r: 0080) reported as 7572000) + (((t: OF24.01.01.01, r: 0090) reported as 1107000 * exp(1, 1, 2)) * ((t: OF24.01.01.01, r: 0090) reported as 1107000 * exp(1, 1, 2))) + (((t: OF24.01.01.01, r: 0100) reported as 371000 * exp(2, 1, 2)) * ((t: OF24.01.01.01, r: 0100) reported as 371000 * exp(2, 1, 2))) + (((t: OF24.01.01.01, r: 0110) reported as 9041000 * exp(2, 1, 2)) * ((t: OF24.01.01.01, r: 0110) reported as 9041000 * exp(2, 1, 2))) + (((t: OF24.01.01.01, r: 0120) reported as 8689000 * exp(6, 1, 2)) * ((t: OF24.01.01.01, r: 0120) reported as 8689000 * exp(6, 1, 2))))>=0 then (t: OF24.01.01.01, r: 0070) reported as 25986681 = exp(((t: OF24.01.01.01, r: 0080) reported as 7572000 * (t: OF24.01.01.01, r: 0080) reported as 7572000) + (((t: OF24.01.01.01, r: 0090) reported as 1107000 * exp(1, 1, 2)) * ((t: OF24.01.01.01, r: 0090) reported as 1107000 * exp(1, 1, 2))) + (((t: OF24.01.01.01, r: 0100) reported as 371000 * exp(2, 1, 2)) * ((t: OF24.01.01.01, r: 0100) reported as 371000 * exp(2, 1, 2))) + (((t: OF24.01.01.01, r: 0110) reported as 9041000 * exp(2, 1, 2)) * ((t: OF24.01.01.01, r: 0110) reported as 9041000 * exp(2, 1, 2))) + (((t: OF24.01.01.01, r: 0120) reported as 8689000 * exp(6, 1, 2)) * ((t: OF24.01.01.01, r: 0120) reported as 8689000 * exp(6, 1, 2))), 1, 2) else true()]
+Causes6 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0361
+The constrained expected shortfall measure for the risk factor Credit spread risk // [boe_b0361];[scope((t: OF24.01.01.01, c:0050;0060;0070;0080;0140;0150;0160;0170))];[If (((t: OF24.01.01.01, r: 0080) reported as 8973000 * (t: OF24.01.01.01, r: 0080) reported as 8973000) + (((t: OF24.01.01.01, r: 0090) reported as 3418000 * exp(1, 1, 2)) * ((t: OF24.01.01.01, r: 0090) reported as 3418000 * exp(1, 1, 2))) + (((t: OF24.01.01.01, r: 0100) reported as 6994000 * exp(2, 1, 2)) * ((t: OF24.01.01.01, r: 0100) reported as 6994000 * exp(2, 1, 2))) + (((t: OF24.01.01.01, r: 0110) reported as 4087000 * exp(2, 1, 2)) * ((t: OF24.01.01.01, r: 0110) reported as 4087000 * exp(2, 1, 2))) + (((t: OF24.01.01.01, r: 0120) reported as 7575000 * exp(6, 1, 2)) * ((t: OF24.01.01.01, r: 0120) reported as 7575000 * exp(6, 1, 2))))>=0 then (t: OF24.01.01.01, r: 0070) reported as 23826884 = exp(((t: OF24.01.01.01, r: 0080) reported as 8973000 * (t: OF24.01.01.01, r: 0080) reported as 8973000) + (((t: OF24.01.01.01, r: 0090) reported as 3418000 * exp(1, 1, 2)) * ((t: OF24.01.01.01, r: 0090) reported as 3418000 * exp(1, 1, 2))) + (((t: OF24.01.01.01, r: 0100) reported as 6994000 * exp(2, 1, 2)) * ((t: OF24.01.01.01, r: 0100) reported as 6994000 * exp(2, 1, 2))) + (((t: OF24.01.01.01, r: 0110) reported as 4087000 * exp(2, 1, 2)) * ((t: OF24.01.01.01, r: 0110) reported as 4087000 * exp(2, 1, 2))) + (((t: OF24.01.01.01, r: 0120) reported as 7575000 * exp(6, 1, 2)) * ((t: OF24.01.01.01, r: 0120) reported as 7575000 * exp(6, 1, 2))), 1, 2) else true()]
+Causes6 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0361
+The constrained expected shortfall measure for the risk factor Credit spread risk // [boe_b0361];[scope((t: OF24.01.01.01, c:0050;0060;0070;0080;0140;0150;0160;0170))];[If (((t: OF24.01.01.01, r: 0080) reported as 2008000 * (t: OF24.01.01.01, r: 0080) reported as 2008000) + (((t: OF24.01.01.01, r: 0090) reported as 228000 * exp(1, 1, 2)) * ((t: OF24.01.01.01, r: 0090) reported as 228000 * exp(1, 1, 2))) + (((t: OF24.01.01.01, r: 0100) reported as 7586000 * exp(2, 1, 2)) * ((t: OF24.01.01.01, r: 0100) reported as 7586000 * exp(2, 1, 2))) + (((t: OF24.01.01.01, r: 0110) reported as 7676000 * exp(2, 1, 2)) * ((t: OF24.01.01.01, r: 0110) reported as 7676000 * exp(2, 1, 2))) + (((t: OF24.01.01.01, r: 0120) reported as 6299000 * exp(6, 1, 2)) * ((t: OF24.01.01.01, r: 0120) reported as 6299000 * exp(6, 1, 2))))>=0 then (t: OF24.01.01.01, r: 0070) reported as 21796449 = exp(((t: OF24.01.01.01, r: 0080) reported as 2008000 * (t: OF24.01.01.01, r: 0080) reported as 2008000) + (((t: OF24.01.01.01, r: 0090) reported as 228000 * exp(1, 1, 2)) * ((t: OF24.01.01.01, r: 0090) reported as 228000 * exp(1, 1, 2))) + (((t: OF24.01.01.01, r: 0100) reported as 7586000 * exp(2, 1, 2)) * ((t: OF24.01.01.01, r: 0100) reported as 7586000 * exp(2, 1, 2))) + (((t: OF24.01.01.01, r: 0110) reported as 7676000 * exp(2, 1, 2)) * ((t: OF24.01.01.01, r: 0110) reported as 7676000 * exp(2, 1, 2))) + (((t: OF24.01.01.01, r: 0120) reported as 6299000 * exp(6, 1, 2)) * ((t: OF24.01.01.01, r: 0120) reported as 6299000 * exp(6, 1, 2))), 1, 2) else true()]
+Causes6 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0361
+The constrained expected shortfall measure for the risk factor Credit spread risk // [boe_b0361];[scope((t: OF24.01.01.01, c:0050;0060;0070;0080;0140;0150;0160;0170))];[If (((t: OF24.01.01.01, r: 0080) reported as 7704000 * (t: OF24.01.01.01, r: 0080) reported as 7704000) + (((t: OF24.01.01.01, r: 0090) reported as 5749000 * exp(1, 1, 2)) * ((t: OF24.01.01.01, r: 0090) reported as 5749000 * exp(1, 1, 2))) + (((t: OF24.01.01.01, r: 0100) reported as 7458000 * exp(2, 1, 2)) * ((t: OF24.01.01.01, r: 0100) reported as 7458000 * exp(2, 1, 2))) + (((t: OF24.01.01.01, r: 0110) reported as 2559000 * exp(2, 1, 2)) * ((t: OF24.01.01.01, r: 0110) reported as 2559000 * exp(2, 1, 2))) + (((t: OF24.01.01.01, r: 0120) reported as 7847000 * exp(6, 1, 2)) * ((t: OF24.01.01.01, r: 0120) reported as 7847000 * exp(6, 1, 2))))>=0 then (t: OF24.01.01.01, r: 0070) reported as 24211476 = exp(((t: OF24.01.01.01, r: 0080) reported as 7704000 * (t: OF24.01.01.01, r: 0080) reported as 7704000) + (((t: OF24.01.01.01, r: 0090) reported as 5749000 * exp(1, 1, 2)) * ((t: OF24.01.01.01, r: 0090) reported as 5749000 * exp(1, 1, 2))) + (((t: OF24.01.01.01, r: 0100) reported as 7458000 * exp(2, 1, 2)) * ((t: OF24.01.01.01, r: 0100) reported as 7458000 * exp(2, 1, 2))) + (((t: OF24.01.01.01, r: 0110) reported as 2559000 * exp(2, 1, 2)) * ((t: OF24.01.01.01, r: 0110) reported as 2559000 * exp(2, 1, 2))) + (((t: OF24.01.01.01, r: 0120) reported as 7847000 * exp(6, 1, 2)) * ((t: OF24.01.01.01, r: 0120) reported as 7847000 * exp(6, 1, 2))), 1, 2) else true()]
+Causes6 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b1093
+This sum is to derive Total Credit Risk RWAs under all approaches // [boe_b1093];[(t: OF02.00.01.01, r: 0040, c: 0010) reported as 139862000 = sum((t: OF02.00.01.01, r: 0050; 0240; 0460; 0470, c: 0010) reported as 20903000 139862000 0 0)]
+Causes8 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0793
+Total credit risk RWAs under standardised approaches should reflect the sum of SA on the SA, and IRB exposures on the SA // [boe_b0793];[if not(isNull((t: OF02.00.01.01, r: 0010, c: 0030) reported as 2619000)) then (t: OF02.00.01.01, r: 0010, c: 0030) reported as 2619000 = ((t: OF02.00.01.01, r: 0036, c: 0030) reported as 9658000 + (t: OF02.00.01.01, r: 0040, c: 0020) reported as 139862000 + (t: OF02.00.01.01, r: 0490, c: 0010) reported as 0 + (t: OF02.00.01.01, r: 0520, c: 0020) reported as 0 + (t: OF02.00.01.01, r: 5898, c: 0010) reported as 0 + (t: OF02.00.01.01, r: 0590, c: 0010) reported as 0 + (t: OF02.00.01.01, r: 0630, c: 0010) reported as 0 + (t: OF02.00.01.01, r: 0640, c: 0020) reported as 2822000 + (t: OF02.00.01.01, r: 0680, c: 0020) reported as 8875000 + (t: OF02.00.01.01, r: 0690, c: 0020) reported as 3604000) * (t: OF02.00.01.01, r: 0035, c: 0030) reported as 0.55 else true()]
+Causes15 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0471_3
+This represents the calculation of exposure value post CRM post off-Balance sheet conversion factors // [boe_b0471_3];[scope((t: OF07.00.01.05, r:0380,z:0001;0009;0010))];[(t: OF07.00.01.05, c: 0200) reported as 1625000 = (t: OF07.00.01.05, c: 0150) reported as 1635500 - (0.9 * (t: OF07.00.01.05, c: 0160) reported as 0) - (0.8 * (t: OF07.00.01.05, c: 0170) reported as 0) - (0.6 * (t: OF07.00.01.05, c: 0171) reported as 13500) - (0.5 * (t: OF07.00.01.05, c: 0180) reported as 0)]
+Causes6 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0471_3
+This represents the calculation of exposure value post CRM post off-Balance sheet conversion factors // [boe_b0471_3];[scope((t: OF07.00.01.05, r:0380,z:0001;0009;0010))];[(t: OF07.00.01.05, c: 0200) reported as 0 = (t: OF07.00.01.05, c: 0150) reported as 51000 - (0.9 * (t: OF07.00.01.05, c: 0160) reported as 54000) - (0.8 * (t: OF07.00.01.05, c: 0170) reported as 0) - (0.6 * (t: OF07.00.01.05, c: 0171) reported as 0) - (0.5 * (t: OF07.00.01.05, c: 0180) reported as 0)]
+Causes6 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0471_2
+This represents the calculation of end exposure value post CRM post off-Balance sheet conversion factors // [boe_b0471_2];[scope((t: OF07.00.01.03, r:0300;0320,z:0001;0002;0003;0004;0007;0008;0009))];[(t: OF07.00.01.03, c: 0200) reported as 7911000 = (t: OF07.00.01.03, c: 0150) reported as 7935000 - (0.9 * (t: OF07.00.01.03, c: 0160) reported as 0) - (0.8 * (t: OF07.00.01.03, c: 0170) reported as 27000) - (0.6 * (t: OF07.00.01.03, c: 0171) reported as 0) - (0.5 * (t: OF07.00.01.03, c: 0180) reported as 0)]
+Causes6 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0471_2
+This represents the calculation of end exposure value post CRM post off-Balance sheet conversion factors // [boe_b0471_2];[scope((t: OF07.00.01.03, r:0300;0320,z:0001;0002;0003;0004;0007;0008;0009))];[(t: OF07.00.01.03, c: 0200) reported as 0 = (t: OF07.00.01.03, c: 0150) reported as 10500 - (0.9 * (t: OF07.00.01.03, c: 0160) reported as 0) - (0.8 * (t: OF07.00.01.03, c: 0170) reported as 0) - (0.6 * (t: OF07.00.01.03, c: 0171) reported as 13500) - (0.5 * (t: OF07.00.01.03, c: 0180) reported as 0)]
+Causes6 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0471_2
+This represents the calculation of end exposure value post CRM post off-Balance sheet conversion factors // [boe_b0471_2];[scope((t: OF07.00.01.03, r:0300;0320,z:0001;0002;0003;0004;0007;0008;0009))];[(t: OF07.00.01.03, c: 0200) reported as 2094000 = (t: OF07.00.01.03, c: 0150) reported as 2145000 - (0.9 * (t: OF07.00.01.03, c: 0160) reported as 54000) - (0.8 * (t: OF07.00.01.03, c: 0170) reported as 0) - (0.6 * (t: OF07.00.01.03, c: 0171) reported as 0) - (0.5 * (t: OF07.00.01.03, c: 0180) reported as 0)]
+Causes6 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0471_2
+This represents the calculation of end exposure value post CRM post off-Balance sheet conversion factors // [boe_b0471_2];[scope((t: OF07.00.01.03, r:0300;0320,z:0001;0002;0003;0004;0007;0008;0009))];[(t: OF07.00.01.03, c: 0200) reported as 0 = (t: OF07.00.01.03, c: 0150) reported as 51000 - (0.9 * (t: OF07.00.01.03, c: 0160) reported as 54000) - (0.8 * (t: OF07.00.01.03, c: 0170) reported as 0) - (0.6 * (t: OF07.00.01.03, c: 0171) reported as 0) - (0.5 * (t: OF07.00.01.03, c: 0180) reported as 0)]
+Causes6 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0471_2
+This represents the calculation of end exposure value post CRM post off-Balance sheet conversion factors // [boe_b0471_2];[scope((t: OF07.00.01.03, r:0300;0320,z:0001;0002;0003;0004;0007;0008;0009))];[(t: OF07.00.01.03, c: 0200) reported as 0 = (t: OF07.00.01.03, c: 0150) reported as 51000 - (0.9 * (t: OF07.00.01.03, c: 0160) reported as 54000) - (0.8 * (t: OF07.00.01.03, c: 0170) reported as 0) - (0.6 * (t: OF07.00.01.03, c: 0171) reported as 0) - (0.5 * (t: OF07.00.01.03, c: 0180) reported as 0)]
+Causes6 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0471_2
+This represents the calculation of end exposure value post CRM post off-Balance sheet conversion factors // [boe_b0471_2];[scope((t: OF07.00.01.03, r:0300;0320,z:0001;0002;0003;0004;0007;0008;0009))];[(t: OF07.00.01.03, c: 0200) reported as 1832000 = (t: OF07.00.01.03, c: 0150) reported as 1883000 - (0.9 * (t: OF07.00.01.03, c: 0160) reported as 54000) - (0.8 * (t: OF07.00.01.03, c: 0170) reported as 0) - (0.6 * (t: OF07.00.01.03, c: 0171) reported as 0) - (0.5 * (t: OF07.00.01.03, c: 0180) reported as 0)]
+Causes6 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0471_2
+This represents the calculation of end exposure value post CRM post off-Balance sheet conversion factors // [boe_b0471_2];[scope((t: OF07.00.01.03, r:0300;0320,z:0001;0002;0003;0004;0007;0008;0009))];[(t: OF07.00.01.03, c: 0200) reported as 0 = (t: OF07.00.01.03, c: 0150) reported as 51000 - (0.9 * (t: OF07.00.01.03, c: 0160) reported as 54000) - (0.8 * (t: OF07.00.01.03, c: 0170) reported as 0) - (0.6 * (t: OF07.00.01.03, c: 0171) reported as 0) - (0.5 * (t: OF07.00.01.03, c: 0180) reported as 0)]
+Causes6 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0471_2
+This represents the calculation of end exposure value post CRM post off-Balance sheet conversion factors // [boe_b0471_2];[scope((t: OF07.00.01.03, r:0300;0320,z:0001;0002;0003;0004;0007;0008;0009))];[(t: OF07.00.01.03, c: 0200) reported as 0 = (t: OF07.00.01.03, c: 0150) reported as 16800 - (0.9 * (t: OF07.00.01.03, c: 0160) reported as 0) - (0.8 * (t: OF07.00.01.03, c: 0170) reported as 18000) - (0.6 * (t: OF07.00.01.03, c: 0171) reported as 0) - (0.5 * (t: OF07.00.01.03, c: 0180) reported as 0)]
+Causes6 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0471_2
+This represents the calculation of end exposure value post CRM post off-Balance sheet conversion factors // [boe_b0471_2];[scope((t: OF07.00.01.03, r:0300;0320,z:0001;0002;0003;0004;0007;0008;0009))];[(t: OF07.00.01.03, c: 0200) reported as 0 = (t: OF07.00.01.03, c: 0150) reported as 24000 - (0.9 * (t: OF07.00.01.03, c: 0160) reported as 0) - (0.8 * (t: OF07.00.01.03, c: 0170) reported as 27000) - (0.6 * (t: OF07.00.01.03, c: 0171) reported as 0) - (0.5 * (t: OF07.00.01.03, c: 0180) reported as 0)]
+Causes6 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0471_2
+This represents the calculation of end exposure value post CRM post off-Balance sheet conversion factors // [boe_b0471_2];[scope((t: OF07.00.01.03, r:0300;0320,z:0001;0002;0003;0004;0007;0008;0009))];[(t: OF07.00.01.03, c: 0200) reported as 2612000 = (t: OF07.00.01.03, c: 0150) reported as 2622500 - (0.9 * (t: OF07.00.01.03, c: 0160) reported as 0) - (0.8 * (t: OF07.00.01.03, c: 0170) reported as 0) - (0.6 * (t: OF07.00.01.03, c: 0171) reported as 13500) - (0.5 * (t: OF07.00.01.03, c: 0180) reported as 0)]
+Causes6 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0471_2
+This represents the calculation of end exposure value post CRM post off-Balance sheet conversion factors // [boe_b0471_2];[scope((t: OF07.00.01.03, r:0300;0320,z:0001;0002;0003;0004;0007;0008;0009))];[(t: OF07.00.01.03, c: 0200) reported as 6148000 = (t: OF07.00.01.03, c: 0150) reported as 6172000 - (0.9 * (t: OF07.00.01.03, c: 0160) reported as 0) - (0.8 * (t: OF07.00.01.03, c: 0170) reported as 27000) - (0.6 * (t: OF07.00.01.03, c: 0171) reported as 0) - (0.5 * (t: OF07.00.01.03, c: 0180) reported as 0)]
+Causes6 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0471_2
+This represents the calculation of end exposure value post CRM post off-Balance sheet conversion factors // [boe_b0471_2];[scope((t: OF07.00.01.03, r:0300;0320,z:0001;0002;0003;0004;0007;0008;0009))];[(t: OF07.00.01.03, c: 0200) reported as 0 = (t: OF07.00.01.03, c: 0150) reported as 51000 - (0.9 * (t: OF07.00.01.03, c: 0160) reported as 54000) - (0.8 * (t: OF07.00.01.03, c: 0170) reported as 0) - (0.6 * (t: OF07.00.01.03, c: 0171) reported as 0) - (0.5 * (t: OF07.00.01.03, c: 0180) reported as 0)]
+Causes6 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0471_2
+This represents the calculation of end exposure value post CRM post off-Balance sheet conversion factors // [boe_b0471_2];[scope((t: OF07.00.01.03, r:0300;0320,z:0001;0002;0003;0004;0007;0008;0009))];[(t: OF07.00.01.03, c: 0200) reported as 0 = (t: OF07.00.01.03, c: 0150) reported as 51000 - (0.9 * (t: OF07.00.01.03, c: 0160) reported as 54000) - (0.8 * (t: OF07.00.01.03, c: 0170) reported as 0) - (0.6 * (t: OF07.00.01.03, c: 0171) reported as 0) - (0.5 * (t: OF07.00.01.03, c: 0180) reported as 0)]
+Causes6 locations
+xbrl.xiif.AssertionUnsatisfied.boe_v0637_m
+[v0637_m];[{t: C24.00.01.01, r: 0010, c: 0120} = imax({t: C24.00.01.01, r: 0010, c: 0030}, {t: C24.00.01.01, r: 0010, c: 0040}) + imax({t: C24.00.01.01, r: 0010, c: 0050}, {t: C24.00.01.01, r: 0010, c: 0060}) + imax({t: C24.00.01.01, r: 0010, c: 0070}, {t: C24.00.01.01, r: 0010, c: 0080}) + imax({t: C24.00.01.01, r: 0010, c: 0090}, {t: C24.00.01.01, r: 0010, c: 0100}, {t: C24.00.01.01, r: 0010, c: 0110})] // [v0637_m];[(t: C24.00.01.01, r: 0010, c: 0120) reported as 0 = imax((t: C24.00.01.01, r: 0010, c: 0030) reported as 1675000, (t: C24.00.01.01, r: 0010, c: 0040) reported as 862000) + imax((t: C24.00.01.01, r: 0010, c: 0050) reported as 6669000, (t: C24.00.01.01, r: 0010, c: 0060) reported as 2371000) + imax((t: C24.00.01.01, r: 0010, c: 0070) reported as 2592000, (t: C24.00.01.01, r: 0010, c: 0080) reported as 6196000) + imax((t: C24.00.01.01, r: 0010, c: 0090) reported as 472080, (t: C24.00.01.01, r: 0010, c: 0100) reported as 2057000, (t: C24.00.01.01, r: 0010, c: 0110) reported as 6116000)]
+Causes10 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b1071
+Country-TOTAL Original exposures pre conversion factors should be consistent with the corresponding exposures by approach reported in OF08.01 // [boe_b1071];[(t: OF09.02.01.01, r: 0071, c: 0010, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = (t: OF08.01.01.01, r: 0010, c: 0020, z: 0020) reported as 100000]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b1066
+Total Risk-weighted exposure amount for the relevant exposure class should be consistent across templates // [boe_b1066];[(t: OF09.02.01.01, r: 0074, c: 0110, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = (t: OF08.01.01.01, r: 0010, c: 0260, z: 0019) reported as 130000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b1065
+TOTAL EXPOSURE Value should be consistent across templates // [boe_b1065];[(t: OF09.02.01.01, r: 0074, c: 0105, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = (t: OF08.01.01.01, r: 0010, c: 0110, z: 0019) reported as 500000]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b1064
+Country-TOTAL Original exposures pre conversion factors should be consistent with the corresponding exposures by approach reported in OF08.01 // [boe_b1064];[(t: OF09.02.01.01, r: 0074, c: 0010, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = (t: OF08.01.01.01, r: 0010, c: 0020, z: 0019) reported as 20000]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b1063
+Total Risk-weighted exposure amount for the relevant exposure class should be consistent across templates // [boe_b1063];[(t: OF09.02.01.01, r: 0073, c: 0110, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = (t: OF08.01.01.01, r: 0010, c: 0260, z: 0018) reported as 131000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b1062
+TOTAL EXPOSURE Value should be consistent across templates // [boe_b1062];[(t: OF09.02.01.01, r: 0073, c: 0105, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = (t: OF08.01.01.01, r: 0010, c: 0110, z: 0018) reported as 461000]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b1061
+Country-TOTAL Original exposures pre conversion factors should be consistent with the corresponding exposures by approach reported in OF08.01 // [boe_b1061];[(t: OF09.02.01.01, r: 0073, c: 0010, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = (t: OF08.01.01.01, r: 0010, c: 0020, z: 0018) reported as 35000]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b1060
+Total Risk-weighted exposure amount for the relevant exposure class should be consistent across templates // [boe_b1060];[(t: OF09.02.01.01, r: 0072, c: 0110, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = (t: OF08.01.01.01, r: 0010, c: 0260, z: 0021) reported as 500000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b1059
+TOTAL EXPOSURE Value should be consistent across templates // [boe_b1059];[(t: OF09.02.01.01, r: 0072, c: 0105, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = (t: OF08.01.01.01, r: 0010, c: 0110, z: 0021) reported as 100000]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b1058
+Country-TOTAL Original exposures pre conversion factors should be consistent with the corresponding exposures by approach reported in OF08.01 // [boe_b1058];[(t: OF09.02.01.01, r: 0072, c: 0010, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = (t: OF08.01.01.01, r: 0010, c: 0020, z: 0021) reported as 99000]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b1057
+Total Risk-weighted exposure amount for the relevant exposure class should be consistent across templates // [boe_b1057];[(t: OF09.02.01.01, r: 0071, c: 0110, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = (t: OF08.01.01.01, r: 0010, c: 0260, z: 0020) reported as 101000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b1056
+TOTAL EXPOSURE Value for the referenced exposure class should be consistent across templates // [boe_b1056];[(t: OF09.02.01.01, r: 0071, c: 0105, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = (t: OF08.01.01.01, r: 0010, c: 0110, z: 0020) reported as 508000]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b1055
+Total Risk-weighted exposure amount for Corporates (Other General SME) across countries = TOTAL RISK-WEIGHTED EXPOSURE AMOUNT for Corporates Other General non-SME across approaches (FIRB and AIRB) // [boe_b1055];[(t: OF09.02.01.01, r: 0055, c: 0110, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = (t: OF08.01.01.01, r: 0010, c: 0260, z: 0011; 0012) reported as 68000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b1055
+Total Risk-weighted exposure amount for Corporates (Other General SME) across countries = TOTAL RISK-WEIGHTED EXPOSURE AMOUNT for Corporates Other General non-SME across approaches (FIRB and AIRB) // [boe_b1055];[(t: OF09.02.01.01, r: 0055, c: 0110, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = (t: OF08.01.01.01, r: 0010, c: 0260, z: 0011; 0012) reported as 100000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b1054
+Exposure Value for Corporates (Other General non-SME) across countries = TOTAL Exposures to Corporates Other General non-SME across approaches (FIRB and AIRB) // [boe_b1054];[(t: OF09.02.01.01, r: 0055, c: 0105, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = (t: OF08.01.01.01, r: 0010, c: 0110, z: 0011; 0012) reported as 106000]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b1054
+Exposure Value for Corporates (Other General non-SME) across countries = TOTAL Exposures to Corporates Other General non-SME across approaches (FIRB and AIRB) // [boe_b1054];[(t: OF09.02.01.01, r: 0055, c: 0105, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = (t: OF08.01.01.01, r: 0010, c: 0110, z: 0011; 0012) reported as 2000000]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b1053
+ORIGINAL EXPOSURE PRE-CONVERSION FACTORS for Corporates Other Non-SME (Country-Total) = TOTAL Original exposures to Corporates (Other non-SME) across approaches (FIRB and AIRB) // [boe_b1053];[(t: OF09.02.01.01, r: 0055, c: 0010, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = (t: OF08.01.01.01, r: 0010, c: 0020, z: 0011; 0012) reported as 100000]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b1053
+ORIGINAL EXPOSURE PRE-CONVERSION FACTORS for Corporates Other Non-SME (Country-Total) = TOTAL Original exposures to Corporates (Other non-SME) across approaches (FIRB and AIRB) // [boe_b1053];[(t: OF09.02.01.01, r: 0055, c: 0010, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = (t: OF08.01.01.01, r: 0010, c: 0020, z: 0011; 0012) reported as 95000]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b1052
+Total Risk-weighted exposure amount for Financial Corporates across countries = TOTAL RISK-WEIGHTED EXPOSURE AMOUNT reported in Financial Corporates sheet s0022 // [boe_b1052];[(t: OF09.02.01.01, r: 0048, c: 0110, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = (t: OF08.01.01.01, r: 0010, c: 0260, z: 0022) reported as 105000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b1051
+Financial Corporates Exposure value across countries = TOTAL EXPOSURES to Financial Corporates reported in sheet 0022 // [boe_b1051];[(t: OF09.02.01.01, r: 0048, c: 0105, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = (t: OF08.01.01.01, r: 0010, c: 0110, z: 0022) reported as 220000]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b1034
+Original exposure pre-conversion factors for Financial Corporates (Country-TOTAL) = Total ORIGINAL EXPOSURES PRE-CONVERSION FACTORS reported in the Financial Corporates sheet 0022 // [boe_b1034];[(t: OF09.02.01.01, r: 0048, c: 0010, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = (t: OF08.01.01.01, r: 0010, c: 0020, z: 0022) reported as 120000]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0304
+Total Risk-weighted exposure amount for the relevant exposure class should be consistent across templates // [boe_b0304];[(t: OF09.02.01.01, r: 0071, c: 0110, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = (t: OF08.01.01.01, r: 0010, c: 0260, z: 0020) reported as 101000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0303
+Total Risk-weighted exposure amount for Corporates (Other General SME) across countries = TOTAL RISK-WEIGHTED EXPOSURE AMOUNT for Corporates Other General SME across approaches (FIRB and AIRB) // [boe_b0303];[(t: OF09.02.01.01, r: 0050, c: 0010; 0110, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = sum((t: OF08.01.01.01, r: 0010, c: 0260, z: 0023; 0024) reported as 230000 2000000)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0302
+Total Risk-weighted exposure amount for RETAIL Other non-SME exposures across countries = TOTAL RISK-WEIGHTED EXPOSURE AMOUNT AFTER ADJUSTMENTS for RETAIL Other non-SME Exposures (AIRB approach) // [boe_b0302];[(t: OF09.02.01.01, r: 0130, c: 0110, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = (t: OF08.01.01.01, r: 0010, c: 0260, z: 0017) reported as 166000]
+Causes2 locations
+
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0301
+TOTAL RETAIL Other non-SME Exposure value across countries = Total RETAIL Other non-SME EXPOSURES (AIRB approach) reported in OF 08.01 // [boe_b0301];[(t: OF09.02.01.01, r: 0130, c: 0105, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = (t: OF08.01.01.01, r: 0010, c: 0110, z: 0017) reported as 500000]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0300
+Original exposure pre-conversion factors TOTAL RETAIL Other non-SME exposures across countries = Total ORIGINAL EXPOSURES PRE-CONVERSION FACTORS for RETAIL Other non-SME (AIRB approach) reported in OF08.01 // [boe_b0300];[(t: OF09.02.01.01, r: 0130, c: 0010, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = (t: OF08.01.01.01, r: 0010, c: 0020, z: 0017) reported as 21000]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0299
+Total Risk-weighted exposure amount for RETAIL Other SME exposures across countries = TOTAL RISK-WEIGHTED EXPOSURE AMOUNT AFTER ADJUSTMENTS for RETAIL Other SME Exposures (AIRB approach) // [boe_b0299];[(t: OF09.02.01.01, r: 0120, c: 0110, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = (t: OF08.01.01.01, r: 0010, c: 0260, z: 0016) reported as 45000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0298
+TOTAL RETAIL Other SME Exposure value across countries = Total RETAIL Other SME EXPOSURES (AIRB approach) reported in OF 08.01 // [boe_b0298];[(t: OF09.02.01.01, r: 0120, c: 0105, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = (t: OF08.01.01.01, r: 0010, c: 0110, z: 0016) reported as 100000]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0297
+Original exposure pre-conversion factors TOTAL RETAIL Other SME exposures across countries = Total ORIGINAL EXPOSURES PRE-CONVERSION FACTORS for RETAIL Other SME (AIRB approach) reported in OF08.01 // [boe_b0297];[(t: OF09.02.01.01, r: 0120, c: 0010, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = (t: OF08.01.01.01, r: 0010, c: 0020, z: 0016) reported as 100000]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0296
+Total Risk-weighted exposure amount for QUALIFYING REVOLVING Exposures across countries = TOTAL RISK-WEIGHTED EXPOSURE AMOUNT for Qualifying Revolving exposures reported in OF08.01 // [boe_b0296];[(t: OF09.02.01.01, r: 0100, c: 0110, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = (t: OF08.01.01.01, r: 0010, c: 0260, z: 0015) reported as 22000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0295
+Exposure Value RETAIL QUALIFYING REVOLVING EXPOSURES across countries = TOTAL QUALIFYING REVOLVING Exposures (AIRB approach) // [boe_b0295];[(t: OF09.02.01.01, r: 0100, c: 0105, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = (t: OF08.01.01.01, r: 0010, c: 0110, z: 0015) reported as 125000]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0294
+ORIGINAL EXPOSURE PRE-CONVERSION FACTORS for Retail Qualifying Revolving exposures (Country-Total) = TOTAL Original exposures to Qualifying Revolving exposures (AIRB approach) // [boe_b0294];[(t: OF09.02.01.01, r: 0100, c: 0010, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = (t: OF08.01.01.01, r: 0010, c: 0020, z: 0015) reported as 5000]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0293
+Total Risk-weighted exposure amount for RETAIL exposures across countries = TOTAL RISK-WEIGHTED EXPOSURE AMOUNT AFTER ADJUSTMENTS across all RETAIL Exposures (AIRB approach) // [boe_b0293];[(t: OF09.02.01.01, r: 0060, c: 0110, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = sum((t: OF08.01.01.01, r: 0010, c: 0260, z: 0015; 0016; 0017; 0018; 0019; 0020; 0021) reported as 101000 500000 131000 130000 22000 45000 166000)]
+Causes14 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0292
+TOTAL RETAIL Exposure value across countries = Total RETAIL EXPOSURES across sheets (AIRB approach) // [boe_b0292];[(t: OF09.02.01.01, r: 0060, c: 0105, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = sum((t: OF08.01.01.01, r: 0010, c: 0110, z: 0015; 0016; 0017; 0018; 0019; 0020; 0021) reported as 125000 100000 500000 461000 500000 508000 100000)]
+Causes7 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0291
+Original exposure pre-conversion factors TOTAL RETAIL exposures across countries = Total ORIGINAL EXPOSURES PRE-CONVERSION FACTORS in template OF08.01 for across Retail sheets (AIRB approach) // [boe_b0291];[(t: OF09.02.01.01, r: 0060, c: 0010, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = sum((t: OF08.01.01.01, r: 0010, c: 0020, z: 0015; 0016; 0017; 0018; 0019; 0020; 0021) reported as 5000 100000 21000 35000 20000 100000 99000)]
+Causes7 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0290
+Total Risk-weighted exposure amount for Corporates (Other General SME) across countries = TOTAL RISK-WEIGHTED EXPOSURE AMOUNT for Corporates Other General SME across approaches (FIRB and AIRB) // [boe_b0290];[(t: OF09.02.01.01, r: 0050, c: 0110, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = sum((t: OF08.01.01.01, r: 0010, c: 0260, z: 0023; 0024) reported as 230000 2000000)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0289
+Exposure Value for Corporates (Other General SME) across countries = TOTAL Exposures to Corporates Other General SME across approaches (FIRB and AIRB) // [boe_b0289];[(t: OF09.02.01.01, r: 0050, c: 0105, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = sum((t: OF08.01.01.01, r: 0010, c: 0110, z: 0023; 0024) reported as 100000 662000)]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0288
+ORIGINAL EXPOSURE PRE-CONVERSION FACTORS for Corporates Other General SME (Country-Total) = TOTAL Original exposures to Corporates (Other SME) across approaches (FIRB and AIRB) // [boe_b0288];[(t: OF09.02.01.01, r: 0050, c: 0010, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = sum((t: OF08.01.01.01, r: 0010, c: 0020, z: 0023; 0024) reported as 20000 95000)]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0284
+Total Risk-weighted exposure amount for Corporates across Countries = TOTAL RISK-WEIGHTED EXPOSURE AMOUNT AFTER ADJUSTMENTS across Corporates sheets // [boe_b0284];[(t: OF09.02.01.01, r: 0030, c: 0110, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = sum((t: OF08.01.01.01, r: 0010, c: 0260, z: 0009; 0010; 0011; 0012; 0022; 0023; 0024) reported as 105000 2000000 100000 500000 230000 68000 183000)]
+Causes13 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0283
+Corporates Exposure Value (Country TOTAL) = TOTAL exposures value across Corporates sheets (all approaches) // [boe_b0283];[(t: OF09.02.01.01, r: 0030, c: 0105, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = sum((t: OF08.01.01.01, r: 0010, c: 0110, z: 0009; 0010; 0011; 0012; 0022; 0023; 0024) reported as 2000000 500000 106000 2000000 220000 100000 662000)]
+Causes7 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0282
+ORIGINAL EXPOSURE PRE-CONVERSION FACTORS for Corporates (Country-Total) = TOTAL Original exposures to Corporates (pre-conversion factors) // [boe_b0282];[(t: OF09.02.01.01, r: 0030, c: 0010, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = sum((t: OF08.01.01.01, r: 0010, c: 0020, z: 0009; 0010; 0011; 0012; 0022; 0023; 0024) reported as 20000 100000 100000 95000 120000 20000 95000)]
+Causes7 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0278
+Total Risk-weighted exposure amount for Institutions across countries = TOTAL RISK-WEIGHTED EXPOSURE AMOUNT AFTER ADJUSTMENTS for Institutions (FIRB Approach) sheet s0006 // [boe_b0278];[(t: OF09.02.01.01, r: 0020, c: 0110, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = (t: OF08.01.01.01, r: 0010, c: 0260, z: 0006) reported as 952000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0277
+Institutions Exposure value across countries = Total Exposures to Institutions sheet s0006 (FIRB approach) // [boe_b0277];[(t: OF09.02.01.01, r: 0020, c: 0105, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = (t: OF08.01.01.01, r: 0010, c: 0110, z: 0006) reported as 525000]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0276
+Original exposure pre-conversion factors for Institutions across all countries = Total ORIGINAL EXPOSURES PRE-CONVERSION FACTORS in template OF08.01 for Institutions sheet s0006 // [boe_b0276];[(t: OF09.02.01.01, r: 0020, c: 0010, filter: [eba_dim:CEG] = [eba_GA:x1]) reported as 0 = (t: OF08.01.01.01, r: 0010, c: 0020, z: 0006) reported as 396500]
+Causes1 location
+
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b1068
+CCR Exposure value consistency check for Institutions (FIRB) // [boe_b1068];[(t: OF34.07.01.01, r: 0180, c: 0010, z: 0006) reported as 6520000 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0110, z: 0006) reported as 20000 20000 1000)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b1067
+CCR RW-exposure amount post-adjustments for Institutions (FIRB approach) // [boe_b1067];[(t: OF34.07.01.01, r: 0180, c: 0060, z: 0006) reported as 0 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0260, z: 0006) reported as 146000 5000 202000)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b1035
+Number of obligors check for Institutions class (FIRB approach) // [boe_b1035];[(t: OF34.07.01.01, r: 0180, c: 0030, z: 0006) reported as 84000 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0300, z: 0006) reported as 380000 0 20000)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0889
+CCR Exposure value consistency check for Retail – Other non-SME (AIRB approach) // [boe_b0889];[(t: OF34.07.01.01, r: 0180, c: 0010, z: 0017) reported as 2806000 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0110, z: 0017) reported as 0 1000 494000)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0888
+CCR Exposure value consistency check for Retail – Other SME (AIRB approach) // [boe_b0888];[(t: OF34.07.01.01, r: 0180, c: 0010, z: 0016) reported as 8457000 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0110, z: 0016) reported as 0 0 0)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0887
+CCR Exposure value consistency check for Retail – Qualifying revolving exposures (AIRB approach) // [boe_b0887];[(t: OF34.07.01.01, r: 0180, c: 0010, z: 0015) reported as 9831000 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0110, z: 0015) reported as 0 0 120000)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0886
+CCR Exposure value consistency check for Retail – Secured by commercial immovable property non-SME (AIRB approach) // [boe_b0886];[(t: OF34.07.01.01, r: 0180, c: 0010, z: 0019) reported as 9159000 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0110, z: 0019) reported as 0 0 0)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0885
+CCR Exposure value consistency check for Retail – Secured by commercial immovable property SME (AIRB approach) // [boe_b0885];[(t: OF34.07.01.01, r: 0180, c: 0010, z: 0018) reported as 2045000 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0110, z: 0018) reported as 460000 0 0)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0884
+CCR Exposure value consistency check for Retail – Secured by residential immovable property non-SME (AIRB approach) // [boe_b0884];[(t: OF34.07.01.01, r: 0180, c: 0010, z: 0021) reported as 6970000 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0110, z: 0021) reported as 20000 0 0)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0883
+CCR Exposure value consistency check for Retail – Secured by residential immovable property - SME (AIRB approach) // [boe_b0883];[(t: OF34.07.01.01, r: 0180, c: 0010, z: 0020) reported as 8245000 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0110, z: 0020) reported as 5000 1000 500000)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0882
+CCR Exposure value consistency check for Corporates – Other general corporates – non-SME (FIRB approach) // [boe_b0882];[(t: OF34.07.01.01, r: 0180, c: 0010, z: 0012) reported as 3908000 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0110, z: 0012) reported as 1994000 5000 0)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0881
+CCR Exposure value consistency check for Corporates – Other general corporates non-SME (AIRB approach) // [boe_b0881];[(t: OF34.07.01.01, r: 0180, c: 0010, z: 0011) reported as 4177000 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0110, z: 0011) reported as 0 0 0)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0880
+CCR Exposure value consistency check for Corporates – Other general corporates – SME (FIRB approach) // [boe_b0880];[(t: OF34.07.01.01, r: 0180, c: 0010, z: 0024) reported as 9824000 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0110, z: 0024) reported as 5000 5000 100000)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0879
+CCR Exposure value consistency check for Corporates – Other general corporates – SME (AIRB approach) // [boe_b0879];[(t: OF34.07.01.01, r: 0180, c: 0010, z: 0023) reported as 10035000 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0110, z: 0023) reported as 5000 5000 20000)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0878
+CCR Exposure value consistency check for Financial corporates and large corporates (FIRB approach) // [boe_b0878];[(t: OF34.07.01.01, r: 0180, c: 0010, z: 0022) reported as 4701000 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0110, z: 0022) reported as 100000 1000 1000)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0877
+CCR Exposure value consistency check for Corporates – Specialised Lending (FIRB approach or slotting approach)) // [boe_b0877];[(t: OF34.07.01.01, r: 0180, c: 0010, z: 0010) reported as 9538000 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0110, z: 0010) reported as 480000 0 0)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0876
+CCR Exposure value consistency check for Corporates – Specialised Lending (AIRB approach) // [boe_b0876];[(t: OF34.07.01.01, r: 0180, c: 0010, z: 0009) reported as 7012000 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0110, z: 0009) reported as 0 0 0)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0873
+CCR Exposure value consistency check for TOTAL FIRB // [boe_b0873];[(t: OF34.07.01.01, r: 0180, c: 0010, z: 0002) reported as 17172000 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0110, z: 0002) reported as 500000 2136000 100000)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0872
+CCR Exposure value consistency check for TOTAL AIRB // [boe_b0872];[(t: OF34.07.01.01, r: 0180, c: 0010, z: 0001) reported as 7934000 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0110, z: 0001) reported as 20000 100000 500000)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0871
+CCR RW-exposure amount post-adjustments for Retail – Other non-SME (AIRB approach) // [boe_b0871];[(t: OF34.07.01.01, r: 0180, c: 0060, z: 0017) reported as 0 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0260, z: 0017) reported as 23000 5000 117000)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0870
+CCR RW-exposure amount post-adjustments for Retail – Other SME (AIRB approach) // [boe_b0870];[(t: OF34.07.01.01, r: 0180, c: 0060, z: 0016) reported as 0 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0260, z: 0016) reported as 1000 0 19000)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0868
+CCR RW-exposure amount post-adjustments for Retail – Secured by commercial immovable property non-SME (AIRB approach) // [boe_b0868];[(t: OF34.07.01.01, r: 0180, c: 0060, z: 0019) reported as 0 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0260, z: 0019) reported as 0 0 15000)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0866
+CCR RW-exposure amount post-adjustments for Retail – Secured by residential immovable property non-SME (AIRB approach) // [boe_b0866];[(t: OF34.07.01.01, r: 0180, c: 0060, z: 0021) reported as 0 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0260, z: 0021) reported as 1000 100000 1000)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0864
+CCR RW-exposure amount post-adjustments for Corporates – Other general corporates – non-SME (FIRB approach) // [boe_b0864];[(t: OF34.07.01.01, r: 0180, c: 0060, z: 0012) reported as 0 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0260, z: 0012) reported as 1000 20000 73000)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0863
+CCR RW-exposure amount post-adjustments for Corporates – Other general corporates non-SME (AIRB approach) // [boe_b0863];[(t: OF34.07.01.01, r: 0180, c: 0060, z: 0011) reported as 0 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0260, z: 0011) reported as 20000 20000 21000)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0862
+CCR RW-exposure amount post-adjustments for Corporates – Other general corporates – SME (FIRB approach) // [boe_b0862];[(t: OF34.07.01.01, r: 0180, c: 0060, z: 0024) reported as 0 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0260, z: 0024) reported as 100000 1000 105000)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0861
+CCR RW-exposure amount post-adjustments for Corporates – Other general corporates – SME (AIRB approach) // [boe_b0861];[(t: OF34.07.01.01, r: 0180, c: 0060, z: 0023) reported as 0 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0260, z: 0023) reported as 5000 20000 100000)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0860
+CCR RW-exposure amount post-adjustments for TOTAL FIRB // [boe_b0860];[(t: OF34.07.01.01, r: 0180, c: 0060, z: 0022) reported as 0 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0260, z: 0022) reported as 1000 1000 56000)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0859
+CCR RW-exposure amount post-adjustments for Corporates – Specialised Lending (FIRB approach or slotting approach) // [boe_b0859];[(t: OF34.07.01.01, r: 0180, c: 0060, z: 0010) reported as 0 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0260, z: 0010) reported as 100000 21000 30000)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0858
+CCR RW-exposure amount post-adjustments for Corporates – Specialised Lending (AIRB approach) // [boe_b0858];[(t: OF34.07.01.01, r: 0180, c: 0060, z: 0009) reported as 0 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0260, z: 0009) reported as 20000 5000 5000)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0855
+CCR Risk Weighted exposure amount post-adjustments for TOTAL FIRB // [boe_b0855];[(t: OF34.07.01.01, r: 0180, c: 0060, z: 0002) reported as 0 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0260, z: 0002) reported as 100000 6000 5000)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0854
+CCR Risk Weighted exposure amount post-adjustments for TOTAL AIRB // [boe_b0854];[(t: OF34.07.01.01, r: 0180, c: 0060, z: 0001) reported as 0 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0260, z: 0001) reported as 100000 546000 520000)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0853
+Number of obligors check for Retail – Other non-SME (AIRB approach) // [boe_b0853];[(t: OF34.07.01.01, r: 0180, c: 0030, z: 0017) reported as 138000 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0300, z: 0017) reported as 5000 9000 500000)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0852
+Number of obligors check for Retail – Other SME (AIRB approach) // [boe_b0852];[(t: OF34.07.01.01, r: 0180, c: 0030, z: 0016) reported as 50000 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0300, z: 0016) reported as 0 0 4000)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0851
+Number of obligors check for Retail – Qualifying revolving exposures (AIRB approach) // [boe_b0851];[(t: OF34.07.01.01, r: 0180, c: 0030, z: 0015) reported as 70107 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0300, z: 0015) reported as 5000 1000 100000)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0850
+Number of obligors check for Retail – Secured by commercial immovable property non-SME (AIRB approach) // [boe_b0850];[(t: OF34.07.01.01, r: 0180, c: 0030, z: 0019) reported as 92412 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0300, z: 0019) reported as 20000 71000 5000)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0849
+Number of obligors check for Retail – Secured by commercial immovable property SME (AIRB approach) // [boe_b0849];[(t: OF34.07.01.01, r: 0180, c: 0030, z: 0018) reported as 82000 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0300, z: 0018) reported as 0 0 0)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0848
+Number of obligors check for Retail – Secured by residential immovable property non-SME (AIRB approach) // [boe_b0848];[(t: OF34.07.01.01, r: 0180, c: 0030, z: 0021) reported as 101220 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0300, z: 0021) reported as 20000 100000 20000)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0847
+Number of obligors check for Retail – Secured by residential immovable property - SME (AIRB approach) // [boe_b0847];[(t: OF34.07.01.01, r: 0180, c: 0030, z: 0020) reported as 93739 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0300, z: 0020) reported as 0 5000 10000)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0846
+Number of obligors consistency check for Corporates – Other general corporates – non-SME (FIRB approach) // [boe_b0846];[(t: OF34.07.01.01, r: 0180, c: 0030, z: 0012) reported as 99443 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0300, z: 0012) reported as 1000 20000 20000)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0845
+Number of obligors consistency check for Corporates – Other general corporates non-SME (AIRB approach) // [boe_b0845];[(t: OF34.07.01.01, r: 0180, c: 0030, z: 0011) reported as 32000 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0300, z: 0011) reported as 0 0 0)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0844
+Number of obligors consistency check for Corporates – Other general corporates – SME (FIRB approach) // [boe_b0844];[(t: OF34.07.01.01, r: 0180, c: 0030, z: 0024) reported as 111000 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0300, z: 0024) reported as 753000 20000 20000)]
+Causes4 locations
+
+
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0843
+Number of obligors consistency check for Corporates – Other general corporates – SME (AIRB approach) // [boe_b0843];[(t: OF34.07.01.01, r: 0180, c: 0030, z: 0023) reported as 92000 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0300, z: 0023) reported as 15000 0 0)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0842
+Number of obligors check for Financial corporates and large corporates (FIRB approach) // [boe_b0842];[(t: OF34.07.01.01, r: 0180, c: 0030, z: 0022) reported as 111890 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0300, z: 0022) reported as 1404000 20000 1000)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0841
+Number of obligors check for Corporates – Specialised Lending (FIRB approach or slotting approach) // [boe_b0841];[(t: OF34.07.01.01, r: 0180, c: 0030, z: 0010) reported as 83000 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0300, z: 0010) reported as 480000 100000 5000)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0840
+Number of obligors check for Corporates – Specialised Lending (AIRB approach) // [boe_b0840];[(t: OF34.07.01.01, r: 0180, c: 0030, z: 0009) reported as 79000 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0300, z: 0009) reported as 0 0 0)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0837
+Number of obligors consistency check for TOTAL FIRB // [boe_b0837];[(t: OF34.07.01.01, r: 0180, c: 0030, z: 0002) reported as 131000 = sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0300, z: 0002) reported as 2000000 100000 0)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0779
+Total risk-weighted exposure amount reported by roll-out class // [boe_b0779];[scope((t: OF08.07.01.01, c:0010;0020;0050;0060;0070;0080;0090;0100;0110;0120;0130;0140;0150))];[(t: OF08.07.01.01, r: 0260, c: 0010; 0020; 0050; 0060; 0070; 0080; 0090; 0100; 0110; 0120; 0130; 0140; 0150) reported as 0.2202 = sum((t: OF08.07.01.01, r: 0180; 0190; 0200; 0210; 0220; 0230; 0240; 0250) reported as 0.0 0.0016 0.1621 0.0 0.0 0.0082 0.0488 0.0)]
+Causes10 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0778
+Sum of the stated percentages shall not exceed 100% // [boe_b0778];[scope((t: OF08.07.01.01, r:0180;0190;0200;0210;0220;0230;0240;0250;0260))];[sum((t: OF08.07.01.01, c: 0030; 0040; 0050) reported as 0.2127 0.7875 0.0) = 1]
+Causes3 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0778
+Sum of the stated percentages shall not exceed 100% // [boe_b0778];[scope((t: OF08.07.01.01, r:0180;0190;0200;0210;0220;0230;0240;0250;0260))];[sum((t: OF08.07.01.01, c: 0030; 0040; 0050) reported as 0.6792 0.3206 0.0) = 1]
+Causes3 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0778
+Sum of the stated percentages shall not exceed 100% // [boe_b0778];[scope((t: OF08.07.01.01, r:0180;0190;0200;0210;0220;0230;0240;0250;0260))];[sum((t: OF08.07.01.01, c: 0030; 0040; 0050) reported as 0.2786 0.6724 0.0488) = 1]
+Causes3 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0778
+Sum of the stated percentages shall not exceed 100% // [boe_b0778];[scope((t: OF08.07.01.01, r:0180;0190;0200;0210;0220;0230;0240;0250;0260))];[sum((t: OF08.07.01.01, c: 0030; 0040; 0050) reported as 0.0491 0.9511 0.0) = 1]
+Causes3 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b1043
+Change in exposure due to FCCM shall be consistent across templates for the relevant exposure class // [boe_b1043];[sum((t: OF08.06.01.01, r: 0095, c: 0031) reported as 0) = sum((t: OF08.01.01.02, r: 0080, c: 0100, z: 0002; 0010) reported as 746000 5000) * 0.5]
+Causes3 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0821
+Exposure value Of which: arising from counterparty credit risk shall be consistent across templates for the relevant exposure class (Specialised Lending, slotting) // [boe_b0821];[sum((t: OF08.06.01.01, r: 0095, c: 0060) reported as 7589000) = sum((t: OF08.01.01.02, r: 0080, c: 0130, z: 0002; 0010) reported as 1000 100000) / 2]
+Causes3 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0820
+Exposure value of which: off-balance sheet items shall be consistent across templates for the relevant exposure class (Specialised Lending, slotting) // [boe_b0820];[sum((t: OF08.06.01.01, r: 0095, c: 0050) reported as 3836000) = sum((t: OF08.01.01.02, r: 0080, c: 0120, z: 0002; 0010) reported as 1000 2000000) / 2]
+Causes3 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0818
+off-balance sheet items after CRM substitution effects pre-CFs shall be consistent across templates for the relevant exposure class (Specialised Lending, slotting) // [boe_b0818];[sum((t: OF08.06.01.01, r: 0095, c: 0030) reported as 6824000) = sum((t: OF08.01.01.02, r: 0080, c: 0100, z: 0002; 0010) reported as 746000 5000) / 2]
+Causes3 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0956
+The LEI code must follow a valid format (20 alpha-numeric characters) // [boe_b0956];[matches((t: OF700.00.01.01, r: 0021, c: 0010) reported as SXHVJ8Q9, "^[A-Z0-9]{18}[0-9]{2}$")]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0955
+T‌he FRN must follow a valid format // [boe_b0955];[matches((t: OF700.00.01.01, r: 0020, c: 0010) reported as KW0BTXWA, "^[0-9]{6,8}$")]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0936
+The total own funds requirements for commodity risk is the maximum own funds requirements under low, medium and high correlation scenarios // [boe_b0936];[(t: OF91.06.01.01, r: 0010, c: 0160) reported as 749680 = imax((t: OF91.06.01.01, r: 0010, c: 0070) reported as 3649000, (t: OF91.06.01.01, r: 0010, c: 0110) reported as 3381000, (t: OF91.06.01.01, r: 0010, c: 0150) reported as 4990000)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0935
+The total own funds requirements for equity risk is the maximum own funds requirements under low, medium and high correlation scenarios // [boe_b0935];[(t: OF91.05.01.01, r: 0010, c: 0160) reported as 22640 = imax((t: OF91.05.01.01, r: 0010, c: 0070) reported as 6194000, (t: OF91.05.01.01, r: 0010, c: 0110) reported as 1865000, (t: OF91.05.01.01, r: 0010, c: 0150) reported as 5745000)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0934
+The total own funds requirements for non-ACTP CSR is the maximum own funds requirements under low, medium and high correlation scenarios // [boe_b0934];[(t: OF91.04.01.01, r: 0010, c: 0160) reported as 706640 = imax((t: OF91.04.01.01, r: 0010, c: 0070) reported as 51000, (t: OF91.04.01.01, r: 0010, c: 0110) reported as 4586000, (t: OF91.04.01.01, r: 0010, c: 0150) reported as 9798000)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0933
+The total own funds requirements for ACTP CSR is the maximum own funds requirements under low, medium and high correlation scenarios // [boe_b0933];[(t: OF91.03.01.01, r: 0010, c: 0160) reported as 422400 = imax((t: OF91.03.01.01, r: 0010, c: 0070) reported as 9681000, (t: OF91.03.01.01, r: 0010, c: 0110) reported as 3722000, (t: OF91.03.01.01, r: 0010, c: 0150) reported as 1453000)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0932
+The total own funds requirements for CSR is the maximum own funds requirements under low, medium and high correlation scenarios // [boe_b0932];[(t: OF91.02.01.01, r: 0010, c: 0160) reported as 532160 = imax((t: OF91.02.01.01, r: 0010, c: 0070) reported as 4726000, (t: OF91.02.01.01, r: 0010, c: 0110) reported as 1426000, (t: OF91.02.01.01, r: 0010, c: 0150) reported as 7535000)]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0636
+High volatility commercial real estate (HVCRE) across templates // [boe_b0636];[(t: OF02.00.01.01, r: 0416, c: 0010) reported as 8108000 = (t: OF08.06.01.01, r: 0095, c: 0080, filter: [eba_dim:TSL] = [boe_eba_TA:x10002]) reported as 0]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0635
+Income-producing real estate (IPRE) should be consistent across templates // [boe_b0635];[(t: OF02.00.01.01, r: 0415, c: 0010) reported as 8108000 = (t: OF08.06.01.01, r: 0095, c: 0080, filter: [eba_dim:TSL] = [boe_eba_TA:x10001]) reported as 0]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0634
+Specialised Lending (Commodities finance) should be consistent across templates // [boe_b0634];[(t: OF02.00.01.01, r: 0414, c: 0010) reported as 8108000 = (t: OF08.06.01.01, r: 0095, c: 0080, filter: [eba_dim:TSL] = [eba_TA:x132]) reported as 0]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0633
+Specialised Lending (Object finance) should be consistent across templates // [boe_b0633];[(t: OF02.00.01.01, r: 0413, c: 0010) reported as 8108000 = (t: OF08.06.01.01, r: 0095, c: 0080, filter: [eba_dim:TSL] = [eba_TA:x131]) reported as 0]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0632
+Specialised Lending (Project finance) should be consistent across templates // [boe_b0632];[(t: OF02.00.01.01, r: 0412, c: 0010) reported as 8108000 = (t: OF08.06.01.01, r: 0095, c: 0080, filter: [eba_dim:TSL] = [eba_TA:x129]) reported as 0]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0899
+The end date used for the ES stress period shall not be beyond the general reporting period end date for this submission (stress period end date cannot be in the future) // [boe_b0899];[(t: OF24.01.01.01, r: 0010, c: 0200) reported as 2024-12-31 <= (t: OF700.00.01.01, r: 0050, c: 0010) reported as 2022-01-21]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0900
+The SS end date used for the NMRF Stress-Period scenario shall be earlier than the reporting period end date of this XBRL submission (it must be in the past) // [boe_b0900];[(t: OF24.02.01.01, r: 0020; 0030; 0040; 0050; 0060, c: 0100) reported as 2024-12-31 <= (t: OF700.00.01.01, r: 0050, c: 0010) reported as 2022-01-21]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0900
+The SS end date used for the NMRF Stress-Period scenario shall be earlier than the reporting period end date of this XBRL submission (it must be in the past) // [boe_b0900];[(t: OF24.02.01.01, r: 0020; 0030; 0040; 0050; 0060, c: 0100) reported as 2024-12-31 <= (t: OF700.00.01.01, r: 0050, c: 0010) reported as 2022-01-21]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0900
+The SS end date used for the NMRF Stress-Period scenario shall be earlier than the reporting period end date of this XBRL submission (it must be in the past) // [boe_b0900];[(t: OF24.02.01.01, r: 0020; 0030; 0040; 0050; 0060, c: 0100) reported as 2024-12-31 <= (t: OF700.00.01.01, r: 0050, c: 0010) reported as 2022-01-21]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0900
+The SS end date used for the NMRF Stress-Period scenario shall be earlier than the reporting period end date of this XBRL submission (it must be in the past) // [boe_b0900];[(t: OF24.02.01.01, r: 0020; 0030; 0040; 0050; 0060, c: 0100) reported as 2024-12-31 <= (t: OF700.00.01.01, r: 0050, c: 0010) reported as 2022-01-21]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0900
+The SS end date used for the NMRF Stress-Period scenario shall be earlier than the reporting period end date of this XBRL submission (it must be in the past) // [boe_b0900];[(t: OF24.02.01.01, r: 0020; 0030; 0040; 0050; 0060, c: 0100) reported as 2024-12-31 <= (t: OF700.00.01.01, r: 0050, c: 0010) reported as 2022-01-21]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_v4797_m
+v4797_m: [C 14.00 (All rows)] abs({c0210}) <= {c0140} // [v4797_m];[iabs((t: C14.00.01.01, c: 0210) reported as 6525000) <= (t: C14.00.01.01, c: 0140) reported as 1703000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_v6289_m
+v6289_m: [C 06.02 (All rows)] {c0410} = {c0420} + {c0430} + {c0440} + {c0450} + max({c0470}, {c0480}) // [v6289_m];[(t: C06.02.01.01, c: 0410) reported as 8699000 = (t: C06.02.01.01, c: 0420) reported as 7533000 + (t: C06.02.01.01, c: 0430) reported as 5391000 + (t: C06.02.01.01, c: 0440) reported as 6002000 + (t: C06.02.01.01, c: 0450) reported as 7312000 + imax((t: C06.02.01.01, c: 0470) reported as 5474000, (t: C06.02.01.01, c: 0480) reported as 8904000)]
+Causes7 locations
+xbrl.xiif.AssertionUnsatisfied.boe_v1634_m
+v1634_m: [C 06.02 (All rows)] {c0310} = {c0320} + {c0330} // [v1634_m];[(t: C06.02.01.01, c: 0310) reported as 7411000 = (t: C06.02.01.01, c: 0320) reported as 9808000 + (t: C06.02.01.01, c: 0330) reported as 4928000]
+Causes3 locations
+xbrl.xiif.AssertionUnsatisfied.boe_v0293_m
+v0293_m: [C 06.02 (All rows)] {c0070} = {c0080} + {c0090} + {c0100} + {c0110} // [v0293_m];[(t: C06.02.01.01, c: 0070) reported as 8814000 = (t: C06.02.01.01, c: 0080) reported as 5089000 + (t: C06.02.01.01, c: 0090) reported as 9963000 + (t: C06.02.01.01, c: 0100) reported as 3764000 + (t: C06.02.01.01, c: 0110) reported as 3256000]
+Causes5 locations
+xbrl.xiif.AssertionUnsatisfied.boe_v0288_m
+v0288_m: [C 06.02 (All rows)] {c0300} = {c0310} + {c0340} // [v0288_m];[(t: C06.02.01.01, c: 0300) reported as 5808000 = (t: C06.02.01.01, c: 0310) reported as 7411000 + (t: C06.02.01.01, c: 0340) reported as 8023000]
+Causes3 locations
+xbrl.xiif.AssertionUnsatisfied.boe_v0287_m
+v0287_m: [C 06.02 (All rows)] {c0250} = {c0260} + {c0270} + {c0280} + {c0290} // [v0287_m];[(t: C06.02.01.01, c: 0250) reported as 8929000 = (t: C06.02.01.01, c: 0260) reported as 9856000 + (t: C06.02.01.01, c: 0270) reported as 3343000 + (t: C06.02.01.01, c: 0280) reported as 5824000 + (t: C06.02.01.01, c: 0290) reported as 3581000]
+Causes5 locations
+xbrl.xiif.AssertionUnsatisfied.boe_v0149_h
+v0149_h: [C 06.02 (All rows)] {c0120} = +{c0210} + {c0180} + {c0230} // [v0149_h];[(t: C06.02.01.01, c: 0120) reported as 339000 = (t: C06.02.01.01, c: 0210) reported as 6443000 + (t: C06.02.01.01, c: 0180) reported as 9852000 + (t: C06.02.01.01, c: 0230) reported as 1451000]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_v0147_h
+v0147_h: [C 06.02 (All rows)] {c0150} = +{c0210} + {c0180} // [v0147_h];[(t: C06.02.01.01, c: 0150) reported as 6835000 = (t: C06.02.01.01, c: 0210) reported as 6443000 + (t: C06.02.01.01, c: 0180) reported as 9852000]
+Causes3 locations
+xbrl.xiif.AssertionUnsatisfied.boe_v6345_m
+v6345_m: [C 32.02.b] {C 32.02.b, r0070, c0130} <= {C 32.02.c, r0030, c0130} // [v6345_m];[(t: C32.02.01.02, r: 0070, c: 0130) reported as 8142000 <= (t: C32.02.01.03, r: 0030, c: 0130) reported as 4660000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_v4816_m
+v4816_m: [C 04.00 (c0010)] {C 01.00, r0940} * ({C 04.00, r0230} + {C 04.00, r0300} + {C 04.00, r0370}) = -(max({C 04.00, r0230} + {C 04.00, r0300} + {C 04.00, r0370} - {C 04.00, r0190}, 0)) * {C 04.00, r0370} // [v4816_m];[(t: C01.00.01.01, r: 0940, c: 0010) reported as 0 * ((t: C04.00.01.01, r: 0230, c: 0010) reported as 2838000 + (t: C04.00.01.01, r: 0300, c: 0010) reported as 9889000 + (t: C04.00.01.01, r: 0370, c: 0010) reported as 2853000) = -1 * (imax((t: C04.00.01.01, r: 0230, c: 0010) reported as 2838000 + (t: C04.00.01.01, r: 0300, c: 0010) reported as 9889000 + (t: C04.00.01.01, r: 0370, c: 0010) reported as 2853000 - (t: C04.00.01.01, r: 0190, c: 0010) reported as 7791000, 0)) * (t: C04.00.01.01, r: 0370, c: 0010) reported as 2853000]
+Causes5 locations
+xbrl.xiif.AssertionUnsatisfied.boe_v4815_m
+v4815_m: [C 04.00 (c0010)] {C 01.00, r0700} * ({C 04.00, r0230} + {C 04.00, r0300} + {C 04.00, r0370}) = -(max({C 04.00, r0230} + {C 04.00, r0300} + {C 04.00, r0370} - {C 04.00, r0190}, 0)) * {C 04.00, r0300} // [v4815_m];[(t: C01.00.01.01, r: 0700, c: 0010) reported as 0 * ((t: C04.00.01.01, r: 0230, c: 0010) reported as 2838000 + (t: C04.00.01.01, r: 0300, c: 0010) reported as 9889000 + (t: C04.00.01.01, r: 0370, c: 0010) reported as 2853000) = -1 * (imax((t: C04.00.01.01, r: 0230, c: 0010) reported as 2838000 + (t: C04.00.01.01, r: 0300, c: 0010) reported as 9889000 + (t: C04.00.01.01, r: 0370, c: 0010) reported as 2853000 - (t: C04.00.01.01, r: 0190, c: 0010) reported as 7791000, 0)) * (t: C04.00.01.01, r: 0300, c: 0010) reported as 9889000]
+Causes5 locations
+xbrl.xiif.AssertionUnsatisfied.boe_v4812_m
+v4812_m: [C 04.00 (c0010)] if {C 04.00, r0100} > 0 and {C 04.00, r0145} > 0 then {C 01.00, r0910} = min({C 04.00, r0100} + {C 04.00, r0145}, {C 04.00, r0160} * 0.6%) // [v4812_m];[if (t: C04.00.01.01, r: 0100, c: 0010) reported as 89000 > 0 and (t: C04.00.01.01, r: 0145, c: 0010) reported as 1787000 > 0 then (t: C01.00.01.01, r: 0910, c: 0010) reported as 0 = imin((t: C04.00.01.01, r: 0100, c: 0010) reported as 89000 + (t: C04.00.01.01, r: 0145, c: 0010) reported as 1787000, (t: C04.00.01.01, r: 0160, c: 0010) reported as 7000000 * 0.006) else true()]
+Causes4 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0760
+Exposure after CRM with substitution effect should equal exposure before CRM effects + on-balance sheet netting + effects from CRM with substitution effect on the exposure // [boe_b0760];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0090) reported as 501000 = sum((t: OF08.02.01.01, c: 0020; 0035; 0070; 0080) reported as 500000 3835000 0 1000)]
+Causes5 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0760
+Exposure after CRM with substitution effect should equal exposure before CRM effects + on-balance sheet netting + effects from CRM with substitution effect on the exposure // [boe_b0760];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0090) reported as 100000 = sum((t: OF08.02.01.01, c: 0020; 0035; 0070; 0080) reported as 1000 4084000 0 99000)]
+Causes5 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0760
+Exposure after CRM with substitution effect should equal exposure before CRM effects + on-balance sheet netting + effects from CRM with substitution effect on the exposure // [boe_b0760];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0090) reported as 399000 = sum((t: OF08.02.01.01, c: 0020; 0035; 0070; 0080) reported as 296500 861000 0 102500)]
+Causes5 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0760
+Exposure after CRM with substitution effect should equal exposure before CRM effects + on-balance sheet netting + effects from CRM with substitution effect on the exposure // [boe_b0760];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0090) reported as 20000 = sum((t: OF08.02.01.01, c: 0020; 0035; 0070; 0080) reported as 20000 1902000 0 0)]
+Causes5 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0760
+Exposure after CRM with substitution effect should equal exposure before CRM effects + on-balance sheet netting + effects from CRM with substitution effect on the exposure // [boe_b0760];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0090) reported as 95000 = sum((t: OF08.02.01.01, c: 0020; 0035; 0070; 0080) reported as 95000 9822000 0 0)]
+Causes5 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0760
+Exposure after CRM with substitution effect should equal exposure before CRM effects + on-balance sheet netting + effects from CRM with substitution effect on the exposure // [boe_b0760];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0090) reported as 400000 = sum((t: OF08.02.01.01, c: 0020; 0035; 0070; 0080) reported as 100000 3772000 0 300000)]
+Causes5 locations
+
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0760
+Exposure after CRM with substitution effect should equal exposure before CRM effects + on-balance sheet netting + effects from CRM with substitution effect on the exposure // [boe_b0760];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0090) reported as 100000 = sum((t: OF08.02.01.01, c: 0020; 0035; 0070; 0080) reported as 80000 633000 0 20000)]
+Causes5 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0760
+Exposure after CRM with substitution effect should equal exposure before CRM effects + on-balance sheet netting + effects from CRM with substitution effect on the exposure // [boe_b0760];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0090) reported as 100000 = sum((t: OF08.02.01.01, c: 0020; 0035; 0070; 0080) reported as 100000 4471000 0 0)]
+Causes5 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0760
+Exposure after CRM with substitution effect should equal exposure before CRM effects + on-balance sheet netting + effects from CRM with substitution effect on the exposure // [boe_b0760];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0090) reported as 60000 = sum((t: OF08.02.01.01, c: 0020; 0035; 0070; 0080) reported as 20000 268000 0 40000)]
+Causes5 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0760
+Exposure after CRM with substitution effect should equal exposure before CRM effects + on-balance sheet netting + effects from CRM with substitution effect on the exposure // [boe_b0760];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0090) reported as 76000 = sum((t: OF08.02.01.01, c: 0020; 0035; 0070; 0080) reported as 75000 7879000 0 1000)]
+Causes5 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0760
+Exposure after CRM with substitution effect should equal exposure before CRM effects + on-balance sheet netting + effects from CRM with substitution effect on the exposure // [boe_b0760];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0090) reported as 104000 = sum((t: OF08.02.01.01, c: 0020; 0035; 0070; 0080) reported as 5000 6661000 0 99000)]
+Causes5 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0760
+Exposure after CRM with substitution effect should equal exposure before CRM effects + on-balance sheet netting + effects from CRM with substitution effect on the exposure // [boe_b0760];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0090) reported as 100000 = sum((t: OF08.02.01.01, c: 0020; 0035; 0070; 0080) reported as 100000 8318000 0 0)]
+Causes5 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0760
+Exposure after CRM with substitution effect should equal exposure before CRM effects + on-balance sheet netting + effects from CRM with substitution effect on the exposure // [boe_b0760];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0090) reported as 121000 = sum((t: OF08.02.01.01, c: 0020; 0035; 0070; 0080) reported as 21000 5361000 0 100000)]
+Causes5 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0760
+Exposure after CRM with substitution effect should equal exposure before CRM effects + on-balance sheet netting + effects from CRM with substitution effect on the exposure // [boe_b0760];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0090) reported as 100000 = sum((t: OF08.02.01.01, c: 0020; 0035; 0070; 0080) reported as 35000 1388000 0 65000)]
+Causes5 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0760
+Exposure after CRM with substitution effect should equal exposure before CRM effects + on-balance sheet netting + effects from CRM with substitution effect on the exposure // [boe_b0760];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0090) reported as 80000 = sum((t: OF08.02.01.01, c: 0020; 0035; 0070; 0080) reported as 20000 7260000 0 60000)]
+Causes5 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0760
+Exposure after CRM with substitution effect should equal exposure before CRM effects + on-balance sheet netting + effects from CRM with substitution effect on the exposure // [boe_b0760];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0090) reported as 81000 = sum((t: OF08.02.01.01, c: 0020; 0035; 0070; 0080) reported as 81000 7982000 0 0)]
+Causes5 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0760
+Exposure after CRM with substitution effect should equal exposure before CRM effects + on-balance sheet netting + effects from CRM with substitution effect on the exposure // [boe_b0760];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0090) reported as 100000 = sum((t: OF08.02.01.01, c: 0020; 0035; 0070; 0080) reported as 99000 3655000 0 1000)]
+Causes5 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0388
+exposure value arising from counterparty credit risk should be equal to or smaller than the overall exposure value // [boe_b0388];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0130) reported as 6142000 <= (t: OF08.02.01.01, c: 0110) reported as 2000000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0388
+exposure value arising from counterparty credit risk should be equal to or smaller than the overall exposure value // [boe_b0388];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0130) reported as 7763000 <= (t: OF08.02.01.01, c: 0110) reported as 2000000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0388
+exposure value arising from counterparty credit risk should be equal to or smaller than the overall exposure value // [boe_b0388];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0130) reported as 6376000 <= (t: OF08.02.01.01, c: 0110) reported as 20000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0388
+exposure value arising from counterparty credit risk should be equal to or smaller than the overall exposure value // [boe_b0388];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0130) reported as 8308000 <= (t: OF08.02.01.01, c: 0110) reported as 1000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0388
+exposure value arising from counterparty credit risk should be equal to or smaller than the overall exposure value // [boe_b0388];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0130) reported as 5521000 <= (t: OF08.02.01.01, c: 0110) reported as 5000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0388
+exposure value arising from counterparty credit risk should be equal to or smaller than the overall exposure value // [boe_b0388];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0130) reported as 598000 <= (t: OF08.02.01.01, c: 0110) reported as 100000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0388
+exposure value arising from counterparty credit risk should be equal to or smaller than the overall exposure value // [boe_b0388];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0130) reported as 282000 <= (t: OF08.02.01.01, c: 0110) reported as 20000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0388
+exposure value arising from counterparty credit risk should be equal to or smaller than the overall exposure value // [boe_b0388];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0130) reported as 4835000 <= (t: OF08.02.01.01, c: 0110) reported as 100000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0388
+exposure value arising from counterparty credit risk should be equal to or smaller than the overall exposure value // [boe_b0388];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0130) reported as 7819000 <= (t: OF08.02.01.01, c: 0110) reported as 20000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0388
+exposure value arising from counterparty credit risk should be equal to or smaller than the overall exposure value // [boe_b0388];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0130) reported as 3187000 <= (t: OF08.02.01.01, c: 0110) reported as 500000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0388
+exposure value arising from counterparty credit risk should be equal to or smaller than the overall exposure value // [boe_b0388];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0130) reported as 5714000 <= (t: OF08.02.01.01, c: 0110) reported as 20000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0388
+exposure value arising from counterparty credit risk should be equal to or smaller than the overall exposure value // [boe_b0388];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0130) reported as 9623000 <= (t: OF08.02.01.01, c: 0110) reported as 80000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0388
+exposure value arising from counterparty credit risk should be equal to or smaller than the overall exposure value // [boe_b0388];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0130) reported as 4898000 <= (t: OF08.02.01.01, c: 0110) reported as 20000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0388
+exposure value arising from counterparty credit risk should be equal to or smaller than the overall exposure value // [boe_b0388];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0130) reported as 1841000 <= (t: OF08.02.01.01, c: 0110) reported as 459000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0388
+exposure value arising from counterparty credit risk should be equal to or smaller than the overall exposure value // [boe_b0388];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0130) reported as 605000 <= (t: OF08.02.01.01, c: 0110) reported as 380000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0388
+exposure value arising from counterparty credit risk should be equal to or smaller than the overall exposure value // [boe_b0388];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0130) reported as 6661000 <= (t: OF08.02.01.01, c: 0110) reported as 100000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0388
+exposure value arising from counterparty credit risk should be equal to or smaller than the overall exposure value // [boe_b0388];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0130) reported as 9827000 <= (t: OF08.02.01.01, c: 0110) reported as 94000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0387
+default exposure value should be less than or equal to the overall exposure value // [boe_b0387];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0125) reported as 9299000 <= (t: OF08.02.01.01, c: 0110) reported as 2000000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0387
+default exposure value should be less than or equal to the overall exposure value // [boe_b0387];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0125) reported as 7157000 <= (t: OF08.02.01.01, c: 0110) reported as 2000000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0387
+default exposure value should be less than or equal to the overall exposure value // [boe_b0387];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0125) reported as 9838000 <= (t: OF08.02.01.01, c: 0110) reported as 20000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0387
+default exposure value should be less than or equal to the overall exposure value // [boe_b0387];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0125) reported as 7956000 <= (t: OF08.02.01.01, c: 0110) reported as 1000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0387
+default exposure value should be less than or equal to the overall exposure value // [boe_b0387];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0125) reported as 8236000 <= (t: OF08.02.01.01, c: 0110) reported as 5000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0387
+default exposure value should be less than or equal to the overall exposure value // [boe_b0387];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0125) reported as 7907000 <= (t: OF08.02.01.01, c: 0110) reported as 100000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0387
+default exposure value should be less than or equal to the overall exposure value // [boe_b0387];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0125) reported as 8372000 <= (t: OF08.02.01.01, c: 0110) reported as 20000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0387
+default exposure value should be less than or equal to the overall exposure value // [boe_b0387];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0125) reported as 9577000 <= (t: OF08.02.01.01, c: 0110) reported as 100000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0387
+default exposure value should be less than or equal to the overall exposure value // [boe_b0387];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0125) reported as 7351000 <= (t: OF08.02.01.01, c: 0110) reported as 20000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0387
+default exposure value should be less than or equal to the overall exposure value // [boe_b0387];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0125) reported as 2328000 <= (t: OF08.02.01.01, c: 0110) reported as 500000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0387
+default exposure value should be less than or equal to the overall exposure value // [boe_b0387];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0125) reported as 7075000 <= (t: OF08.02.01.01, c: 0110) reported as 20000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0387
+default exposure value should be less than or equal to the overall exposure value // [boe_b0387];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0125) reported as 8040000 <= (t: OF08.02.01.01, c: 0110) reported as 80000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0387
+default exposure value should be less than or equal to the overall exposure value // [boe_b0387];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0125) reported as 5094000 <= (t: OF08.02.01.01, c: 0110) reported as 20000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0387
+default exposure value should be less than or equal to the overall exposure value // [boe_b0387];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0125) reported as 5517000 <= (t: OF08.02.01.01, c: 0110) reported as 459000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0387
+default exposure value should be less than or equal to the overall exposure value // [boe_b0387];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0125) reported as 4070000 <= (t: OF08.02.01.01, c: 0110) reported as 380000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0387
+default exposure value should be less than or equal to the overall exposure value // [boe_b0387];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0125) reported as 9997000 <= (t: OF08.02.01.01, c: 0110) reported as 100000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0387
+default exposure value should be less than or equal to the overall exposure value // [boe_b0387];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0125) reported as 7077000 <= (t: OF08.02.01.01, c: 0110) reported as 94000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0386
+off balance sheet exposure value should be equal to or smaller than the overall exposure value // [boe_b0386];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0120) reported as 3234000 <= (t: OF08.02.01.01, c: 0110) reported as 2000000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0386
+off balance sheet exposure value should be equal to or smaller than the overall exposure value // [boe_b0386];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0120) reported as 1177000 <= (t: OF08.02.01.01, c: 0110) reported as 20000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0386
+off balance sheet exposure value should be equal to or smaller than the overall exposure value // [boe_b0386];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0120) reported as 3197000 <= (t: OF08.02.01.01, c: 0110) reported as 1000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0386
+off balance sheet exposure value should be equal to or smaller than the overall exposure value // [boe_b0386];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0120) reported as 4368000 <= (t: OF08.02.01.01, c: 0110) reported as 5000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0386
+off balance sheet exposure value should be equal to or smaller than the overall exposure value // [boe_b0386];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0120) reported as 2298000 <= (t: OF08.02.01.01, c: 0110) reported as 100000]
+Causes2 locations
+
+
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0386
+off balance sheet exposure value should be equal to or smaller than the overall exposure value // [boe_b0386];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0120) reported as 5857000 <= (t: OF08.02.01.01, c: 0110) reported as 20000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0386
+off balance sheet exposure value should be equal to or smaller than the overall exposure value // [boe_b0386];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0120) reported as 136000 <= (t: OF08.02.01.01, c: 0110) reported as 100000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0386
+off balance sheet exposure value should be equal to or smaller than the overall exposure value // [boe_b0386];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0120) reported as 3564000 <= (t: OF08.02.01.01, c: 0110) reported as 20000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0386
+off balance sheet exposure value should be equal to or smaller than the overall exposure value // [boe_b0386];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0120) reported as 1750000 <= (t: OF08.02.01.01, c: 0110) reported as 500000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0386
+off balance sheet exposure value should be equal to or smaller than the overall exposure value // [boe_b0386];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0120) reported as 5102000 <= (t: OF08.02.01.01, c: 0110) reported as 20000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0386
+off balance sheet exposure value should be equal to or smaller than the overall exposure value // [boe_b0386];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0120) reported as 7792000 <= (t: OF08.02.01.01, c: 0110) reported as 80000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0386
+off balance sheet exposure value should be equal to or smaller than the overall exposure value // [boe_b0386];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0120) reported as 8496000 <= (t: OF08.02.01.01, c: 0110) reported as 20000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0386
+off balance sheet exposure value should be equal to or smaller than the overall exposure value // [boe_b0386];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0120) reported as 6662000 <= (t: OF08.02.01.01, c: 0110) reported as 459000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0386
+off balance sheet exposure value should be equal to or smaller than the overall exposure value // [boe_b0386];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0120) reported as 2651000 <= (t: OF08.02.01.01, c: 0110) reported as 380000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0386
+off balance sheet exposure value should be equal to or smaller than the overall exposure value // [boe_b0386];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0120) reported as 2945000 <= (t: OF08.02.01.01, c: 0110) reported as 100000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0386
+off balance sheet exposure value should be equal to or smaller than the overall exposure value // [boe_b0386];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0120) reported as 1348000 <= (t: OF08.02.01.01, c: 0110) reported as 94000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0385
+off balance sheet exposure after CRM should be equal to or smaller than the overall exposure after CRM // [boe_b0385];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0100) reported as 5358000 <= (t: OF08.02.01.01, c: 0090) reported as 501000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0385
+off balance sheet exposure after CRM should be equal to or smaller than the overall exposure after CRM // [boe_b0385];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0100) reported as 9652000 <= (t: OF08.02.01.01, c: 0090) reported as 100000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0385
+off balance sheet exposure after CRM should be equal to or smaller than the overall exposure after CRM // [boe_b0385];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0100) reported as 1717000 <= (t: OF08.02.01.01, c: 0090) reported as 399000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0385
+off balance sheet exposure after CRM should be equal to or smaller than the overall exposure after CRM // [boe_b0385];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0100) reported as 4801000 <= (t: OF08.02.01.01, c: 0090) reported as 20000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0385
+off balance sheet exposure after CRM should be equal to or smaller than the overall exposure after CRM // [boe_b0385];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0100) reported as 5689000 <= (t: OF08.02.01.01, c: 0090) reported as 95000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0385
+off balance sheet exposure after CRM should be equal to or smaller than the overall exposure after CRM // [boe_b0385];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0100) reported as 5157000 <= (t: OF08.02.01.01, c: 0090) reported as 400000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0385
+off balance sheet exposure after CRM should be equal to or smaller than the overall exposure after CRM // [boe_b0385];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0100) reported as 6128000 <= (t: OF08.02.01.01, c: 0090) reported as 100000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0385
+off balance sheet exposure after CRM should be equal to or smaller than the overall exposure after CRM // [boe_b0385];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0100) reported as 1127000 <= (t: OF08.02.01.01, c: 0090) reported as 100000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0385
+off balance sheet exposure after CRM should be equal to or smaller than the overall exposure after CRM // [boe_b0385];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0100) reported as 9492000 <= (t: OF08.02.01.01, c: 0090) reported as 60000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0385
+off balance sheet exposure after CRM should be equal to or smaller than the overall exposure after CRM // [boe_b0385];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0100) reported as 2619000 <= (t: OF08.02.01.01, c: 0090) reported as 76000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0385
+off balance sheet exposure after CRM should be equal to or smaller than the overall exposure after CRM // [boe_b0385];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0100) reported as 2879000 <= (t: OF08.02.01.01, c: 0090) reported as 104000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0385
+off balance sheet exposure after CRM should be equal to or smaller than the overall exposure after CRM // [boe_b0385];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0100) reported as 5648000 <= (t: OF08.02.01.01, c: 0090) reported as 100000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0385
+off balance sheet exposure after CRM should be equal to or smaller than the overall exposure after CRM // [boe_b0385];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0100) reported as 4160000 <= (t: OF08.02.01.01, c: 0090) reported as 121000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0385
+off balance sheet exposure after CRM should be equal to or smaller than the overall exposure after CRM // [boe_b0385];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0100) reported as 977000 <= (t: OF08.02.01.01, c: 0090) reported as 100000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0385
+off balance sheet exposure after CRM should be equal to or smaller than the overall exposure after CRM // [boe_b0385];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0100) reported as 6196000 <= (t: OF08.02.01.01, c: 0090) reported as 80000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0385
+off balance sheet exposure after CRM should be equal to or smaller than the overall exposure after CRM // [boe_b0385];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0100) reported as 1447000 <= (t: OF08.02.01.01, c: 0090) reported as 81000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0385
+off balance sheet exposure after CRM should be equal to or smaller than the overall exposure after CRM // [boe_b0385];[scope((t: OF08.02.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01, c: 0100) reported as 1176000 <= (t: OF08.02.01.01, c: 0090) reported as 100000]
+Causes2 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0309
+Data entries stated should be less than or equal to zero // [boe_b0309];[scope((t: OF08.02.01.01, c:0035;0040;0050;0060;0070;0290,z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01) reported as 3835000 <= 0]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0309
+Data entries stated should be less than or equal to zero // [boe_b0309];[scope((t: OF08.02.01.01, c:0035;0040;0050;0060;0070;0290,z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01) reported as 4084000 <= 0]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0309
+Data entries stated should be less than or equal to zero // [boe_b0309];[scope((t: OF08.02.01.01, c:0035;0040;0050;0060;0070;0290,z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01) reported as 861000 <= 0]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0309
+Data entries stated should be less than or equal to zero // [boe_b0309];[scope((t: OF08.02.01.01, c:0035;0040;0050;0060;0070;0290,z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01) reported as 1902000 <= 0]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0309
+Data entries stated should be less than or equal to zero // [boe_b0309];[scope((t: OF08.02.01.01, c:0035;0040;0050;0060;0070;0290,z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01) reported as 9822000 <= 0]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0309
+Data entries stated should be less than or equal to zero // [boe_b0309];[scope((t: OF08.02.01.01, c:0035;0040;0050;0060;0070;0290,z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01) reported as 3772000 <= 0]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0309
+Data entries stated should be less than or equal to zero // [boe_b0309];[scope((t: OF08.02.01.01, c:0035;0040;0050;0060;0070;0290,z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01) reported as 633000 <= 0]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0309
+Data entries stated should be less than or equal to zero // [boe_b0309];[scope((t: OF08.02.01.01, c:0035;0040;0050;0060;0070;0290,z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01) reported as 4471000 <= 0]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0309
+Data entries stated should be less than or equal to zero // [boe_b0309];[scope((t: OF08.02.01.01, c:0035;0040;0050;0060;0070;0290,z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01) reported as 268000 <= 0]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0309
+Data entries stated should be less than or equal to zero // [boe_b0309];[scope((t: OF08.02.01.01, c:0035;0040;0050;0060;0070;0290,z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01) reported as 7879000 <= 0]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0309
+Data entries stated should be less than or equal to zero // [boe_b0309];[scope((t: OF08.02.01.01, c:0035;0040;0050;0060;0070;0290,z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01) reported as 6661000 <= 0]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0309
+Data entries stated should be less than or equal to zero // [boe_b0309];[scope((t: OF08.02.01.01, c:0035;0040;0050;0060;0070;0290,z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01) reported as 8318000 <= 0]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0309
+Data entries stated should be less than or equal to zero // [boe_b0309];[scope((t: OF08.02.01.01, c:0035;0040;0050;0060;0070;0290,z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01) reported as 5361000 <= 0]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0309
+Data entries stated should be less than or equal to zero // [boe_b0309];[scope((t: OF08.02.01.01, c:0035;0040;0050;0060;0070;0290,z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01) reported as 1388000 <= 0]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0309
+Data entries stated should be less than or equal to zero // [boe_b0309];[scope((t: OF08.02.01.01, c:0035;0040;0050;0060;0070;0290,z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01) reported as 7260000 <= 0]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0309
+Data entries stated should be less than or equal to zero // [boe_b0309];[scope((t: OF08.02.01.01, c:0035;0040;0050;0060;0070;0290,z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01) reported as 7982000 <= 0]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0309
+Data entries stated should be less than or equal to zero // [boe_b0309];[scope((t: OF08.02.01.01, c:0035;0040;0050;0060;0070;0290,z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.02.01.01) reported as 3655000 <= 0]
+Causes1 location
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0823
+Total Specialised Lending Expected Loss Amount (Slotting approach) across all the types of specialised lending shall be consistent // [boe_b0823];[(t: OF08.06.01.01, r: 0095, c: 0090) reported as 9893000 = sum((t: OF08.01.01.01, r: 0080, c: 0280, z: 0002; 0010) reported as 328500 5000) / 2]
+Causes3 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0822
+Risk-weighted exposure amount shall be consistent across templates for the relevant exposure class (Specialised Lending, slotting) // [boe_b0822];[sum((t: OF08.06.01.01, r: 0095, c: 0080) reported as 8108000) = sum((t: OF08.01.01.01, r: 0080, c: 0260, z: 0002; 0010) reported as 0 0) / 2]
+Causes3 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0819
+Exposure value shall be consistent across templates for the relevant exposure class // [boe_b0819];[sum((t: OF08.06.01.01, r: 0095, c: 0040) reported as 8168000) = sum((t: OF08.01.01.01, r: 0080, c: 0110, z: 0002; 0010) reported as 1000 100000) / 2]
+Causes3 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0817
+Exposure after CRM substitution effects pre-conversion factors shall be consistent across templates for the relevant exposure class // [boe_b0817];[sum((t: OF08.06.01.01, r: 0095, c: 0020) reported as 8168000) = sum((t: OF08.01.01.01, r: 0080, c: 0090, z: 0002; 0010) reported as 746000 5000) / 2]
+Causes3 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0816
+Original exposure pre conversion factors for SPECIALISED LENDING exposures under the SLOTTING APPROACH shall be consistent across templates // [boe_b0816];[sum((t: OF08.06.01.01, r: 0095, c: 0010) reported as 4028000) = sum((t: OF08.01.01.01, r: 0080, c: 0020, z: 0002; 0010) reported as 746000 5000) / 2]
+Causes3 locations
+
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0792
+To calculate Surplus(+)/Deficit(-) of total capital in table C03.00, the parameters shall be c0010 or c0030, when c0030 is greater than c0010 // [boe_b0792];[if ((t: OF02.00.01.01, r: 0010, c: 0030) reported as 2619000 > (t: OF02.00.01.01, r: 0010, c: 0010) reported as 142684000) then ((t: C03.00.01.01, r: 0060, c: 0010) reported as 0 = (t: C01.00.01.01, r: 0010, c: 0010) reported as 8094000 - ((t: OF02.00.01.01, r: 0010, c: 0030) reported as 2619000 * 0.08)) else ((t: C03.00.01.01, r: 0060, c: 0010) reported as 0 = (t: C01.00.01.01, r: 0010, c: 0010) reported as 8094000 - ((t: OF02.00.01.01, r: 0010, c: 0010) reported as 142684000 * 0.08))]
+Causes5 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0791
+This is the Own Funds amount calculated by using as variable parameters c0010 or alternatively c0030 if c0030 is greater than c0010 // [boe_b0791];[if ((t: OF02.00.01.01, r: 0010, c: 0030) reported as 2619000 > (t: OF02.00.01.01, r: 0010, c: 0010) reported as 142684000) then ((t: C01.00.01.01, r: 0010, c: 0010) reported as 8094000 = (t: OF02.00.01.01, r: 0010, c: 0030) reported as 2619000 * (t: C03.00.01.01, r: 0050, c: 0010) reported as 0.0) else ((t: C01.00.01.01, r: 0010, c: 0010) reported as 8094000 = (t: OF02.00.01.01, r: 0010, c: 0010) reported as 142684000 * (t: C03.00.01.01, r: 0050, c: 0010) reported as 0.0)]
+Causes5 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0790
+This is the amount of Surplus(+)/Deficit(-) of T1 capital, calculated using as parameters c0010 or c0030 if it’s greater than c0010 // [boe_b0790];[if ((t: OF02.00.01.01, r: 0010, c: 0030) reported as 2619000 > (t: OF02.00.01.01, r: 0010, c: 0010) reported as 142684000) then ((t: C03.00.01.01, r: 0040, c: 0010) reported as 0 = (t: C01.00.01.01, r: 0015, c: 0010) reported as 4161000 - ((t: OF02.00.01.01, r: 0010, c: 0030) reported as 2619000 * 0.06)) else ((t: C03.00.01.01, r: 0040, c: 0010) reported as 0 = (t: C01.00.01.01, r: 0015, c: 0010) reported as 4161000 - ((t: OF02.00.01.01, r: 0010, c: 0010) reported as 142684000 * 0.06))]
+Causes5 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0789
+This is the TIER1 Capital amount calculated by using as parameters c0010 or c0030 if it’s greater than c0010 // [boe_b0789];[if ((t: OF02.00.01.01, r: 0010, c: 0030) reported as 2619000 > (t: OF02.00.01.01, r: 0010, c: 0010) reported as 142684000) then ((t: C01.00.01.01, r: 0015, c: 0010) reported as 4161000 = (t: OF02.00.01.01, r: 0010, c: 0030) reported as 2619000 * (t: C03.00.01.01, r: 0030, c: 0010) reported as 0.0) else ((t: C01.00.01.01, r: 0015, c: 0010) reported as 4161000 = (t: OF02.00.01.01, r: 0010, c: 0010) reported as 142684000 * (t: C03.00.01.01, r: 0030, c: 0010) reported as 0.0)]
+Causes5 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0788
+This represents the Surplus(+)/Deficit(-) of CET1 capital amount, calculated using as parameters c0010 or c0030 if it’s greater than c0010 // [boe_b0788];[if ((t: OF02.00.01.01, r: 0010, c: 0030) reported as 2619000 > (t: OF02.00.01.01, r: 0010, c: 0010) reported as 142684000) then ((t: C03.00.01.01, r: 0020, c: 0010) reported as 0 = (t: C01.00.01.01, r: 0020, c: 0010) reported as 1568000 - ((t: OF02.00.01.01, r: 0010, c: 0030) reported as 2619000 * 0.045)) else ((t: C03.00.01.01, r: 0020, c: 0010) reported as 0 = (t: C01.00.01.01, r: 0020, c: 0010) reported as 1568000 - ((t: OF02.00.01.01, r: 0010, c: 0010) reported as 142684000 * 0.045))]
+Causes5 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0787
+COMMON EQUITY TIER 1 CAPITAL is equal to CET1 capital ratio multiplied by c0030 if it is greater than c0010, otherwise c0010 (Total risk exposure amount) shall be used in the calculation in lieu of c0030 // [boe_b0787];[if ((t: OF02.00.01.01, r: 0010, c: 0030) reported as 2619000 > (t: OF02.00.01.01, r: 0010, c: 0010) reported as 142684000) then ((t: C01.00.01.01, r: 0020, c: 0010) reported as 1568000 = (t: OF02.00.01.01, r: 0010, c: 0030) reported as 2619000 * (t: C03.00.01.01, r: 0010, c: 0010) reported as 0.0) else ((t: C01.00.01.01, r: 0020, c: 0010) reported as 1568000 = (t: OF02.00.01.01, r: 0010, c: 0010) reported as 142684000 * (t: C03.00.01.01, r: 0010, c: 0010) reported as 0.0)]
+Causes5 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0740
+VALUE ADJUSTMENTS AND PROVISIONS should be consistent across templates for the relevant exposure class // [boe_b0740];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0290) reported as 0 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0290) reported as 0 0 0) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0110) reported as 4599000 9610000 5711000 848000 7840000 5140000 19965000 715000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0739
+EXPECTED LOSS AMOUNT should be consistent across templates for the relevant exposure classes // [boe_b0739];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0280) reported as 500000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0280) reported as 100000 0 362000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0100) reported as 9552000 9477000 9057000 6449000 3482000 9373000 10884000 2840000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0739
+EXPECTED LOSS AMOUNT should be consistent across templates for the relevant exposure classes // [boe_b0739];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0280) reported as 329500 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0280) reported as 1000 0 20000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0100) reported as 7296000 5690000 4412000 8474000 3454000 12135000 9610000 3064000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0739
+EXPECTED LOSS AMOUNT should be consistent across templates for the relevant exposure classes // [boe_b0739];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0280) reported as 100000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0280) reported as 0 5000 1000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0100) reported as 1758000 3475000 9156000 8791000 2415000 12272000 11817000 2957000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0739
+EXPECTED LOSS AMOUNT should be consistent across templates for the relevant exposure classes // [boe_b0739];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0280) reported as 20000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0280) reported as 5000 0 1000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0100) reported as 3603000 5516000 9572000 4499000 3233000 14116000 18255000 7118000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0739
+EXPECTED LOSS AMOUNT should be consistent across templates for the relevant exposure classes // [boe_b0739];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0280) reported as 100000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0280) reported as 95000 5000 0) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0100) reported as 3892000 9850000 9913000 3461000 936000 12135000 9467000 79000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0739
+EXPECTED LOSS AMOUNT should be consistent across templates for the relevant exposure classes // [boe_b0739];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0280) reported as 100000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0280) reported as 1000 72000 1000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0100) reported as 5113000 3318000 3972000 1758000 4407000 1943000 9348000 8697000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0739
+EXPECTED LOSS AMOUNT should be consistent across templates for the relevant exposure classes // [boe_b0739];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0280) reported as 32000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0280) reported as 20000 5000 1000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0100) reported as 7426000 3768000 9177000 941000 9829000 8678000 10911000 6039000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0739
+EXPECTED LOSS AMOUNT should be consistent across templates for the relevant exposure classes // [boe_b0739];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0280) reported as 71500 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0280) reported as 5000 5000 20000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0100) reported as 133000 2928000 6186000 2692000 9297000 11191000 5323000 9815000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0739
+EXPECTED LOSS AMOUNT should be consistent across templates for the relevant exposure classes // [boe_b0739];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0280) reported as 20000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0280) reported as 0 0 0) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0100) reported as 5335000 7236000 9860000 742000 649000 14962000 12714000 8910000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0739
+EXPECTED LOSS AMOUNT should be consistent across templates for the relevant exposure classes // [boe_b0739];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0280) reported as 26000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0280) reported as 1000 0 0) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0100) reported as 8296000 117000 2880000 9962000 5320000 8565000 9725000 61000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0739
+EXPECTED LOSS AMOUNT should be consistent across templates for the relevant exposure classes // [boe_b0739];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0280) reported as 5000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0280) reported as 0 4000 0) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0100) reported as 2715000 8304000 9571000 848000 1518000 14202000 22021000 203000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0739
+EXPECTED LOSS AMOUNT should be consistent across templates for the relevant exposure classes // [boe_b0739];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0280) reported as 100000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0280) reported as 1000 1000 80000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0100) reported as 7110000 4385000 3165000 6936000 6148000 17156000 9948000 8449000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0739
+EXPECTED LOSS AMOUNT should be consistent across templates for the relevant exposure classes // [boe_b0739];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0280) reported as 20000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0280) reported as 0 0 19000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0100) reported as 4965000 5433000 8842000 172000 6917000 7720000 19170000 8971000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0739
+EXPECTED LOSS AMOUNT should be consistent across templates for the relevant exposure classes // [boe_b0739];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0280) reported as 35000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0280) reported as 20000 0 0) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0100) reported as 9647000 3670000 6330000 3150000 6003000 8580000 6539000 896000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0739
+EXPECTED LOSS AMOUNT should be consistent across templates for the relevant exposure classes // [boe_b0739];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0280) reported as 20000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0280) reported as 0 0 0) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0100) reported as 6845000 9447000 3332000 4478000 7476000 18350000 14320000 1604000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0739
+EXPECTED LOSS AMOUNT should be consistent across templates for the relevant exposure classes // [boe_b0739];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0280) reported as 81000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0280) reported as 0 0 76000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0100) reported as 2358000 9763000 7091000 5712000 4099000 9806000 14118000 8516000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0739
+EXPECTED LOSS AMOUNT should be consistent across templates for the relevant exposure classes // [boe_b0739];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0280) reported as 99000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0280) reported as 5000 5000 70000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0100) reported as 4370000 3906000 3816000 7054000 1012000 18746000 23933000 5724000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0738
+RISK-WEIGHTED EXPOSURE AMOUNT should be reported consistently across templates for the relevant exposure classes // [boe_b0738];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0260) reported as 952000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0260) reported as 202000 146000 5000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0090) reported as 2424000 3158000 1960000 4140000 9723000 13708000 15250000 6819000)]
+Causes13 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0738
+RISK-WEIGHTED EXPOSURE AMOUNT should be reported consistently across templates for the relevant exposure classes // [boe_b0738];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0260) reported as 105000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0260) reported as 56000 1000 1000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0090) reported as 3385000 8258000 5625000 8412000 369000 10707000 15544000 4919000)]
+Causes13 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0738
+RISK-WEIGHTED EXPOSURE AMOUNT should be reported consistently across templates for the relevant exposure classes // [boe_b0738];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0260) reported as 2000000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0260) reported as 105000 100000 1000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0090) reported as 9242000 1064000 2877000 6952000 6982000 10748000 10313000 1708000)]
+Causes13 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0738
+RISK-WEIGHTED EXPOSURE AMOUNT should be reported consistently across templates for the relevant exposure classes // [boe_b0738];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0260) reported as 100000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0260) reported as 73000 1000 20000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0090) reported as 6630000 8024000 7277000 3354000 1528000 8200000 22162000 5722000)]
+Causes13 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0738
+RISK-WEIGHTED EXPOSURE AMOUNT should be reported consistently across templates for the relevant exposure classes // [boe_b0738];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0260) reported as 1893000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0260) reported as 520000 100000 546000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0090) reported as 9646000 6521000 4845000 736000 2407000 15277000 22382000 5479000)]
+Causes13 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0738
+RISK-WEIGHTED EXPOSURE AMOUNT should be reported consistently across templates for the relevant exposure classes // [boe_b0738];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0260) reported as 500000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0260) reported as 5000 20000 5000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0090) reported as 291000 2756000 6732000 1937000 394000 9996000 12412000 8229000)]
+Causes13 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0738
+RISK-WEIGHTED EXPOSURE AMOUNT should be reported consistently across templates for the relevant exposure classes // [boe_b0738];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0260) reported as 230000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0260) reported as 100000 5000 20000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0090) reported as 2090000 5634000 3949000 383000 6959000 12546000 7842000 1216000)]
+Causes13 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0738
+RISK-WEIGHTED EXPOSURE AMOUNT should be reported consistently across templates for the relevant exposure classes // [boe_b0738];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0260) reported as 68000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0260) reported as 21000 20000 20000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0090) reported as 2663000 7572000 5538000 6799000 9891000 9880000 24616000 622000)]
+Causes13 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0738
+RISK-WEIGHTED EXPOSURE AMOUNT should be reported consistently across templates for the relevant exposure classes // [boe_b0738];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0260) reported as 101000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0260) reported as 0 0 0) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0090) reported as 9151000 3858000 9527000 4871000 5332000 9588000 16333000 3214000)]
+Causes13 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0738
+RISK-WEIGHTED EXPOSURE AMOUNT should be reported consistently across templates for the relevant exposure classes // [boe_b0738];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0260) reported as 500000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0260) reported as 1000 1000 100000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0090) reported as 5085000 8688000 7152000 3055000 273000 12862000 16133000 2000)]
+Causes13 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0738
+RISK-WEIGHTED EXPOSURE AMOUNT should be reported consistently across templates for the relevant exposure classes // [boe_b0738];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0260) reported as 131000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0260) reported as 0 0 0) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0090) reported as 7979000 3238000 6099000 2585000 4855000 16733000 12161000 4530000)]
+Causes13 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0738
+RISK-WEIGHTED EXPOSURE AMOUNT should be reported consistently across templates for the relevant exposure classes // [boe_b0738];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0260) reported as 130000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0260) reported as 15000 0 0) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0090) reported as 2118000 9155000 6190000 6790000 8542000 7903000 13550000 2513000)]
+Causes13 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0738
+RISK-WEIGHTED EXPOSURE AMOUNT should be reported consistently across templates for the relevant exposure classes // [boe_b0738];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0260) reported as 22000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0260) reported as 0 0 2000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0090) reported as 5784000 6085000 2157000 8385000 7373000 11991000 22501000 9893000)]
+Causes13 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0738
+RISK-WEIGHTED EXPOSURE AMOUNT should be reported consistently across templates for the relevant exposure classes // [boe_b0738];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0260) reported as 45000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0260) reported as 19000 1000 0) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0090) reported as 5750000 1354000 2543000 773000 5853000 15319000 20827000 9826000)]
+Causes13 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0738
+RISK-WEIGHTED EXPOSURE AMOUNT should be reported consistently across templates for the relevant exposure classes // [boe_b0738];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0260) reported as 166000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0260) reported as 117000 23000 5000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0090) reported as 6829000 4781000 7326000 5002000 3081000 14439000 4500000 5383000)]
+Causes13 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0738
+RISK-WEIGHTED EXPOSURE AMOUNT should be reported consistently across templates for the relevant exposure classes // [boe_b0738];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0260) reported as 3340000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0260) reported as 5000 100000 6000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0090) reported as 8862000 7220000 7010000 1382000 7289000 10182000 18136000 5370000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0738
+RISK-WEIGHTED EXPOSURE AMOUNT should be reported consistently across templates for the relevant exposure classes // [boe_b0738];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0260) reported as 183000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0260) reported as 30000 100000 21000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0090) reported as 6551000 4155000 977000 8106000 2244000 5201000 14663000 9239000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0737
+NUMBER OF OBLIGORS should be reported consistently across templates // [boe_b0737];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0300) reported as 2451000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0300) reported as 5000 100000 1000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0060) reported as 68000 18000 39000 88000 38000 75000 155000 74000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0737
+NUMBER OF OBLIGORS should be reported consistently across templates // [boe_b0737];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0300) reported as 2700000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0300) reported as 0 2000000 100000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0060) reported as 95000 64000 9000 30000 8000 141000 153000 39000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0737
+NUMBER OF OBLIGORS should be reported consistently across templates // [boe_b0737];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0300) reported as 500000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0300) reported as 20000 380000 0) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0060) reported as 22000 47000 23000 49000 72000 151000 180000 35000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0737
+NUMBER OF OBLIGORS should be reported consistently across templates // [boe_b0737];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0300) reported as 100000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0300) reported as 0 0 0) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0060) reported as 79000 8000 66000 68000 58000 77000 120000 48000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0737
+NUMBER OF OBLIGORS should be reported consistently across templates // [boe_b0737];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0300) reported as 705000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0300) reported as 5000 480000 100000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0060) reported as 28000 73046 47982 78066 39000 142000 78000 50992)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0737
+NUMBER OF OBLIGORS should be reported consistently across templates // [boe_b0737];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0300) reported as 20000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0300) reported as 0 0 0) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0060) reported as 17135 81000 69000 94000 40000 161000 78000 56000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0737
+NUMBER OF OBLIGORS should be reported consistently across templates // [boe_b0737];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0300) reported as 561000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0300) reported as 20000 1000 20000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0060) reported as 5000 14000 48000 36000 63000 116000 174000 50000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0737
+NUMBER OF OBLIGORS should be reported consistently across templates // [boe_b0737];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0300) reported as 2025000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0300) reported as 1000 1404000 20000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0060) reported as 26000 49000 15000 40000 75000 146000 121000 15000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0737
+NUMBER OF OBLIGORS should be reported consistently across templates // [boe_b0737];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0300) reported as 20000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0300) reported as 0 15000 0) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0060) reported as 2000 45000 33000 67000 53000 79000 32000 64000)]
+Causes12 locations
+
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0737
+NUMBER OF OBLIGORS should be reported consistently across templates // [boe_b0737];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0300) reported as 2000000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0300) reported as 20000 753000 20000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0060) reported as 35000 81000 1000 95000 78000 113000 237000 15000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0737
+NUMBER OF OBLIGORS should be reported consistently across templates // [boe_b0737];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0300) reported as 475000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0300) reported as 100000 5000 1000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0060) reported as 29000 21000 62000 54000 58000 137000 195000 59000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0737
+NUMBER OF OBLIGORS should be reported consistently across templates // [boe_b0737];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0300) reported as 5000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0300) reported as 4000 0 0) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0060) reported as 77000 92000 90000 96000 1000 12000 164000 68000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0737
+NUMBER OF OBLIGORS should be reported consistently across templates // [boe_b0737];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0300) reported as 520000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0300) reported as 500000 5000 9000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0060) reported as 92000 93000 44000 60000 31000 59000 189000 84000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0737
+NUMBER OF OBLIGORS should be reported consistently across templates // [boe_b0737];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0300) reported as 20000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0300) reported as 0 0 0) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0060) reported as 58334 82000 89000 23000 1000 123000 146000 98000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0737
+NUMBER OF OBLIGORS should be reported consistently across templates // [boe_b0737];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0300) reported as 106000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0300) reported as 5000 20000 71000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0060) reported as 48000 35000 9000 88000 3000 50000 104000 84000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0737
+NUMBER OF OBLIGORS should be reported consistently across templates // [boe_b0737];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0300) reported as 20000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0300) reported as 10000 0 5000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0060) reported as 95000 5000 34000 72000 23000 63000 143000 76000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0737
+NUMBER OF OBLIGORS should be reported consistently across templates // [boe_b0737];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0300) reported as 1165000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0300) reported as 20000 20000 100000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0060) reported as 45000 61000 90000 91000 5000 61000 144000 78000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0736
+EXPOSURE VALUE POST CONVERSION FACTORS AND POST CRM should be consistent across templates for the relevant exposure classes // [boe_b0736];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0110) reported as 4500000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0110) reported as 500000 20000 100000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0040) reported as 1062000 325000 2987000 6498000 6246000 7156000 9647000 8973000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0736
+EXPOSURE VALUE POST CONVERSION FACTORS AND POST CRM should be consistent across templates for the relevant exposure classes // [boe_b0736];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0110) reported as 3907000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0110) reported as 100000 500000 2136000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0040) reported as 5891000 5519000 9475000 3094000 6181000 11396000 9918000 3325000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0736
+EXPOSURE VALUE POST CONVERSION FACTORS AND POST CRM should be consistent across templates for the relevant exposure classes // [boe_b0736];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0110) reported as 525000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0110) reported as 1000 20000 20000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0040) reported as 8557000 3252000 9745000 3341000 1117000 4795000 4531000 5625000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0736
+EXPOSURE VALUE POST CONVERSION FACTORS AND POST CRM should be consistent across templates for the relevant exposure classes // [boe_b0736];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0110) reported as 2000000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0110) reported as 0 0 0) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0040) reported as 1830000 5687000 866000 8782000 3068000 13132000 9673000 7187000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0736
+EXPOSURE VALUE POST CONVERSION FACTORS AND POST CRM should be consistent across templates for the relevant exposure classes // [boe_b0736];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0110) reported as 500000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0110) reported as 0 480000 0) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0040) reported as 7397000 9490000 1341000 3964000 4063000 14477000 12547000 8225000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0736
+EXPOSURE VALUE POST CONVERSION FACTORS AND POST CRM should be consistent across templates for the relevant exposure classes // [boe_b0736];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0110) reported as 106000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0110) reported as 0 0 0) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0040) reported as 9212000 785000 8997000 8763000 2518000 7945000 11759000 4917000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0736
+EXPOSURE VALUE POST CONVERSION FACTORS AND POST CRM should be consistent across templates for the relevant exposure classes // [boe_b0736];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0110) reported as 2000000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0110) reported as 0 1994000 5000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0040) reported as 5289000 2852000 7360000 7811000 8281000 4946000 20928000 4018000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0736
+EXPOSURE VALUE POST CONVERSION FACTORS AND POST CRM should be consistent across templates for the relevant exposure classes // [boe_b0736];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0110) reported as 220000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0110) reported as 1000 100000 1000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0040) reported as 9212000 7413000 3924000 828000 9283000 12813000 15781000 395000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0736
+EXPOSURE VALUE POST CONVERSION FACTORS AND POST CRM should be consistent across templates for the relevant exposure classes // [boe_b0736];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0110) reported as 100000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0110) reported as 20000 5000 5000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0040) reported as 7247000 5304000 5645000 3900000 302000 7933000 23579000 5881000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0736
+EXPOSURE VALUE POST CONVERSION FACTORS AND POST CRM should be consistent across templates for the relevant exposure classes // [boe_b0736];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0110) reported as 662000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0110) reported as 100000 5000 5000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0040) reported as 2819000 950000 9697000 6878000 6616000 13405000 8912000 8707000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0736
+EXPOSURE VALUE POST CONVERSION FACTORS AND POST CRM should be consistent across templates for the relevant exposure classes // [boe_b0736];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0110) reported as 125000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0110) reported as 120000 0 0) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0040) reported as 6956000 8053000 9181000 8473000 178000 3796000 11939000 265000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0736
+EXPOSURE VALUE POST CONVERSION FACTORS AND POST CRM should be consistent across templates for the relevant exposure classes // [boe_b0736];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0110) reported as 100000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0110) reported as 0 0 0) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0040) reported as 8389000 1200000 1463000 2924000 4073000 11027000 8974000 1331000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0736
+EXPOSURE VALUE POST CONVERSION FACTORS AND POST CRM should be consistent across templates for the relevant exposure classes // [boe_b0736];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0110) reported as 500000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0110) reported as 494000 0 1000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0040) reported as 9544000 1645000 7068000 6790000 2582000 4292000 15384000 9782000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0736
+EXPOSURE VALUE POST CONVERSION FACTORS AND POST CRM should be consistent across templates for the relevant exposure classes // [boe_b0736];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0110) reported as 461000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0110) reported as 0 460000 0) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0040) reported as 1778000 5815000 9043000 897000 9387000 6990000 14699000 9680000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0736
+EXPOSURE VALUE POST CONVERSION FACTORS AND POST CRM should be consistent across templates for the relevant exposure classes // [boe_b0736];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0110) reported as 500000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0110) reported as 0 0 0) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0040) reported as 6209000 7305000 2558000 6686000 4277000 14668000 14469000 879000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0736
+EXPOSURE VALUE POST CONVERSION FACTORS AND POST CRM should be consistent across templates for the relevant exposure classes // [boe_b0736];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0110) reported as 508000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0110) reported as 500000 5000 1000) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0040) reported as 1822000 1559000 5710000 3877000 6018000 7773000 19585000 3170000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0736
+EXPOSURE VALUE POST CONVERSION FACTORS AND POST CRM should be consistent across templates for the relevant exposure classes // [boe_b0736];[scope((t: OF08.01.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.01, r: 0010, c: 0110) reported as 100000 - sum((t: OF08.01.01.01, r: 0040; 0050; 0060, c: 0110) reported as 0 20000 0) = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130; 0170, c: 0040) reported as 9870000 4287000 2584000 4000 4396000 17169000 14833000 3912000)]
+Causes12 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0735
+OFF-Balance sheet items pre-CFs should be consistent across templates for the relevant exposure classes // [boe_b0735];[scope((t: OF08.01.01.02, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.02, r: 0010, c: 0100) reported as 534000 = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130, c: 0020) reported as 8069000 5083000 4598000 5643000 9473000 16461000 20350000)]
+Causes9 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0735
+OFF-Balance sheet items pre-CFs should be consistent across templates for the relevant exposure classes // [boe_b0735];[scope((t: OF08.01.01.02, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.02, r: 0010, c: 0100) reported as 807500 = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130, c: 0020) reported as 4970000 426000 2180000 240000 8059000 14498000 20130000)]
+Causes9 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0735
+OFF-Balance sheet items pre-CFs should be consistent across templates for the relevant exposure classes // [boe_b0735];[scope((t: OF08.01.01.02, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.02, r: 0010, c: 0100) reported as 400000 = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130, c: 0020) reported as 9690000 4169000 3917000 5862000 5318000 3201000 17547000)]
+Causes9 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0735
+OFF-Balance sheet items pre-CFs should be consistent across templates for the relevant exposure classes // [boe_b0735];[scope((t: OF08.01.01.02, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.02, r: 0010, c: 0100) reported as 40000 = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130, c: 0020) reported as 4717000 3609000 415000 3077000 9124000 2955000 15983000)]
+Causes9 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0735
+OFF-Balance sheet items pre-CFs should be consistent across templates for the relevant exposure classes // [boe_b0735];[scope((t: OF08.01.01.02, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.02, r: 0010, c: 0100) reported as 96000 = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130, c: 0020) reported as 9181000 4665000 5299000 7082000 5630000 7921000 11319000)]
+Causes9 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0735
+OFF-Balance sheet items pre-CFs should be consistent across templates for the relevant exposure classes // [boe_b0735];[scope((t: OF08.01.01.02, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.02, r: 0010, c: 0100) reported as 480000 = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130, c: 0020) reported as 1064000 1494000 3798000 2888000 8243000 9288000 4048000)]
+Causes9 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0735
+OFF-Balance sheet items pre-CFs should be consistent across templates for the relevant exposure classes // [boe_b0735];[scope((t: OF08.01.01.02, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.02, r: 0010, c: 0100) reported as 100000 = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130, c: 0020) reported as 6811000 2549000 1228000 3139000 6051000 10841000 19650000)]
+Causes9 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0735
+OFF-Balance sheet items pre-CFs should be consistent across templates for the relevant exposure classes // [boe_b0735];[scope((t: OF08.01.01.02, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.02, r: 0010, c: 0100) reported as 116500 = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130, c: 0020) reported as 5070000 784000 4282000 2304000 3102000 9200000 18059000)]
+Causes9 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0735
+OFF-Balance sheet items pre-CFs should be consistent across templates for the relevant exposure classes // [boe_b0735];[scope((t: OF08.01.01.02, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.02, r: 0010, c: 0100) reported as 60000 = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130, c: 0020) reported as 6556000 6315000 560000 2834000 5706000 7098000 14110000)]
+Causes9 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0735
+OFF-Balance sheet items pre-CFs should be consistent across templates for the relevant exposure classes // [boe_b0735];[scope((t: OF08.01.01.02, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.02, r: 0010, c: 0100) reported as 95000 = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130, c: 0020) reported as 564000 4182000 9212000 6468000 1525000 11090000 10283000)]
+Causes9 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0735
+OFF-Balance sheet items pre-CFs should be consistent across templates for the relevant exposure classes // [boe_b0735];[scope((t: OF08.01.01.02, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.02, r: 0010, c: 0100) reported as 85000 = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130, c: 0020) reported as 8946000 7038000 728000 7298000 6321000 6881000 18690000)]
+Causes9 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0735
+OFF-Balance sheet items pre-CFs should be consistent across templates for the relevant exposure classes // [boe_b0735];[scope((t: OF08.01.01.02, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.02, r: 0010, c: 0100) reported as 120000 = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130, c: 0020) reported as 2796000 9582000 1998000 4385000 6154000 6072000 10144000)]
+Causes9 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0735
+OFF-Balance sheet items pre-CFs should be consistent across templates for the relevant exposure classes // [boe_b0735];[scope((t: OF08.01.01.02, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.02, r: 0010, c: 0100) reported as 22000 = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130, c: 0020) reported as 9783000 4471000 8319000 3194000 7523000 3408000 23400000)]
+Causes9 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0735
+OFF-Balance sheet items pre-CFs should be consistent across templates for the relevant exposure classes // [boe_b0735];[scope((t: OF08.01.01.02, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.02, r: 0010, c: 0100) reported as 100000 = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130, c: 0020) reported as 9488000 1629000 578000 2136000 3464000 5153000 20550000)]
+Causes9 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0735
+OFF-Balance sheet items pre-CFs should be consistent across templates for the relevant exposure classes // [boe_b0735];[scope((t: OF08.01.01.02, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.02, r: 0010, c: 0100) reported as 25000 = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130, c: 0020) reported as 9602000 8393000 9046000 231000 3542000 2293000 19641000)]
+Causes9 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0735
+OFF-Balance sheet items pre-CFs should be consistent across templates for the relevant exposure classes // [boe_b0735];[scope((t: OF08.01.01.02, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.02, r: 0010, c: 0100) reported as 1000 = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130, c: 0020) reported as 7158000 5506000 6834000 9461000 5530000 9973000 14066000)]
+Causes9 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0735
+OFF-Balance sheet items pre-CFs should be consistent across templates for the relevant exposure classes // [boe_b0735];[scope((t: OF08.01.01.02, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024),(t: OF08.03.01.01, z:0001;0002;0006;0009;0010;0011;0012;0015;0016;0017;0018;0019;0020;0021;0022;0023;0024))];[(t: OF08.01.01.02, r: 0010, c: 0100) reported as 84000 = sum((t: OF08.03.01.01, r: 0010; 0040; 0050; 0060; 0070; 0100; 0130, c: 0020) reported as 7402000 5332000 8869000 2817000 579000 5300000 23351000)]
+Causes9 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0561
+This is the overall capital requirements ratio for CET1 capital (row 0170) calculated by using as parameters the largest of either c0030 (if c0030 is greater than c0010) or otherwise c0010 // [boe_b0561];[if ((t: OF02.00.01.01, r: 0010, c: 0030) reported as 2619000 > (t: OF02.00.01.01, r: 0010, c: 0010) reported as 142684000) then (if (t: OF02.00.01.01, r: 0010, c: 0030) reported as 2619000 != 0 then (t: C03.00.01.01, r: 0170, c: 0010) reported as 0.0 = imax(0.045, (t: C03.00.01.01, r: 0140, c: 0010) reported as 0.0449 + (t: C04.00.01.01, r: 0740, c: 0010) reported as 29590000 / (t: OF02.00.01.01, r: 0010, c: 0030) reported as 2619000) else true()) else (if (t: OF02.00.01.01, r: 0010, c: 0010) reported as 142684000 != 0 then (t: C03.00.01.01, r: 0170, c: 0010) reported as 0.0 = imax(0.045, (t: C03.00.01.01, r: 0140, c: 0010) reported as 0.0449 + (t: C04.00.01.01, r: 0740, c: 0010) reported as 29590000 / (t: OF02.00.01.01, r: 0010, c: 0010) reported as 142684000) else true())]
+Causes6 locations
+xbrl.xiif.AssertionUnsatisfied.boe_boe_b0560
+This is the Overall capital requirement ratio (OCR), calculated by using as parameters either OF02 c0030 if c0030 is greater than c0010, or otherwise c0010 // [boe_b0560];[if ((t: OF02.00.01.01, r: 0010, c: 0030) reported as 2619000 > (t: OF02.00.01.01, r: 0010, c: 0010) reported as 142684000) then (if (t: OF02.00.01.01, r: 0010, c: 0030) reported as 2619000 != 0 then (t: C03.00.01.01, r: 0160, c: 0010) reported as 0.0 = imax(0.08, (t: C03.00.01.01, r: 0130, c: 0010) reported as 0.08 + (t: C04.00.01.01, r: 0740, c: 0010) reported as 29590000 / (t: OF02.00.01.01, r: 0010, c: 0030) reported as 2619000) else true()) else (if (t: OF02.00.01.01, r: 0010, c: 0010) reported as 142684000 != 0 then (t: C03.00.01.01, r: 0160, c: 0010) reported as 0.0 = imax(0.08, (t: C03.00.01.01, r: 0130, c: 0010) reported as 0.08 + (t: C04.00.01.01, r: 0740, c: 0010) reported as 29590000 / (t: OF02.00.01.01, r: 0010, c: 0010) reported as 142684000) else true())]
+Causes6 locations
+xbrl.xiif.err:XPTY0004
+Error in XPath expression on element 'va:valueAssertion' with id 'boe_boe_b0366': Unsuitable types for * operation (xs:string, xs:string). Found while atomizing the first operand of '>=' in {iaf:numeric-add(...)} on line 1
+CausesNo applicable causes
+xbrl.xiif.err:XPTY0004
+Error in XPath expression on element 'va:valueAssertion' with id 'boe_boe_b0365': Cannot compare xs:string to xs:integer
+CausesNo applicable causes
+

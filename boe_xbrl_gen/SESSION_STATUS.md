@@ -1,0 +1,271 @@
+# Session Status & Outstanding Items — BoE Banking XBRL Generator
+
+**Last updated:** 2026-07-24
+**Goal:** Generate BoE Banking XBRL v4.0.0 instances shaped like the official samples, with
+random values that are **business-rule valid** (Arelle-verified), reusable across all
+banking returns. Target: zero violations across all modules.
+
+> Read `USER_GUIDE.md` for prerequisites/usage, `ARCHITECTURE.md` for design, `README.md`
+> for commands. This file is the **"where we are / what's left"** handoff.
+
+---
+
+## How to resume (quick commands)
+```powershell
+$env:PYTHONIOENCODING="utf-8"
+cd C:\Users\177069\ClaudeLearning\boe_xbrl_gen
+# one module (small/medium):
+python src\pipeline.py --sample "..\boebankingtaxonomysampleinstancesv400\<sample>.xbrl" --out out\X.xbrl --seed 1
+# one large module (offline solve + 1 validation):
+python src\solve_all.py --in <gen> --out <out> --val-dir "<framework val dir>" --pkg ..\boebanking400.zip --defaults model\dim_defaults.json --validate
+# all modules under N MB, with validation:
+python src\sweep.py --validate --max-mb 2
+# validate any instance:
+python -m arelle.CntlrCmdLine --packages ..\boebanking400.zip --validate -f out\X.xbrl --logFile out\v.log --logLevel info
+```
+Model artifacts in `model\` (dpm_model.json, dim_defaults.json). Rule caches in `out\` /
+`out\sweep\` (`rules_<framework>_<date>.pkl`). Outputs in `out\` and `out\sweep\`.
+
+---
+
+## PRA001 valid-instance drive (2026-06-24 → 2026-07-24) — moved here from `studio/SESSION_STATUS.md`
+*This is the generator-engine thread (making a generated PRA001 pass TDG Beacon). It lived in the studio
+status file by accident; its natural home is here. **Full blow-by-blow trail = memory
+`pra001-valid-instance-progress.md`.** The dated studio entries below (06-24 → 07-02) also belong to this
+thread but are left in the studio file for now as they interleave with genvalid/hypercube studio work.*
+
+### ▶ 2026-07-24 — v2 → **v12** (surgical → coordinated regen → OF24)
+Files on disk (repo root): `ABCDEFGHIJ0123456789_pra001_2026-02-28_VALID_v{6,8,11,12}.xbrl` (~34.8 MB each).
+v1–v5, v7, v9, v10 were interim/discarded; **v12** (2026-07-24 17:59) is the newest candidate. **v8 = last
+TDG-CONFIRMED baseline (75 error rules).** 0 dimensional / 0 schema errors throughout.
+- **v2/v3 (surgical, `src/solve_existing.py`):** capped closed L1/L2 sweep on the shipped file; fixed a
+  **parser bug** (leading/paren coefficients `1.2*isum`, `(0.9*{cell})`) + a **default-member bridge-drop
+  bug** that had masked true fails.
+- **v5:** b0471 paren-coef class fixed (OF07 clean at TDG). **Surgical ceiling** — cross-table edits cascade
+  (OF08-hub cells shared) and the offline classifier can't see cross-table breakage (only TDG verifies).
+- **v6:** OF34.07↔OF08.01 aggregation → **157 → 111 error rules** (after severity re-assessment).
+- **v8 (BEST / last TDG-confirmed = 75):** OF09.02↔OF08.01 CEG-total generation (`src/gen_of0902.py`,
+  2-phase). Journey **157 → 75 error rules (−52%)**.
+- **v9:** OF08.01↔03/06 surgical cross → cascaded, DISCARDED offline before any TDG cycle.
+- **Coordinated-regen scope + Phase 0/1 proof** (`COORDINATED_REGEN_SCOPE.md`, `tools/phase0_dag.py`,
+  `tools/phase1_derive.py`): OF08.01 component = **35 tables, 385 cross + 643 single-table rules**;
+  leaf-first balances **~98.5%** of additive equations by construction.
+- **v10 (`src/coregen.py`):** regressed at TDG (~650 warnings — populated isNull cells); DELETED.
+- **v11:** coregen + **sparsity guards** (165 targeted changes). TDG: **332 errors + 95 warnings**.
+- **v12 (newest, AWAITING TDG):** `tools/fix_of24.py` — deterministic OF24 non-linear quick-win, **7 fact
+  edits** (date b0899/b0900; imax b0676–b0679; averages b0551/b0552). No offline regression.
+
+**🔜 RESUME PLAN:** (1) **Submit v12 to TDG** → measure vs v11 (332) / v8 (75). (2) Group C b0361/b0363
+(sqrt-sum-of-squares, 14 inst) pending — check formula tolerance first. (3) **0 errors NOT reachable**: 2
+XPTY0004 rules (b0365/b0366) are taxonomy/tool errors (fire on BoE's own sample) + ~88 genuine
+over-determinations → target = MINIMISE. (4) Real frontier = OF08-hub cross-table cluster → **Phase 2
+common-basis regeneration** (`COORDINATED_REGEN_SCOPE.md`). Safe fallback = **v8**. Package hash `50c2f2d9…`.
+Tools: `classify_fails.py`, `diff_reports.py`, `triage_errors.py`, `sev_reassess.py`, `gen_of0902.py`,
+`coregen.py`, `verify_coregen.py`, `phase0_dag.py`, `fix_of24.py`.
+
+### ▶ 2026-07-23 — surgical L1/L2 sweep (capped, SAFE) + open-table support (negative for OF08)
+Continued `src/solve_existing.py` (no generation run; verified on copies). L1/L2 sweep exposed a **6,503-cell
+mega-component fusing OF02/OF07/C24 + 7 tables** via cell-sharing → added **`--max-comp` (default 400)** to
+solve only small components. Capped sweep SAFE (L1 −5/0, L2 −5/0, L3 +2 expected, L4 0 = 10 rules fixed, 0
+regressions). Open-table `--open` (`expand_to_full()` per-signature) mechanically works but regressed OF08.02
+(shares facts with OF08.01/C04/OF34.07) → the OF08 hypercube cluster needs JOINT L1+L2+L3 solving (genvalid's
+`_nonneg_additive_solve`). *(Its "apply capped sweep → `_VALID_v2.xbrl`" plan was executed the same day, then
+iterated to v12 — see the 2026-07-24 entry above.)*
+
+### ▶ 2026-07-22 — STRATEGY SHIFT: surgical, minimal-perturbation rule-fixing
+Stopped regenerating all datapoints; instead fix still-failing rules level-by-level, touching only cells
+coupled to a failing rule. Built **`tools/classify_fails.py`** (offline per-level fail classifier: L1
+single-additive / L2 single-comparison / L3 cross-additive / L4 cross-comparison / NONLINEAR / OTHER; TDG
+absent=0 semantics, `if…then` preconditions, half-ULP `@decimals` tolerance), **`tools/diff_reports.py`**
+(diff two classify reports), and **`src/solve_existing.py`** (keys facts by (concept-local, dim-local
+frozenset); single-table additive eqs + ≤/= constraints module-wide; union-find components; re-solve only
+dirty components via MILP min Σ|x−cur| with tolerance bands; dry-run default). Key findings: 43,796/50k facts
+are `decimals=-3` (±500) so ±1–9 "fails" were rounding NOISE; cell-sharing across tables is real (components
+must be module-wide); C04.00.01.01 proof = 2 cells changed, 0 regressions; OF07/OF08 pathological (route to
+genvalid).
+
+## Update 2026-06-15 (evening) — `true()` parser fix + cross-table feedback solver
+- **Parser bug fixed (global, high-impact):** the expr grammar treated `true`/`false` as
+  bare keyword literals, so any test ending `else (true())` — the standard conditional
+  shape — **failed to parse and was silently skipped** (`_safe_parse` -> None). `expr.py`
+  now parses `true()`/`false()` as function calls, and adds `QName(ns,local)` ->
+  Clark-notation evaluation; `solve.py` resolves enumeration fact values
+  (`boe_eba_CT:x6004`) to Clark so guards like `$v = QName(...)` compare correctly.
+  - This unblocked the **conditional-empty** class (`if ($v=member) then empty($w)`) and
+    conditional equalities everywhere. RFB007 b1129/b1130: **38 violations -> 0**.
+  - Sub-2MB re-sweep total: **335 -> 300**. One minor regression (LVR001 39->45, a newly
+    active leverage conditional) — fully absorbed by the feedback solver below.
+- **Cross-table aggregation feedback solver (`src/feedback.py`):** the hard tail
+  `{T1,c} = sum({T2,c})` couples open tables with *mismatched* typed dims, so offline
+  implicit filtering can't reproduce Arelle's exact fact set (verified vs the official
+  sample — a shared-aspect join gives 76M, not the 6.3M total). Instead we read the pairing
+  straight from **Arelle's unsatisfied-assertion message**, which lists the bound fact line
+  numbers; map line -> Fact (`el.sourceline`), classify target (non-seq var) vs summands
+  (seq var) by selector, and set `target = sum(summands)`. Wired into `sweep.py --feedback`
+  (validate -> feedback -> re-validate). Confirmed (Arelle):
+  - **RFB007 52 -> 0** (now fully clean), **RFB004 64 -> 20**, **RFB008 15 -> 9**,
+    **RFB003 4 -> 2**, **LVR001 45 -> 30**; RFB001 19 -> 19 (different class).
+- **Net this session: sub-2MB 335 -> 175** (authoritative `--feedback` re-sweep, confirmed).
+  Per-module viol: PRAMEM/PRA118/PRA114/PRAMEM/RFB002/RFB005/RFB006/LVR002/**RFB007**=0;
+  PRAGAAP 2, RFB003 2, MRL001 2, PRA115 5, PRAIFRS 6, RFB008 9, PRA117 10, PRA113 10, MRL003
+  11, RFB001 19, PRA112 20, RFB004 20, LVR001 29, MRL002 30. RFB007 joins the clean set.
+- **PRA001 (COREP giant, 61,498 facts) regenerated + validated 2026-06-15 evening = 0 formula
+  violations (CONFIRMED, not assumed).** Offline solve: 8,965 derived, 5,952 const/sign adj,
+  3,700 ineq adj, 10,120 facts removed (existence). Arelle 2,429 s. Only b0599/b0600 skipped
+  (`xfm:log` custom fn missing in this Arelle — environment limit). Files: out\PRA001_v2.xbrl,
+  out\PRA001_v2.validate.log. The 11 reported assertions (b0360-b0364, b0676-b0679, b0890,
+  b1039) all pass now.
+- **Remaining residuals** are non-aggregation classes: RFB001 19 (coupled?), capital_plus
+  b0010_ss nested or/andFilter additivity, mrel, financialstatements. Next: classify
+  RFB001's 19, and extend feedback to non-sum aggregates if any appear.
+
+### PRA001 (12-June giant) — the 11 reported violations were NOT calc errors
+`b0360-b0364` (conditional sum-of-squares equalities, `... else (true())`) and
+`b0676-b0679` (`if ($v3!=0) then numeric-equal($v0, $v1*max($v2/$v3,1)) else (true())`)
+were skipped by the **`true()` parser bug** above -> never enforced. `b1039` (`empty($v0)`)
+needed **existence rules**, added 15-June *after* PRA001 was generated on 12-June. `b0890`
+(`$v0 <= $v1`) is a downstream inequality whose operands feed from those unsolved calcs.
+All are solver-coverage gaps now closed; **regenerating PRA001 with the current solver
+cleared them — re-validated 2026-06-15 to 0 formula violations (see evening update above).**
+
+## Update 2026-06-15 (later) — capital_plus diagnosis + sign-rule fix
+- **Constant-bound / sign rules** (`$v <= 0`, `$v >= N`) now handled: clamp a leaf to a
+  random value satisfying the bound (`_const_bound`/`_sat_const` in solve.py). Previously
+  skipped because the collector required both sides to be variables.
+- **capital_plus cluster: 609 -> 45 (-93%)**: PRA117 145->15, PRA113 150->10, PRA112 314->20.
+  Dominant cause was `b0007_ss` = `$v <= 0` (130/145 on PRA117).
+- Remaining capital_plus ~45 = hard tail: `b0010_ss` additivity over **nested boolean
+  (orFilter/andFilter) filters across columns** (resolver approximates these), and coupled
+  inequalities (`v0216/v0217`: a cell must be `>= sum` AND `<= 0`). Both are the
+  complex-selector / coupled-constraint cases noted as open.
+- **Combined re-sweep total: 335 violations** (was 2,057 baseline -> 1,142 after existence
+  -> **335** after sign rules = **-84%**), 7 modules at 0. Sign fix also helped beyond
+  capital_plus: RFB001 82->22, RFB004 181->64, LVR001 97->39.
+- **Remaining residuals (335):** structural_reform 195 (RFB007 **90**, RFB004 64, RFB001 22,
+  RFB008 15, RFB003 4) = biggest; mrel 43; capital_plus(+sddt) 45; leverage-2026 39
+  (LVR001); financialstmts 8; step-in-risk 5.
+- **Next target:** RFB007 (90, derived=0 -> not equality/sign; likely the complex
+  boolean-selector / coupled class). Then the broader complex-orFilter handling, which also
+  unblocks b0010_ss (capital_plus) and similar.
+
+## Update 2026-06-15
+- **Existence rules** (`empty($v)` -> remove the matching fact) implemented in solver +
+  `Instance.remove_fact`. Re-sweep (sub-2MB, 22 modules): **2,057 -> 1,142 violations (-44%)**,
+  **7 modules now 0** (PRAMEM, PRA118, PRA114, LVR002, RFB002, RFB005, RFB006).
+- Remaining residuals by framework: **capital_plus 609** (PRA112 314, PRA113 150, PRA117 145)
+  = biggest cluster; **structural_reform 372** (RFB004 181, RFB007 90, RFB001 82, RFB008 15,
+  RFB003 4) = a 2nd rule class; leverage-2026 LVR001 97; mrel 43; financialstmts 16; step-in 5.
+- **Enhancements:** Package Analyzer (`src/analyzer.py`) + **Streamlit UI** (`src/ui_app.py`,
+  `streamlit run src\ui_app.py`, http://localhost:8501) — analyze templates+rules, generate,
+  validate. NEXT enhancement: Phase 3 sample-free generation (tasks #11/#12).
+- **Next solver target:** diagnose capital_plus residuals (PRA117 smallest at 145), then
+  the structural_reform 2nd class.
+
+## Current results (Arelle-validated, 2026-06-12 baseline; see Update above for 06-15)
+
+### Fully clean — 0 violations ✅
+| Module | Framework |
+|--------|-----------|
+| PRA118 | capital_plus_sddt |
+| PRA114 | capital_plus |
+| LVR002 | leverage (2023-05-11) |
+| PRAMEM | financialstatements |
+| **PRA001** | banking_reporting — **0 formula violations** (the 1,448-rule COREP target; date-corruption schema bug fixed; re-validation was assumed-pass, not re-confirmed) |
+
+### Near-clean (≤11 violations) 🟡
+MRL001 (2), PRA115 (5), PRAGAAP (6), PRAIFRS (10), MRL003 (11)
+
+### Solver-tail needed (significant residuals) 🔴
+| Module | Framework | facts | violations |
+|--------|-----------|------:|------:|
+| MRL002 | mrel | 524 | 30 |
+| RFB005/002/006 | structural_reform | ~150 | 112 each |
+| LVR001 | leverage (2026-02-27) | 328 | 97 |
+| RFB003 | structural_reform | 250 | 116 |
+| RFB008 | structural_reform | 522 | 127 |
+| PRA117 | capital_plus_sddt | 534 | 145 |
+| PRA113 | capital_plus | 782 | 150 |
+| RFB001 | structural_reform | 411 | 194 |
+| RFB007 | structural_reform | 500 | 202 |
+| RFB004 | structural_reform | 1249 | 293 |
+| PRA112 | capital_plus | 1670 | 314 |
+
+### Not yet validated ⏭️
+PRA116 (17.8 MB, banking_reporting_sddt), PRA110 (89 MB, liquidity_pillarii).
+
+---
+
+## What's done (engine capabilities)
+- **Data creation:** clone sample structure (contexts/dims/units/filing indicators) +
+  type-correct random values per DPM datatype. Structurally/dimensionally valid by design.
+- **Business-rule solving (Arelle formula linkbase):**
+  - Equality / additivity (derived totals computed bottom-up via fact dependency graph)
+  - Scaled (`× / ÷`), tolerance (`exp`), `imax`/`imin`/`abs` over XPath sequences
+  - Pairwise inequality / sign (nudge a leaf, re-propagate)
+  - Conditional (`if cond then …` — enforce consequent only when guard holds)
+  - Format (`matches` regex)
+  - Implicit filtering (per-group of uncovered dims) + dimension defaults
+- **Validation:** Arelle, offline, against the v4.0.0 package.
+- **Scale/robustness fixes:** concept index, O(1) arc lookups (40 MB rule files), rule
+  parse cache (keyed by framework+date), numeric-only write guard (no date corruption).
+
+---
+
+## Outstanding items (prioritized)
+
+1. **(b) Solver tail — biggest cluster: `structural_reform` (RFB*, 112–293 viol).**
+   Several RFB modules share the same ~112 failing assertions → likely 1–2 fixable classes.
+   Next action: validate RFB002, read `out\sweep\RFB002.validate.log`, categorize the
+   failing assertion test-shapes, then extend the solver. **Est. ~2–4 hrs iterative.**
+   Likely needs: `isNull`/existence rules, more conditional coverage, precise
+   `orFilter`/`general`/`aspectCover` selectors, coupled inequalities (both operands derived).
+
+2. **`capital_plus` large (PRA112/113/117) and `leverage-2026` (LVR001).** Same tail as above.
+
+3. **Validate the giants** PRA116, PRA110 (each one slow Arelle pass: ~15–60 min).
+
+4. **PRA001 re-confirmation** (optional): re-run the single validation on the date-fixed
+   `out\SOLVED_PRA001.xbrl` to formally confirm 0 formula + 0 schema (~46 min). Currently
+   assumed-pass (first full validation showed 0 formula; date fix verified by spot check).
+
+## UI (Streamlit `src/ui_app.py`) — status & future enhancements
+**Status:** working, run with `streamlit run src\ui_app.py` (http://localhost:8501). Two tabs:
+**Analyze** (templates + their rules, drill into datapoints/rules) and **Generate & validate**
+(pick module → clone+randomize → solve → Arelle → violation count + download). A Streamlit
+server has typically been left running during dev sessions — check `ui_app` in the process
+list before starting a new one (avoid double-binding port 8501).
+
+**Future enhancements (not started — documented for later):**
+1. **Wire in the feedback solver** (highest value now): in the Generate tab, after the first
+   Arelle pass, if violations remain run `feedback.apply_feedback` (same as
+   `sweep.py --feedback`) and re-validate, showing before/after counts. Currently the UI
+   solve path = offline `solve()` only, so it under-reports what the full pipeline achieves
+   (e.g. RFB007 would show 52 in the UI but the pipeline gets it to 0).
+2. **Violations drill-down:** parse the validate log and show a table of failing assertions
+   (id, expression, severity, fact lines), not just the count — reuse
+   `feedback.parse_assertion_bindings` + `solve_loop.parse_violations`.
+3. **Phase 3 — sample-free generation (tasks #11/#12):** generate an instance without an
+   official sample by building contexts/dims/typed members from the DPM model + table
+   linkbase directly (the engine currently clones a sample's structure). Surface as a
+   "no-sample" mode in the Generate tab.
+4. **Batch/sweep view + giants:** expose `sweep.py` (multi-module table) and progress for the
+   large returns (PRA116 17.8 MB, PRA110 89 MB) with cancel/async.
+
+## Known blockers / limitations
+- **`xfm:log` rules** (`b0599`/`b0600` in banking_reporting, possibly elsewhere): the
+  taxonomy uses a custom function Arelle can't evaluate in this install → those assertions
+  are skipped (neither pass nor fail). Environment limitation, not a solver gap.
+- **True zero across all returns is not guaranteed** — cross-table consistency, `isNull`
+  with absent facts, and custom-function rules may remain.
+- Validation wall-clock is the time sink (small ~30 s, PRA001 ~46 min, PRA110 likely longer).
+
+## File map
+```
+boe_xbrl_gen\
+  src\  dpm_model.py  generate.py  formula_rules.py  instance.py  resolver.py
+        expr.py  solve.py  solve_loop.py  solve_all.py  pipeline.py  sweep.py
+  model\  dpm_model.json  dim_defaults.json
+  out\    SOLVED_*.xbrl  *.validate.log  rules_banking_reporting.pkl  sweep\
+  ARCHITECTURE.md  README.md  USER_GUIDE.md  SESSION_STATUS.md (this file)
+tools\   (inspection/diagnostic scripts)
+```
