@@ -2,12 +2,31 @@
 
 **Last updated:** 2026-07-24
 **Repo:** GitHub `https://github.com/ManojMj86-Cognizant/Basel.git` (branch `main`). No servers running.
-**▶ NEXT ACTION — submit `v13` to TDG.** v12 was measured at TDG (320 inst / 121 rules + 2 XPTY): the OF24
-fix worked (v11→v12: 466→320 inst, 168→121 rules) but v12 still trails **v8 (75 rules)** because it rides the
-v11 coregen line's cross-table regressions. So I applied the same OF24 fix directly on **v8** → **`v13`**
-(7 fact edits, diff vs v8 = 7 facts only) — expected new best (v8's clean 75-rule baseline + OF24 gains,
-without coregen's regressions). After v13: Group C `b0361/b0363` (sqrt), then Phase 2 common-basis
-regeneration for the OF08-hub cross-table cluster (the dominant remaining ~180-instance mass).
+
+**🛑 PAUSED 2026-07-31 — RESUME TOMORROW.**
+**v13 TDG result:** **321 error instances + 184 warnings** (warnings up from ~94 on the coregen line).
+Offline classifier on v13: L1 10 / L2 21 / **L3 85** / L4 22 — L3 cross-table down **~44 rules vs v12 (129)**,
+so v13 has FEWER error rules than v12 and is close to v8. **The warning jump is the flip side of the same
+thing:** v8/v13 is a SPARSER report than coregen v11/v12, so ~90 absent cross-table cells (OF09.02/OF34.07
+country-totals) fire completeness WARNINGS. One tension, two ways to lose: **sparse (v8/v13)** = fewer error
+rules + more warnings; **populated (coregen v11/v12)** = fewer warnings + more cross-table error rules. Both
+roots = the **OF08-hub cross-table cluster**.
+
+**▶ RESUME STEPS (tomorrow):**
+1. **Get the full v13 TDG log (errors + warnings)** — asked user to save it as `Errors on version 13_31 July`
+   (v12's is at repo root). Triage with `tools/triage_errors.py <file>`: confirm v13's error-RULE count +
+   categorise the 184 warnings (expected = OF09.02/OF34.07 "should be reported" completeness family).
+2. **Confirm priority with user:** does TDG block on errors only (→ keep **v13** as the best file), or must
+   the warnings also come down?
+3. **The real fix = Phase 2 coordinated leaf-first regeneration** of the OF08-hub cluster (OF08.01 ↔ 03/06/
+   09.02/34.07): populate the cross-table cells with rule-CONSISTENT (leaf-derived) values so BOTH errors and
+   warnings drop. Phase 0/1 already proved ~98.5% of the additive web balances by construction
+   (`COORDINATED_REGEN_SCOPE.md`, `tools/phase0_dag.py`, `tools/phase1_derive.py`). **Surgical AND coregen
+   both proven to only trade errors↔warnings — do NOT repeat those; start the Phase 2 emitter properly.**
+
+**Files on disk:** `v8` (last clean-error baseline, 75 rules) + `v13` (best candidate = v8 + OF24 fix); v6/v11/
+v12 `.xbrl` were deleted to tidy the tree (v12/v13 also kept as `.zip`). Package hash `50c2f2d9…`. Note: git
+already stores the whole history in ~8 MB (XBRL deflates ~50×), so no storage action is needed.
 
 **Goal:** Generate BoE Banking XBRL v4.0.0 instances shaped like the official samples, with
 random values that are **business-rule valid** (Arelle-verified), reusable across all
@@ -54,8 +73,12 @@ errors). Comparison (all errors-only, same tool): **v8 = 329 inst / 75 rules**, 
   cross-table regressions (OF08.03/06 hub, OF34.07↔OF08.01 back to 48) outweigh the OF24 gains.
 - **→ Built `v13` = apply the same `tools/fix_of24.py` directly on `v8`** (`FIX_IN`/`FIX_OUT` env). 7 fact
   edits (v8 had the identical stray `2018-03-04` date → set to 2026-02-28; 4 imax b0676–b0679; 2 averages
-  b0551/b0552). Diff vs v8 = **7 facts only** → cannot regress v8's 75 rules; expected new best (~≤75 minus
-  the OF24 rules it clears). **AWAITING TDG** — offline can't verify the non-linear pass; TDG is authority.
+  b0551/b0552). Diff vs v8 = **7 facts only** → cannot regress v8's 75 rules.
+- **v13 TDG result (measured):** **321 error instances + 184 warnings** (warnings up from ~94). Offline
+  classifier: L1 10 / L2 21 / **L3 85** / L4 22 → L3 cross-table **−44 rules vs v12 (129)**: v13 has fewer
+  error rules than v12, close to v8. The warning rise = v8/v13 being a SPARSER report than coregen v11/v12
+  (~90 absent OF09.02/OF34.07 cross-table cells fire completeness warnings). See the PAUSED banner at top for
+  the tension and the resume plan. **v13 = current best candidate; full v13 log + Phase 2 are the next steps.**
 - Remaining frontier unchanged: the OF08-hub cross-table cluster (~135 "other cross-table" + 48 OF34.07 +
   77 OF08.02 instances) needs **Phase 2 common-basis regeneration** — surgical/greedy edits proven to cascade.
 

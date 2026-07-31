@@ -1,26 +1,26 @@
 {
- "file": "C:\\Users\\177069\\ClaudeLearning\\ABCDEFGHIJ0123456789_pra001_2026-02-28_VALID_v12.xbrl",
+ "file": "C:\\Users\\177069\\ClaudeLearning\\ABCDEFGHIJ0123456789_pra001_2026-02-28_VALID_v13.xbrl",
  "module": "pra001",
  "counts": {
   "L1_single_additive": {
    "rules": 395,
    "failing": 10,
    "instances": 16083,
-   "fail_instances": 20,
-   "fail_with_absent": 1
+   "fail_instances": 85,
+   "fail_with_absent": 0
   },
   "L2_single_cmp": {
    "rules": 520,
    "failing": 21,
    "instances": 56653,
-   "fail_instances": 112,
+   "fail_instances": 120,
    "fail_with_absent": 0
   },
   "L3_cross_additive": {
    "rules": 329,
-   "failing": 129,
+   "failing": 85,
    "instances": 1514,
-   "fail_instances": 248,
+   "fail_instances": 172,
    "fail_with_absent": 57
   },
   "L4_cross_cmp": {
@@ -48,26 +48,29 @@
  "failing": {
   "L1_single_additive": [
    {
-    "code": "boe_b0708",
+    "code": "boe_b0760",
     "tables": [
-     "OF07.00.01.01"
+     "OF08.02.01.01"
     ],
-    "fail_instances": 2,
+    "fail_instances": 17,
     "fail_with_absent": 0,
     "examples": [
-     "3935000 != 0",
-     "607000 != 0"
+     "501000 != 7634000",
+     "100000 != 9966000",
+     "399000 != 6958000"
     ]
    },
    {
-    "code": "boe_b0729",
+    "code": "boe_b0834",
     "tables": [
-     "OF09.01.01.01"
+     "OF34.07.01.01"
     ],
-    "fail_instances": 1,
-    "fail_with_absent": 1,
+    "fail_instances": 48,
+    "fail_with_absent": 0,
     "examples": [
-     "4542000 != 0"
+     "620000 != 2461000",
+     "2736000 != 11552000",
+     "41000 != 9852000"
     ]
    },
    {
@@ -143,14 +146,16 @@
     ]
    },
    {
-    "code": "boe_b1092",
+    "code": "v7337_m",
     "tables": [
-     "OF02.00.01.01"
+     "C14.01.01.01"
     ],
-    "fail_instances": 1,
+    "fail_instances": 4,
     "fail_with_absent": 0,
     "examples": [
-     "11484000 != 144206700"
+     "5435000 != 17715000",
+     "6756000 != 15867000",
+     "5544000 != 16132000"
     ]
    },
    {
@@ -198,11 +203,11 @@
     "tables": [
      "OF08.02.01.01"
     ],
-    "fail_instances": 9,
+    "fail_instances": 17,
     "examples": [
-     "7033000 <= 3623000",
-     "8864000 <= 4333000",
-     "7534000 <= 3166000"
+     "5734000 <= 501000",
+     "4390000 <= 100000",
+     "6734000 <= 399000"
     ]
    },
    {
@@ -425,7 +430,7 @@
     "fail_instances": 1,
     "fail_with_absent": 0,
     "examples": [
-     "2594000 != 4542000"
+     "2594000 != 0"
     ]
    },
    {
@@ -919,546 +924,6 @@
     ]
    },
    {
-    "code": "boe_b0836",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "74000 != 106000"
-    ]
-   },
-   {
-    "code": "boe_b0837",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "142000 != 2100000"
-    ]
-   },
-   {
-    "code": "boe_b0840",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "97000 != 0"
-    ]
-   },
-   {
-    "code": "boe_b0841",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "85000 != 585000"
-    ]
-   },
-   {
-    "code": "boe_b0842",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "69150 != 1425000"
-    ]
-   },
-   {
-    "code": "boe_b0843",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "91413 != 15000"
-    ]
-   },
-   {
-    "code": "boe_b0844",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "95000 != 793000"
-    ]
-   },
-   {
-    "code": "boe_b0845",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "78000 != 0"
-    ]
-   },
-   {
-    "code": "boe_b0846",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "98000 != 41000"
-    ]
-   },
-   {
-    "code": "boe_b0847",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "69000 != 15000"
-    ]
-   },
-   {
-    "code": "boe_b0848",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "100000 != 140000"
-    ]
-   },
-   {
-    "code": "boe_b0849",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "132000 != 0"
-    ]
-   },
-   {
-    "code": "boe_b0850",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "127000 != 96000"
-    ]
-   },
-   {
-    "code": "boe_b0851",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "103000 != 106000"
-    ]
-   },
-   {
-    "code": "boe_b0852",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "150758 != 4000"
-    ]
-   },
-   {
-    "code": "boe_b0853",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "45000 != 514000"
-    ]
-   },
-   {
-    "code": "boe_b0854",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "0 != 1166000"
-    ]
-   },
-   {
-    "code": "boe_b0855",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "0 != 111000"
-    ]
-   },
-   {
-    "code": "boe_b0858",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "0 != 30000"
-    ]
-   },
-   {
-    "code": "boe_b0859",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "0 != 151000"
-    ]
-   },
-   {
-    "code": "boe_b0860",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "0 != 58000"
-    ]
-   },
-   {
-    "code": "boe_b0861",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "0 != 125000"
-    ]
-   },
-   {
-    "code": "boe_b0862",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "0 != 206000"
-    ]
-   },
-   {
-    "code": "boe_b0863",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "0 != 61000"
-    ]
-   },
-   {
-    "code": "boe_b0864",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "0 != 94000"
-    ]
-   },
-   {
-    "code": "boe_b0866",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "0 != 102000"
-    ]
-   },
-   {
-    "code": "boe_b0868",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "0 != 15000"
-    ]
-   },
-   {
-    "code": "boe_b0870",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "0 != 20000"
-    ]
-   },
-   {
-    "code": "boe_b0871",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "0 != 145000"
-    ]
-   },
-   {
-    "code": "boe_b0872",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "2461000 != 620000"
-    ]
-   },
-   {
-    "code": "boe_b0873",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "11552000 != 2736000"
-    ]
-   },
-   {
-    "code": "boe_b0876",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "11348000 != 0"
-    ]
-   },
-   {
-    "code": "boe_b0877",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "9640000 != 480000"
-    ]
-   },
-   {
-    "code": "boe_b0878",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "5036000 != 102000"
-    ]
-   },
-   {
-    "code": "boe_b0879",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "10998000 != 30000"
-    ]
-   },
-   {
-    "code": "boe_b0880",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "8192000 != 110000"
-    ]
-   },
-   {
-    "code": "boe_b0881",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "13277000 != 0"
-    ]
-   },
-   {
-    "code": "boe_b0882",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "5996000 != 1999000"
-    ]
-   },
-   {
-    "code": "boe_b0883",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "7353000 != 506000"
-    ]
-   },
-   {
-    "code": "boe_b0884",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "6876000 != 20000"
-    ]
-   },
-   {
-    "code": "boe_b0885",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "16258000 != 460000"
-    ]
-   },
-   {
-    "code": "boe_b0886",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "7604000 != 0"
-    ]
-   },
-   {
-    "code": "boe_b0887",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "9897000 != 120000"
-    ]
-   },
-   {
-    "code": "boe_b0888",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "6821000 != 0"
-    ]
-   },
-   {
-    "code": "boe_b0889",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "9635000 != 495000"
-    ]
-   },
-   {
     "code": "v4810_m",
     "tables": [
      "C06.01.01.01",
@@ -1545,7 +1010,7 @@
     "fail_instances": 1,
     "fail_with_absent": 0,
     "examples": [
-     "56067000 != 834848500"
+     "18881000 != 834848500"
     ]
    },
    {
@@ -1575,6 +1040,45 @@
     ]
    },
    {
+    "code": "boe_b0723_1",
+    "tables": [
+     "OF02.01.01.01",
+     "OF02.01.01.02",
+     "OF02.01.01.03"
+    ],
+    "fail_instances": 1,
+    "fail_with_absent": 0,
+    "examples": [
+     "8224000 != 405000"
+    ]
+   },
+   {
+    "code": "boe_b0723_2",
+    "tables": [
+     "OF02.01.01.01",
+     "OF02.01.01.02",
+     "OF02.01.01.03"
+    ],
+    "fail_instances": 1,
+    "fail_with_absent": 0,
+    "examples": [
+     "6031000 != 1463000"
+    ]
+   },
+   {
+    "code": "boe_b0723_3",
+    "tables": [
+     "OF02.01.01.01",
+     "OF02.01.01.02",
+     "OF02.01.01.03"
+    ],
+    "fail_instances": 1,
+    "fail_with_absent": 0,
+    "examples": [
+     "112014700 != 0"
+    ]
+   },
+   {
     "code": "boe_b0723_5",
     "tables": [
      "OF02.01.01.01",
@@ -1584,21 +1088,7 @@
     "fail_instances": 1,
     "fail_with_absent": 0,
     "examples": [
-     "11484000 != 3120000"
-    ]
-   },
-   {
-    "code": "boe_b0752_9",
-    "tables": [
-     "OF08.01.01.01",
-     "OF08.02.01.01"
-    ],
-    "fail_instances": 17,
-    "fail_with_absent": 0,
-    "examples": [
-     "501000 != 7634000",
-     "100000 != 9966000",
-     "399000 != 6958000"
+     "144206700 != 3120000"
     ]
    },
    {
@@ -1707,18 +1197,6 @@
     "fail_with_absent": 1,
     "examples": [
      "0 != 120000"
-    ]
-   },
-   {
-    "code": "boe_b1035",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "145000 != 400000"
     ]
    },
    {
@@ -1926,44 +1404,6 @@
     ]
    },
    {
-    "code": "boe_b1067",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "0 != 353000"
-    ]
-   },
-   {
-    "code": "boe_b1068",
-    "tables": [
-     "OF08.01.01.01",
-     "OF34.07.01.01"
-    ],
-    "fail_instances": 1,
-    "fail_with_absent": 0,
-    "examples": [
-     "9852000 != 41000"
-    ]
-   },
-   {
-    "code": "boe_b0814_08",
-    "tables": [
-     "OF08.01.01.01",
-     "OF08.02.01.01"
-    ],
-    "fail_instances": 17,
-    "fail_with_absent": 0,
-    "examples": [
-     "501000 != 7634000",
-     "100000 != 9966000",
-     "399000 != 6958000"
-    ]
-   },
-   {
     "code": "boe_b1071",
     "tables": [
      "OF08.01.01.01",
@@ -1986,6 +1426,44 @@
     "fail_with_absent": 0,
     "examples": [
      "0 != 101165500"
+    ]
+   },
+   {
+    "code": "boe_b0723_6",
+    "tables": [
+     "OF02.01.01.01",
+     "OF02.01.01.02",
+     "OF02.01.01.03"
+    ],
+    "fail_instances": 1,
+    "fail_with_absent": 0,
+    "examples": [
+     "8737000 != 1252000"
+    ]
+   },
+   {
+    "code": "boe_b0723_7",
+    "tables": [
+     "OF02.01.01.01",
+     "OF02.01.01.02",
+     "OF02.01.01.03"
+    ],
+    "fail_instances": 1,
+    "fail_with_absent": 0,
+    "examples": [
+     "836000 != 0"
+    ]
+   },
+   {
+    "code": "boe_b0618",
+    "tables": [
+     "OF02.00.01.01",
+     "OF08.01.01.01"
+    ],
+    "fail_instances": 1,
+    "fail_with_absent": 0,
+    "examples": [
+     "10975000 != 183000"
     ]
    }
   ],
