@@ -1,11 +1,13 @@
 # Session Status & Outstanding Items — BoE Banking XBRL Generator
 
 **Last updated:** 2026-07-24
-**🛑 SESSION PAUSED (2026-07-24).** Code + docs + generated instances (v6/v8/v11/v12) pushed to GitHub
-`https://github.com/ManojMj86-Cognizant/Basel.git` (branch `main`, commit `b5815cc`). No servers running.
-**▶ NEXT ON RESUME — the generation work:** submit **v12** to TDG Beacon → compare vs v11 (332 err) / v8
-(75 err, safe fallback), then continue per the "PRA001 valid-instance drive" resume plan below (Group C
-b0361/b0363; then Phase 2 common-basis regeneration for the OF08-hub cluster).
+**Repo:** GitHub `https://github.com/ManojMj86-Cognizant/Basel.git` (branch `main`). No servers running.
+**▶ NEXT ACTION — submit `v13` to TDG.** v12 was measured at TDG (320 inst / 121 rules + 2 XPTY): the OF24
+fix worked (v11→v12: 466→320 inst, 168→121 rules) but v12 still trails **v8 (75 rules)** because it rides the
+v11 coregen line's cross-table regressions. So I applied the same OF24 fix directly on **v8** → **`v13`**
+(7 fact edits, diff vs v8 = 7 facts only) — expected new best (v8's clean 75-rule baseline + OF24 gains,
+without coregen's regressions). After v13: Group C `b0361/b0363` (sqrt), then Phase 2 common-basis
+regeneration for the OF08-hub cross-table cluster (the dominant remaining ~180-instance mass).
 
 **Goal:** Generate BoE Banking XBRL v4.0.0 instances shaped like the official samples, with
 random values that are **business-rule valid** (Arelle-verified), reusable across all
@@ -34,11 +36,30 @@ Model artifacts in `model\` (dpm_model.json, dim_defaults.json). Rule caches in 
 
 ---
 
-## PRA001 valid-instance drive (2026-06-24 → 2026-07-24) — moved here from `studio/SESSION_STATUS.md`
+## PRA001 valid-instance drive (2026-06-24 → 2026-07-31) — moved here from `studio/SESSION_STATUS.md`
 *This is the generator-engine thread (making a generated PRA001 pass TDG Beacon). It lived in the studio
 status file by accident; its natural home is here. **Full blow-by-blow trail = memory
 `pra001-valid-instance-progress.md`.** The dated studio entries below (06-24 → 07-02) also belong to this
 thread but are left in the studio file for now as they interleave with genvalid/hypercube studio work.*
+
+### ▶ 2026-07-31 — v12 TDG result measured; **v13 = v8 + OF24 fix** built (awaiting TDG)
+v12 was submitted to TDG (errors-only log `Errors on version 12_31 July`). Triaged
+(`tools/triage_errors.py`): **320 unsatisfied instances / 121 rules + 2 XPTY0004** (the ignored taxonomy
+errors). Comparison (all errors-only, same tool): **v8 = 329 inst / 75 rules**, **v11 = 466 / 168**,
+**v12 = 320 / 121**.
+- **The v12 OF24 fix worked** (v11→v12: −146 inst, −47 rules). The `di6004` date correction had broad
+  reach — cleared OF08.05 (24), C14 (~30), and most OF24 non-linear (18→7). Only `b0361/b0363` (sqrt-sum,
+  the deliberately-deferred Group C) remain in OF24.
+- **But v12 still trails v8 on distinct rules (121 vs 75)** because it rides the **v11 coregen line**, whose
+  cross-table regressions (OF08.03/06 hub, OF34.07↔OF08.01 back to 48) outweigh the OF24 gains.
+- **→ Built `v13` = apply the same `tools/fix_of24.py` directly on `v8`** (`FIX_IN`/`FIX_OUT` env). 7 fact
+  edits (v8 had the identical stray `2018-03-04` date → set to 2026-02-28; 4 imax b0676–b0679; 2 averages
+  b0551/b0552). Diff vs v8 = **7 facts only** → cannot regress v8's 75 rules; expected new best (~≤75 minus
+  the OF24 rules it clears). **AWAITING TDG** — offline can't verify the non-linear pass; TDG is authority.
+- Remaining frontier unchanged: the OF08-hub cross-table cluster (~135 "other cross-table" + 48 OF34.07 +
+  77 OF08.02 instances) needs **Phase 2 common-basis regeneration** — surgical/greedy edits proven to cascade.
+
+
 
 ### ▶ 2026-07-24 — v2 → **v12** (surgical → coordinated regen → OF24)
 Files on disk (repo root): `ABCDEFGHIJ0123456789_pra001_2026-02-28_VALID_v{6,8,11,12}.xbrl` (~34.8 MB each).
