@@ -292,3 +292,16 @@ from taxonomy + rules. The leaf-tensor/marginal reframe is CONFIRMED viable for 
 proceed to **P2.2** (define the leaf tensor axes {metric/column × exposure-class row × obligor-grade ×
 z-sheet(approach×class) × country CEG × hypercube dims}, generate leaves, project every cell as its marginal,
 verify additive holds by construction). Tools: `src/member_hier.py`, `tools/p2_collapse2.py`.
+
+## P2.2 PROGRESS (2026-08-03, `tools/p2_project.py`) — projection PROVEN to reconcile b0834
+Derived OF34.07 r0180 AND its detail rows ALL from the SAME OF08.01 leaves (scan every additive rule whose
+lone target is OF34.07 and whose sources are all OF08.01 — auto-captures the b0872-0889 / b1035 / b1067-68 /
+b0830-33 family across columns×z). Then checked the b0834 gap = r0180 − Σ(covered details):
+- **51 / 51 cross-pinned instances gap ≥ 0 (min 0, max 2.7M) → b0834 HOLDS BY CONSTRUCTION** (free detail rows
+  absorb the non-negative gap). The other 34 have no cross-pin → r0180 = Σdetail trivially.
+- vs v15's 60/85 gap≥0 when r0180 came from a DIFFERENT pass. **The marginal projection from ONE consistent
+  OF08.01 basis reconciles the whole b0834 family** — the biggest error cluster that defeated surgical,
+  coregen and joint-solve.
+**⇒ P2.2 core is validated for the OF34.07 sub-core.** Remaining P2.2: extend the projection to OF09.02
+(b0282-84 z-sheet sums, CEG=x1) + OF08.02 (b0752, obligor-grade), wire actual leaf generation, and verify the
+full sub-core additive web offline. Then P2.3 (emit → TDG gate). Tools: `tools/p2_project.py`.
