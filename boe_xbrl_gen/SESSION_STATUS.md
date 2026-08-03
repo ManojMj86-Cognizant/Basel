@@ -79,11 +79,19 @@ the combined nullspace, which the 2026-07-23 joint-LP attempt already found INTR
 free detail leaves r0040/50/60/170 = gap where gap≥0 (60/85 instances on v15). Bounded partial win, but
 populating those rows carries activation risk (only TDG confirms). 
 
-**▶ DECISION POINT (reassess with user):** the endgame's clean sweep is intractable; realistic options are
-(A) implement the TARGETED b0834 free-absorb (partial, ~60 inst, TDG-verify) or (B) accept **v15 (70 err/103
-warn)** as the practical best. Separate non-additive quick win still available: b0361/b0363 (OF24 sqrt, 7 inst)
-via a fix_of24-style recompute. Diagnostics: `probe_b0262.py`, `probe_of3407_feasible.py`, `probe_of3407_struct.py`,
-`phase2_solve.py`.
+**▶ TARGETED b0834 ATTEMPT (task 3, `tools/fix_b0834.py`) — MARGINAL, not worth shipping.** User chose to try
+it → v16 = v15 + free-detail-leaf absorb. Result: only 26 (col,z) instances had a usable free cell (34 had all
+detail rows already determined = no free cell; 25 gap<0), and overwriting those 26 CCR rows cleared just
+**+9 b0834 instances offline (48→39), balanced 16137→16146**. 0 additive-rule regressions, BUT the 26 rows got
+artificial balancing values → real non-additive activation risk (TDG-only). Poor trade (9 inst for 26 artificial
+edits + risk). **v16-as-built is NOT recommended for submission.**
+
+**▶ CLEAN WIN REMAINING + RECOMMENDATION:** rebuild v16 = **v15 + OF24 Group C** only (b0361/b0363 sqrt-sum-of-
+squares, ~7 inst) — deterministic recompute `target = sqrt(Σ wᵢ·inputᵢ²)`, w=[1,1,2,2,6], like the fix_of24
+imax pass; safe, no artificial cells. Needs OF24's open-axis subset matching (fix_of24 Group A/B are closed;
+Group C has an open axis). Then v16 ≈ 68 err / 103 warn. **v15 remains the practical best; the b0834/b0739
+cluster is confirmed not economically fixable** (intractable clean solve; marginal+risky targeted fix).
+Diagnostics: `probe_b0262/of3407_feasible/of3407_struct`, `phase2_solve`, `fix_b0834`.
 
 **v13 TDG background (2026-07-31):** 321 error instances + 184 warnings (warnings up from ~94). The warning
 jump was the SPARSE-base effect — v8/v13 lacks the cross-table cells coregen populates; v15 fixes exactly
