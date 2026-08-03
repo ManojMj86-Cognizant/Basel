@@ -30,10 +30,36 @@ cells from the leaf closure using the file's ACTUAL present values, and NEVER ov
   OF34.07 CCR) from that single basis → all reconcile by construction. = the full coordinated-generation
   endgame (scope §2.1). Big: regenerates the whole exposures core; open-dim pairing (§4.1) is the risk.
 
-**▶ DECISION PENDING (asked user):** (A) commit to the OF08.01 leaf-basis regeneration (the endgame — only path
-to clear b0834/b0739/b0262, but large + regenerates the core + can't be fully offline-verified), or (B)
-consolidate **v15 (70 err / 103 warn)** as the best safe result. Note b0361/b0363 (OF24 sqrt Group C, 7 inst)
-and OF02/C24 mega (16) are separate non-additive tracks. `tools/probe_b0262.py` has the diagnosis.
+**▶ DECISION 2026-08-03: BUILD the leaf-basis regeneration (user chose the endgame). Tracked as tasks 1-6.**
+
+**Engine map (task 1 done, via subagent) — genvalid_store.py `_run` pipeline:**
+- It is **"random-then-solve"**: `_build_module_selection` fills every hypercube-valid cartesian cell with a
+  RANDOM value, then `_rule_driven_values`→`workbook_rules.solve_cells_lp` solves each **single-table**
+  connected component (RREF free/pivot split is ARBITRARY, not grain-based), then **cross-table additive is a
+  SEPARATE greedy post-pass** (`_crosstable_agg_values`) that OVERRIDES target cells. **That greedy override
+  is exactly what breaks `b0834`:** the cross-pass sets OF34.07 r0180 = ΣOF08.01, but the single-table solve
+  set the detail rows independently → Σdetail ≠ r0180.
+- Reusable as-is: `_build_module_selection`, `_synth_open_rows`, hypercube filter (cache present, 57,407
+  cells), `_constraint_values`/`le_constraints` (≤ rules), `_apply_nonlinear`, `_apply_isnull`,
+  `build_instances`, and `workbook_rules._toposort` (:709). Regen invocation: `tools/regen_pra001.py`
+  (cwd `studio/backend`, ~3 min, build-only, no Arelle).
+
+**Design (task 2) — LEAF-FIRST JOINT per-component solve:**
+1. Build the additive DAG over **single + cross-table** rules TOGETHER, so OF34.07 detail + r0180 + its
+   OF08.01 links form ONE connected component (not solved separately then patched).
+2. Per component: pick leaves (no rule's target) as free ≥0; **topologically derive all aggregates** (reuse
+   `_toposort`). Where an aggregate is defined two ways (b0834 =Σdetail AND b0872 =ΣOF08.01), the free detail
+   leaves (r0040/0050/0060/0170 — currently 0) ABSORB the coupling via a small per-component ≥0 solve → both
+   hold. **REPLACES** the RREF-random frees + `_crosstable_agg_values` + `_nonneg_additive_solve`.
+3. **`b0834`/`b0739` are CLOSED cells (no open-dim breadth needed) → tractable.** Prior joint-LP over the
+   WHOLE 35-table cluster was intractable, but PER-COMPONENT (e.g. OF34.07↔OF08.01) is feasible (the
+   OF08.01 pair, 10.6k cells, solved before). Open-dim breadth (OF09.02 country CEG, OF08.02 obligor ladder,
+   b0262 default sub-population) is the harder §4.1 track — deferred to a later increment.
+
+**▶ NEXT (task 3/4): prototype the leaf-first joint per-component solver on the CLOSED cluster and verify it
+clears `b0834`/`b0739` offline (`verify_coregen`/`diff_cluster_additive`) BEFORE integrating into genvalid
+`_run`.** Then full regen → v16. Separate non-additive tracks: b0361/b0363 (OF24 sqrt, 7 inst), OF02/C24 (16).
+`tools/probe_b0262.py` has the leaf-gap diagnosis.
 
 **v13 TDG background (2026-07-31):** 321 error instances + 184 warnings (warnings up from ~94). The warning
 jump was the SPARSE-base effect — v8/v13 lacks the cross-table cells coregen populates; v15 fixes exactly
