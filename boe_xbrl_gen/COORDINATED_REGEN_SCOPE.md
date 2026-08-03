@@ -254,3 +254,24 @@ the §4.1 open-dim/hierarchy work that defeated prior attempts — real risk it'
 would need its own gate: does it reproduce the b07xx/b08xx marginal identities EXACTLY?), or (B) stop here and
 accept v15 (70 err/103 warn) — the payoff floor is non-zero regardless (exp() taxonomy errors survive).
 Tool: `tools/p2_collapse.py`.
+
+## P2.1 PROGRESS (2026-08-03 cont.) — gate now trending GREEN; hierarchy extractor BUILT
+Research (subagent) + build resolved the amber blockers:
+- **Member sum-trees ARE cleanly extractable** — from `dict/dom/<domain>/hier-cal.xml` (Eurofiling
+  `complete-breakdown` arcs: parent = Σ weight·child EXACTLY; `partial-breakdown` = ≥). NOT hier-def (that's
+  plain containment, no weights). **Built + tested `src/member_hier.py`**: 30 domains, **274 complete-breakdown
+  totals**; confirmed **MC x309 = x311+x100+x310** (complete). The P2.1 "MCY x195" messiness was an rc-bridge
+  artifact (x195 is a leaf; x309 is the real total) — NOT a hierarchy gap.
+- **OF08.01 + OF08.03 are FULLY CLOSED** (zero open axes; CEG/CPZ pinned). So the feared open-dim breadth
+  problem (§4.1) largely **does not apply to the OF08 core** — a major de-risk. (Open axes live in other
+  tables e.g. C06.02/C09.04/C14.)
+- **Full cell signature** = metric + ruleNode explicitDimensions + open-axis member(s) + default member for
+  each unset TableDRS hypercube dim — assemble from `parse_table.datapoints[].dims` + `dim_drs.TableDRS.specs`
+  + `dim_defaults` (no single existing call returns it fully-defaulted; assemble the three).
+- **model.json has NO hierarchy** → `member_hier.py` is the new required parser (done).
+
+**Verdict update:** the two amber blockers (hierarchy source + open-dim breadth) are resolved — hierarchy is
+extractable and the OF08 core is closed. **P2.1 is now trending GREEN.** Remaining P2.1 step: assemble the
+FULL signature per cell + expand total members via `member_hier` and re-run `p2_collapse` to confirm the
+sub-core rules (b0752/b0834/b0872/b0735-39/b0282) become clean marginals. Then P2.2. Tools: `src/member_hier.py`
+(built/tested), `tools/p2_collapse.py`, `tools/probe_mcy_hier.py`.
