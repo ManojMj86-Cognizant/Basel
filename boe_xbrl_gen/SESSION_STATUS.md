@@ -1,7 +1,25 @@
 # Session Status & Outstanding Items — BoE Banking XBRL Generator
 
-**Last updated:** 2026-07-24
+**Last updated:** 2026-08-03
 **Repo:** GitHub `https://github.com/ManojMj86-Cognizant/Basel.git` (branch `main`). No servers running.
+
+**🛑 PAUSED 2026-08-03 — RESUME TOMORROW.** Delivered best = **`v15` (70 err rules / 103 warn; 0 schema / 0
+dimensional)**, UNCHANGED. Cover note for submission = `SUBMISSION_COVER_NOTE.md` (repo root). Full detail in
+`COORDINATED_REGEN_SCOPE.md`.
+- **Phase 2 (coordinated regen) — reached its ceiling:** the leaf-first marginal reframe is PROVEN for
+  pure-additive structure (integer-exact distributor reconciles b0834), but the emit is blocked by genuine
+  **over-determination** — OF34.07 `c0060` is pinned by an additive rule + a non-linear product (b0759
+  `c0060=c0010×c0070`) + a cross-table link at once → no data satisfies all. Not a bug; mathematical. (Earlier
+  "rc-bridge conflates rows" claim was WRONG and corrected — rows key fine via IMS/PDR.)
+- **▶ THE ONE OPEN SAFE SWING (resume decision):** the isolated-rule check (`tools/isolated_check.py`) found
+  **8 error rules that are single-table on STANDALONE tables** (C06.02.01.01 ×6 additive: v0147_h/v0149_h/
+  v0287_m/v0288_m/v0293_m/v1634_m; C32.03.01.01 ×2 inequality: v6360_m/v6361_m) → fixable WITHOUT cascading
+  into the OF08 web. `solve_existing` didn't engage them (C06.02 is open-axis). **RESUME = build a small
+  open-axis-aware targeted fixer** (per-context: additive total = Σ its columns; clamp c0060/c0070 ≤ c0050) →
+  v16 candidate, verify offline (diff_cluster_additive 0 regressions), submit to TDG. Could take 70 → ~62 err
+  (TDG to confirm). LOW RISK (standalone tables; worst case a no-op). OR submit v15 as-is.
+- Remaining 61 error rules = NOT data-fixable: OF08 cross-table over-determinations (33) + non-linear/`exp()`
+  taxonomy (14, incl b0361/b0363/b0365/b0366) + a few. See `SUBMISSION_COVER_NOTE.md` §3.
 
 **▶ 2026-08-03 — PHASE 2 first increment MEASURED at TDG: `v15` is the NEW BEST (70 err rules / 103 warn).**
 Built the SAFE increment **`src/coregen.py --no-overwrite`** (absent-only): derives the 81 missing cross-table
