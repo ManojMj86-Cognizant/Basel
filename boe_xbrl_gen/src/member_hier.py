@@ -96,6 +96,21 @@ def descendants(tree: dict, code: str) -> set:
     return out or {code}
 
 
+def all_descendants(tree: dict, code: str) -> set:
+    """ALL descendants of `code` — leaves AND intermediate total members (excludes `code` itself).
+    Used for the marginal collapse check: a detail cell may report an intermediate sub-total (e.g. MCY x100)
+    that is a direct child of the reported total (x309), not a leaf."""
+    out = set(); stack = [c for c, _ in tree.get(code, {"children": []})["children"]]
+    while stack:
+        c = stack.pop()
+        if c in out:
+            continue
+        out.add(c)
+        if c in tree:
+            stack.extend(ch for ch, _ in tree[c]["children"])
+    return out
+
+
 if __name__ == "__main__":
     import sys
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")

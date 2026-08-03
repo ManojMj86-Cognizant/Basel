@@ -275,3 +275,20 @@ extractable and the OF08 core is closed. **P2.1 is now trending GREEN.** Remaini
 FULL signature per cell + expand total members via `member_hier` and re-run `p2_collapse` to confirm the
 sub-core rules (b0752/b0834/b0872/b0735-39/b0282) become clean marginals. Then P2.2. Tools: `src/member_hier.py`
 (built/tested), `tools/p2_collapse.py`, `tools/probe_mcy_hier.py`.
+
+## ✅ P2.1 GATE PASSED (2026-08-03, `tools/p2_collapse2.py`) — the marginal reframe is VIABLE
+Hierarchy+default-aware collapse test on the 10 sub-core cross-view rules → **all 10 are valid marginals** of
+one leaf tensor, via TWO extractable collapse mechanisms:
+- **5 = dim-member hierarchy marginals** (`b0752`, `b0834`, `b0872`, `b0735`, `b0876`): total member = Σ its
+  complete-breakdown descendants (`member_hier.all_descendants`), and an OMITTED dim = its default member =
+  "aggregate over all of it". Both handled → CLEAN.
+- **5 = z-sheet-set marginals** (`b0282`/`b0283`/`b0284`, `b0736`, `b0739`): the rule `isum`s OF08.01 over an
+  explicit SET of z-sheets (e.g. b0282 z={0009,0010,0011,0012,0022,0023,0024}); each z-sheet pins a distinct
+  APR/EXC/MCY combo, which is why those dims "varied". The collapse is the rule's **z-list** — VALID, just a
+  different mechanism than single-dim hierarchy. Confirmed by reading the rule scopes/expressions.
+
+**⇒ The collapse map = `member_hier` (dim-total expansion) + rule z-scopes (z-sheet sums). Both extractable
+from taxonomy + rules. The leaf-tensor/marginal reframe is CONFIRMED viable for the sub-core.** GATE PASSED →
+proceed to **P2.2** (define the leaf tensor axes {metric/column × exposure-class row × obligor-grade ×
+z-sheet(approach×class) × country CEG × hypercube dims}, generate leaves, project every cell as its marginal,
+verify additive holds by construction). Tools: `src/member_hier.py`, `tools/p2_collapse2.py`.
