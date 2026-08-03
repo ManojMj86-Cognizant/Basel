@@ -318,3 +318,25 @@ Projected OF34.07+OF09.02 targets = Σ OF08.01 (498 targets, 92 overwritten) int
   b08xx/b10xx family actually pins. i.e. the OF34.07 emit is a top-down SPLIT respecting its own tree, not a
   flat overwrite. This is precise, well-understood next work — NOT a blocker. v15 remains best.
 Tools: `tools/p2_emit.py` (v1, superseded).
+
+## P2.3 EMIT ATTEMPT #2 (2026-08-03, `tools/p2_emit.py` v2) — minimal is SAFE but INEFFECTIVE
+v2 = MINIMAL: set r0180 = ΣOF08.01, absorb delta on ONE true-free leaf, keep the b0830-33 sub-totals at v15.
+Result: only 9/51 r0180 fixable (17 no free leaf, **25 skip because delta<0** → free leaf would go negative),
+39 OF09.02 cells set. `diff_cluster_additive` v15→v16: **0 fixed / 0 broken** at rule level → SAFE (no
+b0830-33 breakage) but INEFFECTIVE (too few instances to clear any rule). v16 discarded.
+- **Why minimal fails:** v15's OF34.07 sub-tree **over-sums** relative to r0180 (that IS why b0834 fails), so
+  the fix needs to REDUCE detail values — a single free leaf can't (goes negative). Must **rebuild the whole
+  OF34.07 sub-tree** so it sums to r0180 = ΣOF08.01: either PROPORTIONAL SCALING (×f = r0180/Σdetails,
+  preserves internal sums linearly) or TOP-DOWN DISTRIBUTION (put r0180 down one leaf path, zero the rest —
+  always ≥0). Both are FULL OF34.07 overwrites with activation risk on OF34.07's OTHER rules (inequalities /
+  isNull / non-additive) that **only TDG can confirm**.
+
+## ⚖ P2.3 STATUS + DECISION (2026-08-03)
+**The projection MATH is proven (P2.2: b0834 reconcilable 51/51). The clean EMIT is the hard part** — two
+iterations in, the safe-minimal emit can't fix b0834 (sub-tree over-sums), and the effective emit is a full
+OF34.07 sub-tree rebuild (scaling / top-down) = a big overwrite whose side-effects on OF34.07's non-additive
+rules are TDG-only-verifiable. This is a substantial, iterative build, not a quick win. v15 (70 err/103 warn)
+remains the delivered best throughout. **DECISION for user:** (A) continue — build the sub-tree-rebuild emit
+(proportional scaling), verify offline, ship a v16 to TDG (real but risky, may need iteration); or (B) bank the
+P2 R&D (reframe proven viable, extractor + collapse map + projection all built and committed) and keep v15 as
+the delivered instance. Tools: `p2_emit.py`, `p2_project.py`, `p2_collapse2.py`, `src/member_hier.py`.

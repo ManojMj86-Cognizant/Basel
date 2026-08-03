@@ -1,16 +1,17 @@
-"""P2.3 emit — project OF34.07 + OF09.02 from the OF08.01 leaf basis and write them into the instance.
+"""P2.3 emit v2 — MINIMAL top-down projection of OF34.07 r0180 + OF09.02 from the OF08.01 basis.
 
-For every additive rule whose lone target is an OF34.07 or OF09.02 cell and whose sources are all OF08.01,
-set target = Σ OF08.01 (the marginal). For OF34.07's internal b0834 total (r0180 = Σ detail rows), set the
-FREE detail rows (no cross-rule) = gap = r0180 - Σ(cross-derived details) so b0834 holds (gap>=0 proven).
-Overwrite present cells; generate absent OF09.02 CEG=x1 cells (DRS-valid). Never touches OF08.01 (the basis)
-so it can't break OF08.01-internal rules. Env FIX_IN/FIX_OUT (v15 -> v16). Run from boe_xbrl_gen/."""
+OF34.07 is a nested tree (r0180 = Σ detail rows [b0834]; some detail rows = Σ sub-rows [b0830-33]). To make
+b0834 AND b0872 (r0180 = ΣOF08.01) hold WITHOUT breaking the internal sub-totals, for each b0834 instance:
+  new_r0180 = Σ OF08.01 (the OF08.01-link);  delta = new_r0180 − Σ(current detail rows);
+  add delta to ONE true-free leaf detail row (a row that is no rule's target — r0040/50/60/170), leaving the
+  b0830-33 sub-totals (and all their sub-rows) at their v15 values. Then Σ details = new_r0180 = r0180.
+OF09.02 CEG=x1 cells are overwritten = Σ OF08.01 (separate country view). OF08.01 (the basis) is never touched.
+Env FIX_IN/FIX_OUT (v15 -> v16). Run from boe_xbrl_gen/."""
 import os, sys, json, copy
 sys.path.insert(0, "src"); sys.path.insert(0, ".")
 from lxml import etree
 import workbook_rules
 from src import dim_drs
-from collections import defaultdict
 
 ROOT = r"C:\Users\177069\ClaudeLearning"
 BASE = "studio/backend/.cache/packages/50c2f2d9c248d453b11fea67dbc6070113bd182d099a4b271b5299b38ea3e181"
@@ -19,7 +20,6 @@ WB = "../boebankingtaxonomyvalidationsv400/Bank of England Banking Taxonomy Vali
 XBRLI = "http://www.xbrl.org/2003/instance"; XBRLDI = "http://xbrl.org/2006/xbrldi"
 CEG_TABLES = {"OF09.01.01.01", "OF09.02.01.01"}
 CEG_DIM, CEG_MEM = "eba_dim:CEG", "eba_GA:x1"
-TARGET_TABLES = {"OF34.07.01.01", "OF09.02.01.01"}
 FIX_IN = os.environ.get("FIX_IN", os.path.join(ROOT, "ABCDEFGHIJ0123456789_pra001_2026-02-28_VALID_v15.xbrl"))
 FIX_OUT = os.environ.get("FIX_OUT", os.path.join(ROOT, "ABCDEFGHIJ0123456789_pra001_2026-02-28_VALID_v16.xbrl"))
 
@@ -75,66 +75,73 @@ def drs_for(table):
         drs_cache[table] = dim_drs.TableDRS(p) if p else None
     return drs_cache[table]
 
-# ---- project: target(OF34.07/OF09.02) = Σ OF08.01 ----
-override = {}; meta = {}
+# ---- override: OF34.07/OF09.02 cell = Σ OF08.01 (pins) ; determined = every lone additive target ----
+override = {}; meta = {}; determined = set()
 for r in R:
     if r.get("deactivated"):
         continue
     for a in workbook_rules.expand_scoped_asts(r):
         if a["op"] != "i=":
             continue
+        for side in ("lhs", "rhs"):
+            if len(a[side]) == 1:
+                for dp in res.resolve(a[side][0]["cell"]):
+                    determined.add(ck_meta(dp)[0])
         tside = "lhs" if len(a["lhs"]) == 1 else "rhs"
         oside = "rhs" if tside == "lhs" else "lhs"
         tdps = res.resolve(a[tside][0]["cell"])
-        if len(tdps) != 1 or tdps[0]["table"].upper() not in TARGET_TABLES:
+        if len(tdps) != 1 or tdps[0]["table"].upper() not in {"OF34.07.01.01", "OF09.02.01.01"}:
             continue
         srcs = [dp for t in a[oside] for dp in res.resolve(t["cell"])]
         if not srcs or any(dp["table"].upper() != "OF08.01.01.01" for dp in srcs):
             continue
-        s = 0.0
-        for t in a[oside]:
-            for dp in res.resolve(t["cell"]):
-                s += t["coef"] * facts.get(ck_meta(dp)[0], 0.0)
+        s = sum(t["coef"] * facts.get(ck_meta(dp)[0], 0.0) for t in a[oside] for dp in res.resolve(t["cell"]))
         k, m = ck_meta(tdps[0]); override[k] = s; meta[k] = m
 
-# ---- b0834 free detail rows = gap ----
+# ---- OF34.07 r0180 via b0834: set r0180=override, absorb delta on ONE true-free leaf ----
+changes = {}
 b0834 = next(x for x in R if "b0834" in x["code"])
-free_set = 0
+n_r0180 = n_skip_nofree = n_skip_neg = 0
 for a in workbook_rules.expand_scoped_asts(b0834):
     if len(a["lhs"]) != 1:
         continue
     tdps = res.resolve(a["lhs"][0]["cell"])
     if not tdps:
         continue
-    tk = ck_meta(tdps[0])[0]
-    if tk not in override:                       # r0180 not cross-derived here -> b0834 trivial
+    tk, tm = ck_meta(tdps[0])
+    if tk not in override:                       # r0180 not OF08.01-pinned here → leave (b0834 holds in v15)
         continue
-    covered = 0.0; frees = []
-    for t in a["rhs"]:
-        for dp in res.resolve(t["cell"]):
-            k, m = ck_meta(dp)
-            if k in override:
-                covered += override[k]
-            else:
-                frees.append((k, m))
-    gap = override[tk] - covered
-    if gap < -0.5 or not frees:
-        continue
-    k, m = frees[0]; override[k] = gap; meta[k] = m; free_set += 1
-    for k2, _ in frees[1:]:
-        override[k2] = 0.0; meta[k2] = _
+    new_r0180 = override[tk]
+    details = [ck_meta(dp) for t in a["rhs"] for dp in res.resolve(t["cell"])]
+    sigcur = sum(facts.get(k, 0.0) for k, _ in details)
+    delta = new_r0180 - sigcur
+    frees = [(k, m) for k, m in details if k not in determined]
+    if not frees:
+        n_skip_nofree += 1; continue
+    fk, fm = frees[0]
+    fnew = facts.get(fk, 0.0) + delta
+    if fnew < -0.5:
+        n_skip_neg += 1; continue
+    changes[tk] = new_r0180; meta[tk] = tm
+    changes[fk] = fnew; meta[fk] = fm
+    n_r0180 += 1
+
+# ---- OF09.02 CEG=x1 cells = Σ OF08.01 ----
+n_of0902 = 0
+for k, v in override.items():
+    if meta[k][2] == "OF09.02.01.01":
+        changes[k] = v; n_of0902 += 1
 
 # ---- emit ----
 QI, QD = f"{{{XBRLI}}}", f"{{{XBRLDI}}}"; seq = 0
 n_over = n_gen = n_skip = 0
-for k, v in override.items():
+for k, v in changes.items():
     concept_q, dims_q, tab = meta[k]
     newv = str(int(round(v)))
     if k in el_by_key:
         if abs(v - facts.get(k, 0.0)) >= 0.5:
             el_by_key[k].text = newv; n_over += 1
         continue
-    # generate absent (mainly OF09.02 CEG=x1)
     drs = drs_for(tab)
     dl = {dim_drs.local(kk): (dim_drs.qmem(mm) if ":" in str(mm) else "(typed)") for kk, mm in dims_q.items()}
     if v < 0.5 or drs is None or not drs.is_valid(dim_drs.local(concept_q), dl, defaults_local):
@@ -158,7 +165,8 @@ for k, v in override.items():
         fe.set("unitRef", unit)
     fe.set("decimals", dec or "-3"); fe.text = newv; n_gen += 1
 
-print(f"projected targets: {len(override)}  (OF34.07/OF09.02 from OF08.01) | b0834 free rows set: {free_set}")
+print(f"OF34.07 r0180 pinned+absorbed: {n_r0180}  (skip no-free {n_skip_nofree}, skip neg-leaf {n_skip_neg})")
+print(f"OF09.02 cells set: {n_of0902}")
 print(f"emit: overwrote {n_over} present, generated {n_gen} absent, skipped {n_skip}")
 out = etree.tostring(root, xml_declaration=True, encoding="UTF-8")
 if bom:
