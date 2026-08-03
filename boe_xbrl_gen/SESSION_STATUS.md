@@ -3,30 +3,32 @@
 **Last updated:** 2026-07-24
 **Repo:** GitHub `https://github.com/ManojMj86-Cognizant/Basel.git` (branch `main`). No servers running.
 
-**🛑 PAUSED 2026-07-31 — RESUME TOMORROW.**
-**v13 TDG result:** **321 error instances + 184 warnings** (warnings up from ~94 on the coregen line).
-Offline classifier on v13: L1 10 / L2 21 / **L3 85** / L4 22 — L3 cross-table down **~44 rules vs v12 (129)**,
-so v13 has FEWER error rules than v12 and is close to v8. **The warning jump is the flip side of the same
-thing:** v8/v13 is a SPARSER report than coregen v11/v12, so ~90 absent cross-table cells (OF09.02/OF34.07
-country-totals) fire completeness WARNINGS. One tension, two ways to lose: **sparse (v8/v13)** = fewer error
-rules + more warnings; **populated (coregen v11/v12)** = fewer warnings + more cross-table error rules. Both
-roots = the **OF08-hub cross-table cluster**.
+**▶ 2026-08-03 — PHASE 2 STARTED; `v15` is the submission candidate (AWAITING TDG).**
+Built the SAFE first increment of coordinated leaf-first regeneration: **`src/coregen.py --no-overwrite`**
+(absent-only) — derives the missing cross-table cells from the leaf closure using the file's ACTUAL present
+values and **never overwrites a present cell**, so it cannot regress any rule v8/v13 already passes.
+- **`v14` = v8 + 81 absent cells; `v15` = v13 (=v8+OF24) + 81 absent cells = the combined best candidate.**
+- **OFFLINE PROOF** (`tools/verify_coregen.py` + new `tools/diff_cluster_additive.py`): cluster-additive
+  failing rules **131 → 51** (80 fixed, **0 new** — no activation/regression on additives). All 81 generated
+  cells DRS-valid + non-isNull; 0 overwrites.
+- **Expected at TDG:** the ~90 completeness WARNINGS (absent OF09.02/OF34.07 country/CCR totals) and the
+  absent-target cross-table ERRORS drop. **Residual RISK:** a few non-additive/inequality/internal rules the
+  offline additive check can't see may activate (the gen_of0902 v7→v8 precedent activated 3 irreducible).
 
-**▶ RESUME STEPS (tomorrow):**
-1. **Get the full v13 TDG log (errors + warnings)** — asked user to save it as `Errors on version 13_31 July`
-   (v12's is at repo root). Triage with `tools/triage_errors.py <file>`: confirm v13's error-RULE count +
-   categorise the 184 warnings (expected = OF09.02/OF34.07 "should be reported" completeness family).
-2. **Confirm priority with user:** does TDG block on errors only (→ keep **v13** as the best file), or must
-   the warnings also come down?
-3. **The real fix = Phase 2 coordinated leaf-first regeneration** of the OF08-hub cluster (OF08.01 ↔ 03/06/
-   09.02/34.07): populate the cross-table cells with rule-CONSISTENT (leaf-derived) values so BOTH errors and
-   warnings drop. Phase 0/1 already proved ~98.5% of the additive web balances by construction
-   (`COORDINATED_REGEN_SCOPE.md`, `tools/phase0_dag.py`, `tools/phase1_derive.py`). **Surgical AND coregen
-   both proven to only trade errors↔warnings — do NOT repeat those; start the Phase 2 emitter properly.**
+**▶ NEXT:** user submits **v15** to TDG → confirm warnings + cross-table errors down vs v13 (321 err/184 warn).
+Then the remaining **51** hard additive failures need OVERWRITE-style derivation — the next Phase 2 increment:
+`b0834` (OF34.07 r0180 internal = irreducible source conflict), `b0735-39`/`b0759`/`b0760`/`b0824` (OF08.01↔
+03/06 present-cell over-determinations), `b0471`/`b0719`/`b0490` (OF07 coef — verify vs TDG, may be offline
+artifact). These need careful per-rule overwrite + the non-additive/inequality layers, each verified before
+shipping (never blind-overwrite — that was the coregen v10/v11 regression).
 
-**Files on disk:** `v8` (last clean-error baseline, 75 rules) + `v13` (best candidate = v8 + OF24 fix); v6/v11/
-v12 `.xbrl` were deleted to tidy the tree (v12/v13 also kept as `.zip`). Package hash `50c2f2d9…`. Note: git
-already stores the whole history in ~8 MB (XBRL deflates ~50×), so no storage action is needed.
+**v13 TDG background (2026-07-31):** 321 error instances + 184 warnings (warnings up from ~94). The warning
+jump was the SPARSE-base effect — v8/v13 lacks the cross-table cells coregen populates; v15 fixes exactly
+that, safely. Offline v13 classifier: L1 10 / L2 21 / L3 85 / L4 22.
+
+**Files on disk:** `v8` (last TDG-confirmed clean-error baseline, 75 rules), `v13` (v8+OF24), **`v14`/`v15`
+(Phase-2 candidates — submit v15)**. v6/v11/v12 `.xbrl` deleted to tidy (kept as `.zip`). Package hash
+`50c2f2d9…`. git history ~8 MB (XBRL deflates ~50×) — no storage action needed.
 
 **Goal:** Generate BoE Banking XBRL v4.0.0 instances shaped like the official samples, with
 random values that are **business-rule valid** (Arelle-verified), reusable across all

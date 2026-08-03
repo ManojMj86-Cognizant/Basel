@@ -35,6 +35,10 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--file", required=True); ap.add_argument("--out", default=None)
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--no-overwrite", action="store_true",
+                    help="Phase-2 SAFE mode: never overwrite a present cell; derive ABSENT aggregates from "
+                         "the file's ACTUAL present values only. Cannot regress a rule the input already "
+                         "passes (present cells are untouched); only fills missing cross-table cells.")
     args = ap.parse_args()
 
     model = json.load(open(os.path.join(BASE, "model.json"), encoding="utf-8"))
@@ -169,6 +173,8 @@ def main():
                 q.append(ch)
     val = dict(val0); neg = 0
     for a in list(order) + [a for a in aggregates if a not in set(order)]:
+        if args.no_overwrite and a in el_by_key:
+            continue                               # keep the file's present value; derive ABSENT cells only
         _, ac, src = canon[a]
         v = -sum(co * val.get(k, 0.0) for k, co in src.items()) / ac
         if v < 0:
@@ -186,6 +192,8 @@ def main():
             n_isnull += 1; continue
         if a not in xref:                           # only touch cross-table-referenced cells (targeted)
             n_notxref += 1; continue
+        if args.no_overwrite and a in el_by_key:     # SAFE mode: leave every present cell exactly as-is
+            continue
         v = val[a]
         if a not in el_by_key and v < 0.5:          # don't generate a 0/near-0 aggregate (sparse report)
             continue
