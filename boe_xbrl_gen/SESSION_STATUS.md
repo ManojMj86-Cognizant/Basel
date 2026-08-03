@@ -56,10 +56,20 @@ cells from the leaf closure using the file's ACTUAL present values, and NEVER ov
    OF08.01 pair, 10.6k cells, solved before). Open-dim breadth (OF09.02 country CEG, OF08.02 obligor ladder,
    b0262 default sub-population) is the harder §4.1 track — deferred to a later increment.
 
-**▶ NEXT (task 3/4): prototype the leaf-first joint per-component solver on the CLOSED cluster and verify it
-clears `b0834`/`b0739` offline (`verify_coregen`/`diff_cluster_additive`) BEFORE integrating into genvalid
-`_run`.** Then full regen → v16. Separate non-additive tracks: b0361/b0363 (OF24 sqrt, 7 inst), OF02/C24 (16).
-`tools/probe_b0262.py` has the leaf-gap diagnosis.
+**▶ FEASIBILITY (task 3, `tools/probe_of3407_feasible.py`) — leaf-first fixes ~70% of `b0834`, ~30% residual:**
+Of b0834's 85 (col×z) instances: **60 gap≥0 (fixable** — free detail leaves r0040/50/60/170 absorb the
+coupling), **25 gap<0** (r0180 < Σ determined detail rows; min gap −15.8M) → NOT fixable by filling free leaves;
+need the OF08.01 leaves generated so the detail-row subsets NEST under r0180's subset (the §4.1 hard part).
+So the leaf-first mechanism is validated for the majority but has a real structural residual — consistent with
+scope §4.2 (can't promise 0). **OPEN QUESTION (next):** is the 25-instance residual STRUCTURAL (detail-row
+OF08.01 source cells ⊄ r0180's source cells → irreducible) or VALUE-driven (would vanish under fresh
+consistent leaves)? Trace b0872 vs b0830-33 source-cell sets to decide — this sets the achievable b0834 ceiling.
+
+**▶ NEXT (task 3/4):** resolve that open question, then prototype the leaf-first joint per-component solver on
+the CLOSED cluster and verify offline (`verify_coregen`/`diff_cluster_additive`) BEFORE integrating into
+genvalid `_run` → full regen → v16. Separate non-additive tracks: b0361/b0363 (OF24 sqrt, 7 inst), OF02/C24 (16).
+Realistic expectation: a PARTIAL reduction of the b0834/b0739 cluster, not a clean zero. `tools/probe_b0262.py`
++ `tools/probe_of3407_feasible.py` have the diagnoses.
 
 **v13 TDG background (2026-07-31):** 321 error instances + 184 warnings (warnings up from ~94). The warning
 jump was the SPARSE-base effect — v8/v13 lacks the cross-table cells coregen populates; v15 fixes exactly
