@@ -3,32 +3,36 @@
 **Last updated:** 2026-07-24
 **Repo:** GitHub `https://github.com/ManojMj86-Cognizant/Basel.git` (branch `main`). No servers running.
 
-**▶ 2026-08-03 — PHASE 2 STARTED; `v15` is the submission candidate (AWAITING TDG).**
-Built the SAFE first increment of coordinated leaf-first regeneration: **`src/coregen.py --no-overwrite`**
-(absent-only) — derives the missing cross-table cells from the leaf closure using the file's ACTUAL present
-values and **never overwrites a present cell**, so it cannot regress any rule v8/v13 already passes.
-- **`v14` = v8 + 81 absent cells; `v15` = v13 (=v8+OF24) + 81 absent cells = the combined best candidate.**
-- **OFFLINE PROOF** (`tools/verify_coregen.py` + new `tools/diff_cluster_additive.py`): cluster-additive
-  failing rules **131 → 51** (80 fixed, **0 new** — no activation/regression on additives). All 81 generated
-  cells DRS-valid + non-isNull; 0 overwrites.
-- **Expected at TDG:** the ~90 completeness WARNINGS (absent OF09.02/OF34.07 country/CCR totals) and the
-  absent-target cross-table ERRORS drop. **Residual RISK:** a few non-additive/inequality/internal rules the
-  offline additive check can't see may activate (the gen_of0902 v7→v8 precedent activated 3 irreducible).
+**▶ 2026-08-03 — PHASE 2 first increment MEASURED at TDG: `v15` is the NEW BEST (70 err rules / 103 warn).**
+Built the SAFE increment **`src/coregen.py --no-overwrite`** (absent-only): derives the 81 missing cross-table
+cells from the leaf closure using the file's ACTUAL present values, and NEVER overwrites a present cell.
+`v15` = v13 (v8+OF24) + 81 absent cells; `v14` = v8 + 81 absent (verification artifact).
+- **v15 TDG (errors+warnings log `Errors on version 15_03 Aug.txt`, split by `tools/sev_split.py`):**
+  ERROR **70 rules / 320 inst** · WARNING **48 rules / 103 inst** · 2 XPTY. vs v8 (75 err) / v12 (121 err) /
+  v13 (~69 err, **184 warn**): **warnings 184 → 103 (−44%)**, errors at/near the floor. **v15 = best file.**
+- **v8→v15 ERROR-set diff (`tools/sev_diff.py`):** FIXED 6 (`b0676-79` imax + `b0899/b0900` date = the OF24
+  fix from v13), NEWLY BROKEN **1 = `b0262`** (activation). So the 81 absent cells' net = **−81 warnings, +1
+  error**; the error wins came from OF24. Offline additive 131→51 held (`verify_coregen`, `diff_cluster_additive`).
+- **`b0262` (the one activation) — understood:** conditional cross-table — *if* OF07 default-exposure total >0
+  AND OF09.01 r0170 c0010 [CEG=x1] >0 *then* OF09.01 r0170 c0020 [CEG=x1] >0. We generated c0010 (total) but
+  not its sibling c0020 (exposures-in-default total) → antecedent true, consequent 0 → fails. Same class as
+  the gen_of0902 sibling-pairing gap.
 
-**▶ NEXT:** user submits **v15** to TDG → confirm warnings + cross-table errors down vs v13 (321 err/184 warn).
-Then the remaining **51** hard additive failures need OVERWRITE-style derivation — the next Phase 2 increment:
-`b0834` (OF34.07 r0180 internal = irreducible source conflict), `b0735-39`/`b0759`/`b0760`/`b0824` (OF08.01↔
-03/06 present-cell over-determinations), `b0471`/`b0719`/`b0490` (OF07 coef — verify vs TDG, may be offline
-artifact). These need careful per-rule overwrite + the non-additive/inequality layers, each verified before
-shipping (never blind-overwrite — that was the coregen v10/v11 regression).
+**▶ NEXT PHASE 2 INCREMENTS:**
+1. **Conditional/existence layer** — fix `b0262`-type activations by generating the paired sibling cell
+   (c0020 = Σ default-exposure leaves), or excluding the trigger. Small; makes v16 = 69 err / 103 warn.
+2. **Overwrite layer** for the remaining ~51 hard additive rules: `b0834` (OF34.07 r0180 internal = likely
+   irreducible source conflict), `b0735-39`/`b0759`/`b0760`/`b0824` (OF08.01↔03/06 present-cell
+   over-determinations), `b0471`/`b0719`/`b0490` (OF07 coef — may be offline artifact, was TDG-clean in v5).
+   CAREFUL per-rule overwrite + the non-additive/inequality layers, each verified — never blind-overwrite (=v10/v11).
 
 **v13 TDG background (2026-07-31):** 321 error instances + 184 warnings (warnings up from ~94). The warning
 jump was the SPARSE-base effect — v8/v13 lacks the cross-table cells coregen populates; v15 fixes exactly
 that, safely. Offline v13 classifier: L1 10 / L2 21 / L3 85 / L4 22.
 
-**Files on disk:** `v8` (last TDG-confirmed clean-error baseline, 75 rules), `v13` (v8+OF24), **`v14`/`v15`
-(Phase-2 candidates — submit v15)**. v6/v11/v12 `.xbrl` deleted to tidy (kept as `.zip`). Package hash
-`50c2f2d9…`. git history ~8 MB (XBRL deflates ~50×) — no storage action needed.
+**Files on disk:** **`v15` = current BEST (TDG-measured: 70 err / 103 warn)** = v8 + OF24 + 81 absent cells;
+`v8` (75 err baseline), `v13` (v8+OF24, 69 err / 184 warn), `v14` (v8+absent, verification). v6/v11/v12
+`.xbrl` deleted to tidy (kept as `.zip`). Package hash `50c2f2d9…`. git history ~8 MB — no storage action needed.
 
 **Goal:** Generate BoE Banking XBRL v4.0.0 instances shaped like the official samples, with
 random values that are **business-rule valid** (Arelle-verified), reusable across all
