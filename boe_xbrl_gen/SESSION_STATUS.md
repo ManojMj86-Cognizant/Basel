@@ -18,13 +18,22 @@ cells from the leaf closure using the file's ACTUAL present values, and NEVER ov
   not its sibling c0020 (exposures-in-default total) → antecedent true, consequent 0 → fails. Same class as
   the gen_of0902 sibling-pairing gap.
 
-**▶ NEXT PHASE 2 INCREMENTS:**
-1. **Conditional/existence layer** — fix `b0262`-type activations by generating the paired sibling cell
-   (c0020 = Σ default-exposure leaves), or excluding the trigger. Small; makes v16 = 69 err / 103 warn.
-2. **Overwrite layer** for the remaining ~51 hard additive rules: `b0834` (OF34.07 r0180 internal = likely
-   irreducible source conflict), `b0735-39`/`b0759`/`b0760`/`b0824` (OF08.01↔03/06 present-cell
-   over-determinations), `b0471`/`b0719`/`b0490` (OF07 coef — may be offline artifact, was TDG-clean in v5).
-   CAREFUL per-rule overwrite + the non-additive/inequality layers, each verified — never blind-overwrite (=v10/v11).
+**▶ DIAGNOSIS 2026-08-03 (`tools/probe_b0262.py`) — remaining errors need OF08.01 LEAF REGEN, not patches:**
+- **`b0262`** consequent OF09.01 r0170 c0020 [CEG=x1] IS additive-defined (b0729) but **derives to 0** (no
+  "exposures-in-default" leaves were ever generated). Rule needs it >0 → not fixable by derivation; needs a
+  default sub-population in the leaves.
+- **`b0834` (48 inst)** genuine over-determination: r0180 pinned by cross-rule b0872 to Σ OF08.01 (=620000)
+  while its detail rows are pinned by b0830-33 to OTHER OF08.01 sums (Σ=2,461,000) — no value satisfies both
+  on v8's leaves. Same for **`b0735-39`/`b0760`/`b0824`** (OF08.01↔03/06).
+- **ROOT:** all trace to the OF08.01 exposures **leaf basis**. Fixable ONLY by regenerating those leaves once
+  (incl. default columns) and deriving EVERY view (OF08.01 totals + detail, OF08.02/03/06, OF09.01/02 country,
+  OF34.07 CCR) from that single basis → all reconcile by construction. = the full coordinated-generation
+  endgame (scope §2.1). Big: regenerates the whole exposures core; open-dim pairing (§4.1) is the risk.
+
+**▶ DECISION PENDING (asked user):** (A) commit to the OF08.01 leaf-basis regeneration (the endgame — only path
+to clear b0834/b0739/b0262, but large + regenerates the core + can't be fully offline-verified), or (B)
+consolidate **v15 (70 err / 103 warn)** as the best safe result. Note b0361/b0363 (OF24 sqrt Group C, 7 inst)
+and OF02/C24 mega (16) are separate non-additive tracks. `tools/probe_b0262.py` has the diagnosis.
 
 **v13 TDG background (2026-07-31):** 321 error instances + 184 warnings (warnings up from ~94). The warning
 jump was the SPARSE-base effect — v8/v13 lacks the cross-table cells coregen populates; v15 fixes exactly
