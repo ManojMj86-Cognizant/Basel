@@ -156,3 +156,80 @@ no cascade. **Phase 1b (next, substantial)** = EMIT the derived values into a fi
 aggregates + generate absent ones (DRS-valid contexts, 35 tables) + fold in the nonneg / inequality (OF08.02
 ≤, b0367/8/9) / non-additive (OF24 exp/imax, ×12.5) / isNull layers so the additive re-derivation doesn't
 introduce new failures on those layers.
+
+---
+
+# ============================================================================
+# REVISED SCOPE v2 — 2026-08-03 (supersedes the v1 approach above)
+# ============================================================================
+
+## Why v1 stalled (what the 2026-08-03 build attempts proved)
+The v1 plan derived/solved aggregates over **v15's EXISTING leaves**. That has a hard ceiling:
+- **`coregen` absent-only** (v14/v15): safe, fixed the missing cross-table completeness cells (warnings
+  184→103) but CANNOT touch present-cell over-determinations. ✅ shipped as v15.
+- **`fix_b0834` targeted free-absorb**: only +9 instances, needed artificial CCR-row values, activation risk. ✗
+- **`phase2_solve` full-cluster joint least-squares**: 85% (worse than 244 residual) — the combined
+  single+cross system is **over-determined AND inconsistent on fixed existing leaves**, so any solve
+  compromises; the exact LP over the combined nullspace is **intractable at cluster scale** (re-confirms the
+  2026-07-23 joint-LP finding). ✗
+- **Key diagnosis** (`probe_of3407_struct`): the residual is **VALUE-driven, not structural** — b0834's detail
+  sources ⊆ its total's sources, so fresh CONSISTENT leaves would satisfy it. The problem was never the rules;
+  it's that we generate each **view independently** then try to reconcile marginals of an exposure set we
+  never modelled.
+
+## The reframe: model ONE exposure LEAF-TENSOR; every reported cell is a MARGINAL of it
+Do NOT generate views then reconcile. Instead:
+1. Model the finest-grain exposures as one tensor: dimensions = {exposure-class, approach (SA/FIRB/AIRB),
+   obligor-grade/pool, counterparty-country (CEG), default-status, CRM, z-sheet, …}; measures = {original
+   exposure, exposure value, RWA inputs, EL, #obligors, …}.
+2. **Generate leaf measures once** (random ≥0, DRS-valid at leaf grain).
+3. **Project every reported cell as the appropriate marginal sum** of the leaf tensor (a "total over dim X" =
+   Σ over X's members). Because OF08.01/02/03/06, OF09.01/02, OF34.07, OF07 are all marginals of the SAME
+   tensor, every cross-view additive rule (b0834, b0752, b0282, b0735-39, …) holds **by construction** — they
+   just assert "marginal = marginal of the same joint." No solve, no cascade. Derivation is O(cells), scales.
+4. Layer the non-marginal measures on top (RWA = base×risk-weight; OF24 ES = √Σw·horizon²; ×12.5), then
+   inequality / sign / isNull.
+
+## Components (reuse ↔ new)
+| # | Component | Reuse | New |
+|---|-----------|-------|-----|
+| A | **Leaf-tensor schema** — dims + valid leaf cells at finest grain | `hypercube_store`, `dim_drs`, table linkbase | leaf-grain cell set (finer than current hypercube) |
+| B | **Leaf generator** — random ≥0 measures over valid leaf cells, incl. default-status + FULL open breadth (all grades/countries) | `instance_build.gen_value` | full-breadth open-dim enumeration (vs genvalid's 1 synth row/z) |
+| C | **Projection engine** — each reported (table,r,c,z,dims) cell → its leaf marginal | rc-bridge (`table_model.rc_codes`), `dim_drs` | the dimensional COLLAPSE map (which leaf dims each cell marginalises) — THE core new artifact |
+| D | **Non-marginal layer** — RWA×weight, OF24 √, ×12.5 | genvalid `_apply_nonlinear`, `fix_of24c` | ordering after marginals |
+| E | **Inequality/isNull/sign** | genvalid `_crosstable_le_rows`, `_apply_isnull` | fold onto leaf constraints |
+| F | **Emitter** — contexts+facts at full open breadth | `gen_of0902`, `coregen`, `instance_build` | scale |
+| G | **Verifier** — dim + additive + cross-view | `dim_drs`, `verify_coregen`, `diff_cluster_additive` | cross-view marginal check |
+
+## Hard parts (honest — unchanged risks + the make-or-break)
+1. **§4.1 the collapse map (C) is make-or-break.** For every cell we must know EXACTLY which leaf slice sums
+   into it — from the table-linkbase dimensional definitions + annotated templates, not the additive rules
+   (which are the over-determined *consequence*, not the *source of truth*). If the map is wrong, marginals
+   won't match the rules. Open dims (CEG country, obligor CPZ) are the intricate case that defeated the
+   OF09.02 leftovers.
+2. **Scale** — full open breadth (all grades × all countries) may multiply fact count well beyond v15's ~50k.
+3. **Non-marginal measures** (RWA, ES √, ×12.5) don't project linearly → separate ordered layer; can perturb.
+4. **Verification gap** — offline confirms dims + additive + marginal-consistency; cross-view + non-additive
+   still need a TDG submit.
+5. **Residual floor regardless:** the `exp()` taxonomy errors (b0361/63/65/66) and any genuine BoE-rule
+   inconsistencies remain — **0 errors is NOT achievable**; target = MINIMISE the OF08 cluster + warnings.
+
+## Phasing (each independently testable; GATE = go/no-go before the next)
+- **P2.1 — Collapse-map extraction (make-or-break, CHEAP, do FIRST).** Build C's dimensional collapse for the
+  OF08.01 ↔ OF09.02 ↔ OF34.07 sub-core; offline-verify the map reproduces the b0834 / b0752 / b0282 / b0735-39
+  relationships (marginal identities). **GATE: if the map can't reproduce them, STOP — the approach is blocked,
+  accept v15.**
+- **P2.2 — Leaf tensor + generate + project for that sub-core** (A+B+C). Verify additive holds BY CONSTRUCTION
+  offline (`verify_coregen` → ~100% on the sub-core). GATE.
+- **P2.3 — Emit the sub-core into v15** (replace those tables' cells), `dim_drs` = 0, submit to TDG → confirm
+  the sub-core cross-table cluster clears (real-world gate; offline can't fully confirm cross-view).
+- **P2.4 — Extend to the full 35-table exposures core.**
+- **P2.5 — Non-marginal + inequality + isNull layers.**
+- **P2.6 — Full generate + TDG acceptance.**
+
+## Effort / risk / payoff (honest)
+- **Effort:** multi-session (the long-outstanding "full coordinated PRA001 generation").
+- **Risk:** HIGH on P2.1 (the collapse map) — it gates everything; MEDIUM on scale + non-marginal layers.
+- **Payoff:** if P2.1/2.2 land, this clears the OF08 cluster (~60 err) + most of the 103 warnings. **Floor is
+  NOT zero** — the exp() taxonomy errors (~4-6) survive no matter what.
+- **First action = P2.1 only.** It's cheap and decides whether the whole build is viable before any big spend.
