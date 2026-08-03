@@ -118,18 +118,25 @@ for r in R:
             for k, m in kids:
                 meta[k] = m
 
-# ---- TOP-DOWN distribute r0180 (= ΣOF08.01) down the tree, proportional to v15 shape (all >=0) ----
+# ---- TOP-DOWN distribute r0180 (= ΣOF08.01) down the tree with INTEGER-EXACT shares (Σ children == parent
+# exactly, so every additive rule in the tree holds with 0 residual), proportional to v15 shape, all >=0 ----
 changes = {}
-def distribute(key, value):
+def distribute(key, value):                        # value is int
     changes[key] = value
     kids = tree.get(key)
     if not kids:
         return                                     # leaf
-    tot = sum(max(facts.get(k, 0.0), 0.0) for k, _ in kids)
-    n = len(kids)
-    for k, _ in kids:
-        share = value * (max(facts.get(k, 0.0), 0.0) / tot) if tot > 0 else value / n
-        distribute(k, share)
+    w = [max(int(round(facts.get(k, 0.0))), 0) for k, _ in kids]
+    tot = sum(w)
+    if tot > 0:
+        shares = [value * wi // tot for wi in w]
+    else:
+        base = value // len(kids); shares = [base] * len(kids)
+    rem = value - sum(shares)                       # integer remainder -> spread 1 each so Σ == value EXACTLY
+    for i in range(int(round(rem))):
+        shares[i % len(shares)] += 1
+    for (k, _), s in zip(kids, shares):
+        distribute(k, s)
 
 b0834 = next(x for x in R if "b0834" in x["code"])
 n_roots = n_skip = 0
@@ -142,7 +149,7 @@ for a in workbook_rules.expand_scoped_asts(b0834):
     tk = ck_meta(tdps[0])[0]
     if tk not in override or tk not in tree:       # need an OF08.01 pin + a tree to distribute
         n_skip += 1; continue
-    distribute(tk, override[tk])
+    distribute(tk, int(round(override[tk])))
     n_roots += 1
 n_r0180 = n_roots; n_skip_nofree = n_skip; n_skip_neg = 0
 
@@ -159,8 +166,7 @@ for k, v in changes.items():
     concept_q, dims_q, tab = meta[k]
     newv = str(int(round(v)))
     if k in el_by_key:
-        if abs(v - facts.get(k, 0.0)) >= 0.5:
-            el_by_key[k].text = newv; n_over += 1
+        el_by_key[k].text = newv; n_over += 1     # write EVERY distributed cell (keep the tree consistent)
         continue
     drs = drs_for(tab)
     dl = {dim_drs.local(kk): (dim_drs.qmem(mm) if ":" in str(mm) else "(typed)") for kk, mm in dims_q.items()}

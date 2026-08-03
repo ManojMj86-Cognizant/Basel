@@ -367,3 +367,41 @@ v15 (70 err / 103 warn) remains the delivered best. RECOMMEND: bank the P2 R&D (
 analysis — all committed) and keep v15, OR commit to building the full-signature resolver first (then redo
 P2.1/2.2/2.3 on correct keys). Tools this phase: `member_hier.py`, `p2_collapse2.py`, `p2_project.py`,
 `p2_emit.py`, `probe_*`.
+
+## ⚠ CORRECTION (2026-08-03, `tools/probe_of3407_rows.py` + `probe_tree_compose.py`) — 'conflation' was WRONG
+The OF34.07 rows ARE distinctly keyed: the 8 b0834 detail cells differ by **PDR** (x400/x403/x404/x405/x436/
+x409/x412; 8th by IMS x3) → **8 DISTINCT keys**, and the internal tree composes (4 of 8 details are tree
+parents with children). My 'rc-bridge conflates rows' claim was an artifact of a diagnostic that truncated the
+dims print to 4 entries (hiding PDR). **`res.resolve` keys these fine → NO full-signature resolver is needed;
+P2.1/P2.2 keying STANDS.** Row structure: cell = column concept (mi119/ii177/mi793) + column dims
+(BAS,MCY,PRP,TRI) + row dims (IMS,PDR); r0180 has no IMS/PDR (aggregates over them). ⇒ The 3 emit failures are
+a BUG in the distribute/write logic, NOT a tooling wall — a much smaller fix. NEXT: fix the emit
+distribution/write bug and re-verify (b0830-33 must stay balanced).
+
+## 🧱 P2.3 EMIT v4 (integer-exact) — FIXED b0834 but hit a genuine OVER-DETERMINATION (the real wall)
+Fixed the emit bugs: INTEGER-EXACT top-down distribution (Σ children == parent exactly) + WRITE every
+distributed cell. Result on v15→v16: **b0834 FIXED** (48-instance family gone from the failing list),
+b0830-33 preserved (0 additive-rule regressions vs v15), 1008 OF34.07 cells rewritten. BUT
+`verify_coregen`: balance 98.4%→**97.0%** because **`b0759` exploded 14→285 instances**. `b0759` is a
+**NON-additive column product**: OF34.07 `c0060 = c0010 × c0070` (per row). My additive redistribution changed
+c0010/c0060 independently and broke it.
+- **The real wall = OF34.07 `c0060` is OVER-DETERMINED by THREE constraints at once:** the additive tree
+  (`r0180 c0060 = Σ details c0060`, b0834), the non-linear product (`c0060 = c0010·c0070`, b0759), and the
+  cross-table link (`c0060 = ΣOF08.01`, b1067/68). No single value/redistribution satisfies all three — this
+  is genuine over-determination (scope §4.2), now demonstrated concretely, with a non-linear twist.
+- **Conclusion:** the marginal reframe + integer-exact distribution cleanly handle **pure-additive** structure
+  (b0834 tree — proven fixable), but OF34.07's cells are governed by an OVERLAPPING web (additive + non-linear
+  product + cross-table) that mutually over-determines them. This is the same fundamental entanglement that
+  defeated surgical / coregen / joint-solve — the emit cannot make an over-determined cell satisfy conflicting
+  rules. **v15 (70 err/103 warn) remains the delivered best.**
+
+## ✅ FINAL P2 ASSESSMENT (2026-08-03)
+The reframe is genuinely sound for clean-additive structure and the tooling built here works (member_hier;
+integer-exact tree distribution reconciles b0834 with 0 additive regressions). But turning it into a clean
+emit is blocked by **over-determination** where a cell is pinned by additive + non-linear + cross-table rules
+simultaneously (OF34.07 c0060 the concrete example). That is a mathematical wall, not a code bug. **RECOMMEND:
+keep v15 as the delivered instance and BANK the P2 R&D** (reframe, member_hier, collapse map, integer-exact
+distributor — all committed and reusable). Reaching zero on the OF08 cluster would require BoE-rule-level
+reconciliation of the over-determined cells (or accepting those specific residuals), beyond what any
+generation approach can force. Tools: `member_hier.py`, `p2_collapse2.py`, `p2_project.py`, `p2_emit.py`,
+`probe_of3407_rows.py`, `probe_tree_compose.py`.
