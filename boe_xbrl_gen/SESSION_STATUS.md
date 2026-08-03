@@ -61,9 +61,12 @@ Of b0834's 85 (col×z) instances: **60 gap≥0 (fixable** — free detail leaves
 coupling), **25 gap<0** (r0180 < Σ determined detail rows; min gap −15.8M) → NOT fixable by filling free leaves;
 need the OF08.01 leaves generated so the detail-row subsets NEST under r0180's subset (the §4.1 hard part).
 So the leaf-first mechanism is validated for the majority but has a real structural residual — consistent with
-scope §4.2 (can't promise 0). **OPEN QUESTION (next):** is the 25-instance residual STRUCTURAL (detail-row
-OF08.01 source cells ⊄ r0180's source cells → irreducible) or VALUE-driven (would vanish under fresh
-consistent leaves)? Trace b0872 vs b0830-33 source-cell sets to decide — this sets the achievable b0834 ceiling.
+scope §4.2. **RESOLVED (`tools/probe_of3407_struct.py`): the residual is VALUE-DRIVEN, 0 STRUCTURAL.** Of the
+51 b0834 instances with a cross-table r0180 def (b0872), ALL 51 have their determined detail rows' OF08.01
+source cells ⊆ r0180's OF08.01 source cells → gap≥0 for ANY ≥0 leaves; the other 34 have no cross-pin on
+r0180 → r0180=Σdetail trivially. **So b0834 is FULLY fixable under a fresh consistent leaf-first regen** (the
+25 gap<0 on v15 were just v15's inconsistent leaves). Ceiling ≈ 100%, not 70%. Same nesting logic should hold
+for b0739/b0735-38. **Green light for the full build.**
 
 **▶ NEXT (task 3/4):** resolve that open question, then prototype the leaf-first joint per-component solver on
 the CLOSED cluster and verify offline (`verify_coregen`/`diff_cluster_additive`) BEFORE integrating into
