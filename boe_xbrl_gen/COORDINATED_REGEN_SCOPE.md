@@ -233,3 +233,24 @@ Do NOT generate views then reconcile. Instead:
 - **Payoff:** if P2.1/2.2 land, this clears the OF08 cluster (~60 err) + most of the 103 warnings. **Floor is
   NOT zero** — the exp() taxonomy errors (~4-6) survive no matter what.
 - **First action = P2.1 only.** It's cheap and decides whether the whole build is viable before any big spend.
+
+## P2.1 RESULTS (2026-08-03, `tools/p2_collapse.py`) — AMBER (viable but the collapse map is a real sub-build)
+Tested 10 sub-core cross-view rules (total = Σ details) for clean marginal structure:
+- **CLEAN single-axis marginal: 2** — `b0872`/`b0876` (OF34.07↔OF08.01, collapse over MCY). Proves the marginal
+  reframe works where signatures are clean.
+- **MULTI-AXIS: 8** — `b0834` {IMS,PDR}; `b0735-39` {MRW,IMS,PDR,TRI} (OF08.03 carries extra risk-weight/PD
+  dims — a legitimate multi-dim marginal); `b0752`/`b0282-84` {APR,EXC,TRI,CEG,CPZ} (OF08.02 grade + OF09.02
+  country). Multi-axis is acceptable IN PRINCIPLE, but…
+- **The blocker = signature INCONSISTENCY:** in `b0736` some OF08.01 details differ from the total on
+  {IMS,MRW,PDR,TRI}, others ALSO on MCY (x311/x100 vs total x195) → **MCY is HIERARCHICAL** (x195 is a parent
+  "total" member). And the rc-bridge OMITS the open dims (CEG country, CPZ obligor). So a usable collapse map
+  needs FULL dimensional signatures + **domain-member hierarchies** reconstructed from the taxonomy
+  (domain/hierarchy linkbase + dim defs + annotated templates) — well beyond `table_model.rc_codes`.
+
+**Verdict:** the leaf-tensor/marginal reframe is STRUCTURALLY SOUND (2 clean proofs; multi-axis is fine) but
+the collapse map is a **substantial sub-build** (full-signature + member-hierarchy extractor), and it is exactly
+the §4.1 open-dim/hierarchy work that defeated prior attempts — real risk it's slow/partial. NOT a clean pass.
+**DECISION for user:** (A) invest in the full-signature + hierarchy extractor (the next big, uncertain step —
+would need its own gate: does it reproduce the b07xx/b08xx marginal identities EXACTLY?), or (B) stop here and
+accept v15 (70 err/103 warn) — the payoff floor is non-zero regardless (exp() taxonomy errors survive).
+Tool: `tools/p2_collapse.py`.
