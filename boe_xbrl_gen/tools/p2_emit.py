@@ -98,33 +98,53 @@ for r in R:
         s = sum(t["coef"] * facts.get(ck_meta(dp)[0], 0.0) for t in a[oside] for dp in res.resolve(t["cell"]))
         k, m = ck_meta(tdps[0]); override[k] = s; meta[k] = m
 
-# ---- OF34.07 r0180 via b0834: set r0180=override, absorb delta on ONE true-free leaf ----
+# ---- OF34.07 INTERNAL tree (parent_key -> [child_key]) from OF34.07=ΣOF34.07 additive rules ----
+tree = {}
+for r in R:
+    if r.get("deactivated"):
+        continue
+    for a in workbook_rules.expand_scoped_asts(r):
+        if a["op"] != "i=":
+            continue
+        tside = "lhs" if len(a["lhs"]) == 1 else "rhs"
+        oside = "rhs" if tside == "lhs" else "lhs"
+        tdps = res.resolve(a[tside][0]["cell"])
+        if len(tdps) != 1 or tdps[0]["table"].upper() != "OF34.07.01.01":
+            continue
+        kids = [ck_meta(dp) for t in a[oside] for dp in res.resolve(t["cell"])]
+        if kids and all(m[2] == "OF34.07.01.01" for _, m in kids):     # internal (all children OF34.07)
+            tk, tm = ck_meta(tdps[0]); meta[tk] = tm
+            tree[tk] = kids
+            for k, m in kids:
+                meta[k] = m
+
+# ---- TOP-DOWN distribute r0180 (= ΣOF08.01) down the tree, proportional to v15 shape (all >=0) ----
 changes = {}
+def distribute(key, value):
+    changes[key] = value
+    kids = tree.get(key)
+    if not kids:
+        return                                     # leaf
+    tot = sum(max(facts.get(k, 0.0), 0.0) for k, _ in kids)
+    n = len(kids)
+    for k, _ in kids:
+        share = value * (max(facts.get(k, 0.0), 0.0) / tot) if tot > 0 else value / n
+        distribute(k, share)
+
 b0834 = next(x for x in R if "b0834" in x["code"])
-n_r0180 = n_skip_nofree = n_skip_neg = 0
+n_roots = n_skip = 0
 for a in workbook_rules.expand_scoped_asts(b0834):
     if len(a["lhs"]) != 1:
         continue
     tdps = res.resolve(a["lhs"][0]["cell"])
     if not tdps:
         continue
-    tk, tm = ck_meta(tdps[0])
-    if tk not in override:                       # r0180 not OF08.01-pinned here → leave (b0834 holds in v15)
-        continue
-    new_r0180 = override[tk]
-    details = [ck_meta(dp) for t in a["rhs"] for dp in res.resolve(t["cell"])]
-    sigcur = sum(facts.get(k, 0.0) for k, _ in details)
-    delta = new_r0180 - sigcur
-    frees = [(k, m) for k, m in details if k not in determined]
-    if not frees:
-        n_skip_nofree += 1; continue
-    fk, fm = frees[0]
-    fnew = facts.get(fk, 0.0) + delta
-    if fnew < -0.5:
-        n_skip_neg += 1; continue
-    changes[tk] = new_r0180; meta[tk] = tm
-    changes[fk] = fnew; meta[fk] = fm
-    n_r0180 += 1
+    tk = ck_meta(tdps[0])[0]
+    if tk not in override or tk not in tree:       # need an OF08.01 pin + a tree to distribute
+        n_skip += 1; continue
+    distribute(tk, override[tk])
+    n_roots += 1
+n_r0180 = n_roots; n_skip_nofree = n_skip; n_skip_neg = 0
 
 # ---- OF09.02 CEG=x1 cells = Σ OF08.01 ----
 n_of0902 = 0

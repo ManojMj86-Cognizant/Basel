@@ -340,3 +340,30 @@ remains the delivered best throughout. **DECISION for user:** (A) continue — b
 (proportional scaling), verify offline, ship a v16 to TDG (real but risky, may need iteration); or (B) bank the
 P2 R&D (reframe proven viable, extractor + collapse map + projection all built and committed) and keep v15 as
 the delivered instance. Tools: `p2_emit.py`, `p2_project.py`, `p2_collapse2.py`, `src/member_hier.py`.
+
+## 🛑 P2.3 EMIT ATTEMPT #3 + ROOT CAUSE (2026-08-03) — the rc-bridge keying is INSUFFICIENT
+Built the top-down sub-tree rebuild (distribute r0180 down the OF34.07 tree, proportional to v15). `diff` v15→
+v16: **fixed 2 / broke 4 (b0830-33) AGAIN**. Diagnosed the real root cause: **`CellResolver.resolve` conflates
+OF34.07 rows** — `b0834`'s 8 detail cells (r0010, r0040, … r0170) ALL resolve to the SAME `(concept, dims)`
+key (`mi119` + identical dims). The row-distinguishing dimension is NOT in what `res.resolve` returns, so the
+`(concept, dims)` key I've used throughout P2 **cannot tell r0010 from r0040 from r0180**. Every emit scrambles
+the tree because it literally can't address the cells distinctly.
+- **Implication:** this also means the P2.2 gap-proof (b0834 51/51) was computed on CONFLATED keys → it must be
+  re-validated once cells are keyed distinctly. The reframe may still be sound, but the EVIDENCE needs redoing
+  with a correct resolver.
+- **The real fix = a FULL cell-signature resolver** (per the research agent §4): assemble each cell's complete
+  signature from `parse_table` ruleNode dims **+ `dim_drs.TableDRS` hypercube dims + `dim_defaults`** so
+  r0010/r0040/r0180 get DISTINCT keys. `res.resolve` (rc-bridge) alone is insufficient for OF34.07-class tables
+  whose rows are dimension members it drops. This is a substantial new component and it underpins EVERYTHING
+  (collapse map, projection, emit) — the current tooling can't emit correctly without it.
+
+## ⚖ P2 HONEST STATUS (2026-08-03) — hit a tooling wall; recommend banking R&D
+Three emit attempts, all blocked by the same root cause: the rc-bridge `(concept,dims)` key conflates
+same-concept rows in OF34.07, so the emit cannot address cells distinctly. Fixing it needs a full-signature
+resolver (parse_table + TableDRS + defaults) — a substantial component that also forces re-validating the P2.1/
+P2.2 evidence on correct keys. **The reframe is still promising in principle, but the effort to make it
+emit-correct is materially larger than a session and I no longer have offline-verified progress toward a v16.**
+v15 (70 err / 103 warn) remains the delivered best. RECOMMEND: bank the P2 R&D (reframe, member_hier, collapse
+analysis — all committed) and keep v15, OR commit to building the full-signature resolver first (then redo
+P2.1/2.2/2.3 on correct keys). Tools this phase: `member_hier.py`, `p2_collapse2.py`, `p2_project.py`,
+`p2_emit.py`, `probe_*`.
