@@ -305,3 +305,16 @@ b0830-33 family across columns×z). Then checked the b0834 gap = r0180 − Σ(co
 **⇒ P2.2 core is validated for the OF34.07 sub-core.** Remaining P2.2: extend the projection to OF09.02
 (b0282-84 z-sheet sums, CEG=x1) + OF08.02 (b0752, obligor-grade), wire actual leaf generation, and verify the
 full sub-core additive web offline. Then P2.3 (emit → TDG gate). Tools: `tools/p2_project.py`.
+
+## P2.3 EMIT ATTEMPT #1 (2026-08-03, `tools/p2_emit.py`) — found OF34.07 has an INTERNAL tree; needs top-down
+Projected OF34.07+OF09.02 targets = Σ OF08.01 (498 targets, 92 overwritten) into v15→v16. `diff_cluster_additive`:
+**fixed 2, BROKE 4 (b0830-b0833) → net worse (51→53)**; v16 discarded.
+- **Root cause (diagnosed):** b0830-b0833 are **OF34.07-INTERNAL sub-totals** (`r0010 = Σ r0015;0025;0030`,
+  `r0070 = Σ r0080;0090`, …), NOT OF08.01 links. OF34.07 is a **nested tree**: `r0180 = Σ detail rows` (b0834)
+  and several detail rows `= Σ sub-rows` (b0830-33). The naive emit set r0180 = ΣOF08.01 correctly but then
+  ZEROED "free" rows — clobbering the b0830-33 sub-totals.
+- **Fix required (P2.3 emit v2):** distribute r0180 **top-down through OF34.07's internal additive tree** (only
+  the true LEAF rows are free; internal totals must equal Σ their children), and only OF08.01-link the rows the
+  b08xx/b10xx family actually pins. i.e. the OF34.07 emit is a top-down SPLIT respecting its own tree, not a
+  flat overwrite. This is precise, well-understood next work — NOT a blocker. v15 remains best.
+Tools: `tools/p2_emit.py` (v1, superseded).
