@@ -86,12 +86,22 @@ detail rows already determined = no free cell; 25 gap<0), and overwriting those 
 artificial balancing values → real non-additive activation risk (TDG-only). Poor trade (9 inst for 26 artificial
 edits + risk). **v16-as-built is NOT recommended for submission.**
 
-**▶ CLEAN WIN REMAINING + RECOMMENDATION:** rebuild v16 = **v15 + OF24 Group C** only (b0361/b0363 sqrt-sum-of-
-squares, ~7 inst) — deterministic recompute `target = sqrt(Σ wᵢ·inputᵢ²)`, w=[1,1,2,2,6], like the fix_of24
-imax pass; safe, no artificial cells. Needs OF24's open-axis subset matching (fix_of24 Group A/B are closed;
-Group C has an open axis). Then v16 ≈ 68 err / 103 warn. **v15 remains the practical best; the b0834/b0739
-cluster is confirmed not economically fixable** (intractable clean solve; marginal+risky targeted fix).
-Diagnostics: `probe_b0262/of3407_feasible/of3407_struct`, `phase2_solve`, `fix_b0834`.
+**▶ OF24 Group C INVESTIGATED (`tools/fix_of24c.py`, `probe_of24c/of24c2.py`) → NO DATA FIX EXISTS.** The
+sqrt aggregate is concept-agnostic: any market-risk expected-shortfall concept (mi10023/mi10024/mi10025/
+mi10026) has a no-LQH fact = `sqrt(Σ w(LQH)·sibling²)` over LQH x10001-x10005, w={1,1,2,2,6}. Recomputed all
+**40** such aggregates with a half-ULP tolerance guard → **0 genuinely wrong**: v15 already carries the correct
+√ values (genvalid `_apply_nonlinear` computed them; both sampled failing instances match within ±80). So
+**b0361/b0363 fail DESPITE correct values → they are the exp() function-evaluation issue at TDG, the same
+unfixable taxonomy/tool class as b0365/b0366 (XPTY0004)** — NOT data-fixable. v16-attempt = v15 + 0 changes →
+deleted.
+
+**▶ FINAL (2026-08-03): `v15` (70 err / 103 warn) is the delivered best; no further data fix is available.**
+The remaining ~70 error rules are ALL either (a) intractable cross-table over-determinations — the OF08.01
+leaf-basis cluster b0834/b0739/b0735-38/b0759/b0760/b0824 (clean solve doesn't scale; targeted fix marginal
++9 & risky), or (b) unfixable taxonomy/tool exp() errors (b0361/b0363/b0365/b0366). Journey 157→75→**70** err,
+warnings 184→**103**. Files on disk: `v14`, `v15` (best). Diagnostics committed: `probe_b0262`,
+`probe_of3407_feasible/struct`, `phase2_solve`, `fix_b0834`, `probe_of24c/c2`, `fix_of24c`, `sev_split/diff`,
+`diff_cluster_additive`.
 
 **v13 TDG background (2026-07-31):** 321 error instances + 184 warnings (warnings up from ~94). The warning
 jump was the SPARSE-base effect — v8/v13 lacks the cross-table cells coregen populates; v15 fixes exactly
