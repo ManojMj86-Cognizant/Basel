@@ -68,11 +68,22 @@ r0180 → r0180=Σdetail trivially. **So b0834 is FULLY fixable under a fresh co
 25 gap<0 on v15 were just v15's inconsistent leaves). Ceiling ≈ 100%, not 70%. Same nesting logic should hold
 for b0739/b0735-38. **Green light for the full build.**
 
-**▶ NEXT (task 3/4):** resolve that open question, then prototype the leaf-first joint per-component solver on
-the CLOSED cluster and verify offline (`verify_coregen`/`diff_cluster_additive`) BEFORE integrating into
-genvalid `_run` → full regen → v16. Separate non-additive tracks: b0361/b0363 (OF24 sqrt, 7 inst), OF02/C24 (16).
-Realistic expectation: a PARTIAL reduction of the b0834/b0739 cluster, not a clean zero. `tools/probe_b0262.py`
-+ `tools/probe_of3407_feasible.py` have the diagnoses.
+**▶ INTRACTABILITY RE-CONFIRMED (task 3/4, `tools/phase2_solve.py`):** the naive full-cluster JOINT solve does
+NOT work. Per-component least-squares over the combined single+cross system on v15's leaves → **85.2% balanced
+(residual 2,405), WORSE than phase1's 244** — because on existing leaves the over-determined system is
+INCONSISTENT, so lstsq compromises (satisfies no equation exactly); + one 5,050-agg component too big to solve.
+A clean solve needs CHOOSING fresh leaves that make the whole system consistent with aggregates ≥0 = an LP over
+the combined nullspace, which the 2026-07-23 joint-LP attempt already found INTRACTABLE at full-cluster scale
+(feasible only per small sub-cluster). So the clean full-cluster regeneration is NOT tractable — matches scope
+§4.2. **What IS achievable:** TARGETED free-absorb for specific over-determined patterns — e.g. b0834: set the
+free detail leaves r0040/50/60/170 = gap where gap≥0 (60/85 instances on v15). Bounded partial win, but
+populating those rows carries activation risk (only TDG confirms). 
+
+**▶ DECISION POINT (reassess with user):** the endgame's clean sweep is intractable; realistic options are
+(A) implement the TARGETED b0834 free-absorb (partial, ~60 inst, TDG-verify) or (B) accept **v15 (70 err/103
+warn)** as the practical best. Separate non-additive quick win still available: b0361/b0363 (OF24 sqrt, 7 inst)
+via a fix_of24-style recompute. Diagnostics: `probe_b0262.py`, `probe_of3407_feasible.py`, `probe_of3407_struct.py`,
+`phase2_solve.py`.
 
 **v13 TDG background (2026-07-31):** 321 error instances + 184 warnings (warnings up from ~94). The warning
 jump was the SPARSE-base effect — v8/v13 lacks the cross-table cells coregen populates; v15 fixes exactly
